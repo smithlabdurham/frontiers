@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>GEOL2301: Palaeoecosystems</title>
+		<title>GEOL2301: Frontiers in Palaeobiology</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -38,7 +38,7 @@
 		<!-- Header -->
 			<section id="header" class="dark">
 				<header>
-					<h1>GEOL2301: Palaeoecosystems</h1>
+					<h1>GEOL2301: Frontiers in Palaeobiology</h1>
 					<p>Resources, timetable and deadlines</p>
 				</header>
 				<footer>
@@ -51,7 +51,7 @@
 				<header>
 					<div class="container">
             <section>
-						<h2>Course overview</h2>
+						<h2>Term overview</h2>
 						<p>
               This page links to the resources you'll need in order to succeed this term.
               Read through the introduction, and bookmark this page; you can come back to it throughout the term.
@@ -60,10 +60,10 @@
             <section>
               <div class="row">
                 <div class="col-6 col-12-narrow">
-                  <a href="0.html" class="button scrolly wide"><span class="fa fa-info"></span> Course introduction</a>
+                  <a href="0.html" class="button scrolly wide"><span class="fa fa-info"></span> Term introduction</a>
                 </div>
                 <div class="col-6 col-12-narrow">
-                  <a href="wenlock.html" class="button scrolly wide"><span class="fa fa-diagnoses"></span> Assessment</a>
+                  <a href="exam.html" class="button scrolly wide"><span class="fa fa-diagnoses"></span> Assessment</a>
                 </div>
               </div>
             </section>
@@ -81,31 +81,17 @@
                     <th class="col-2 col-12-narrow">Week</th>
                     <th class="col-2 col-12-narrow">Date</th>
                     <th class="col-4 col-12-narrow">Topic</th>
-                    <th class="col-4 col-12-narrow">Practical exercises</th>
+                    <th class="col-4 col-12-narrow">Synchronous activity</th>
                   </thead>
                   <tbody id="timetable">
-                    <tr>
-                      <td class="col-2 col-12-narrow">Week 1</td>
-                      <td class="col-2 col-12-narrow"><span week="1"></span></td>
-                      <td class="col-4 col-12-narrow"><a href='1.html'>Palaeoecology</a></td>
-                      <td class="col-4 col-12-narrow">
-                        <p>Ecosystems and environments</p>
-                        <p>
-                          <a href="1S.html">Part A</a> 
-                            <span style="display:none" id='Ans1A'>(<a href="1SA.html">answers</a>)</span>
-                          | <a class="jupyter">Part B</a> 
-                          | <a href="https://notes.dmaitre.phyip3.dur.ac.uk/notebooks/manual/workingwitthenotebook/">Using Jupyter</a>
-                           
-                        </p>
-                      </td>
-                          
-                    </tr>
+                    <!-- Content added below by javascript -->
                   </tbody>
                 </table>
               </div>
             </section>
             <section>
               <div class="row">
+                <p>A final examination will be scheduled in exam term.</p>
                 <p>Meeting deadlines is your responsibility – please note them in your diaries today.</p>
               </div>
             </section>            
@@ -126,23 +112,15 @@
 								<a class="readingList button scrolly wide"><span class="fa fa-scroll"></span> Reading list</a>
 							</div>
 							<div class="col-6 col-12-narrow">
-								<a class="discussionBoard button scrolly wide"><span class="fa fa-comment"></span> Discussion board</a>
+								<a href="access-articles.html" class="button scrolly wide"><span class="fa fa-unlock"></span> Access scientific papers</a>
 							</div>
             </div>
             <div class="row">
 							<div class="col-6 col-12-narrow">
 								<a href="https://ms609.github.io/Concentration/" class="button scrolly wide"><span class="fa fa-user-clock"></span> Time management</a>
 							</div>
-							<div class="col-6 col-12-narrow">
-								<a href="access-articles.html" class="button scrolly wide"><span class="fa fa-unlock"></span> Access scientific papers</a>
-							</div>
-            </div>
-            <div class="row">
-							<div class="col-6 col-12-narrow">
+            	<div class="col-6 col-12-narrow">
 								<a href="word.html" class="button scrolly wide"><span class="fa fa-file-word"></span> Scientific writing in MS Word</a>
-							</div>
-							<div class="col-6 col-12-narrow">
-								<a href="scans.html" class="button scrolly wide"><span class="fa fa-hand-rock"></span> SketchFab models</a>
 							</div>
             </div>
             <div class="row">
@@ -165,8 +143,7 @@
 				</ul>
 				<div class="copyright">
 					<ul class="menu">
-						<li>&copy; 2021 <a href="http://smithlabdurham.github.io/">Martin R. Smith</a>,
-            incorporating material from Russell Garwood.</li>
+						<li>&copy; 2021 <a href="http://smithlabdurham.github.io/">Martin R. Smith</a></li>
             <!--<li>All content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, except where noted.</li>-->
             <li>Design: <a href="http://html5up.net" rel='noopener'>HTML5 UP</a></li>
 					</ul>
@@ -224,34 +201,16 @@
         if (new Date().getTime() > release1.getTime()) {
           document.getElementById('Ans1A').style.display = 'inline';
         }
-        addRow(2, "Succession", "<a href='2S.html'>Measures of diversity</a> (Computer required)");
-        addRow(3, "Systematic Palaeontology", "<a href='3S.html'>Key Palaeozoic Fossils</a>");
-        addRow(4, "Higher classification", 
-        "<strong><em>Lab notebook required</em></strong><br>Keeping a lab notebook<br />How to write a scientific paper<br />Introduction to the <a href='wenlock.html'>Wenlock</a> Biota",
-        "<strong>Start writing introduction</strong> – bring two printed copies to Week 6’s session");
-        addRow(5, "Taphonomy", "<a href='5S.html'>Taphonomy</a>", "Data collection – <strong>datasets due</strong> two days before Week 7’s session");
-        addRow(6, "Functional Morphology", "Peer review of introductions", "Data collection");
-        addRow(7,	"Biogenic carbonates", "Present data to peers");
-        addRow(8,	"Case study: Burgess Shale", "Data analysis");
-        addRow(9,	"Ichnology", "Data analysis / writeup");
-        addRow(10, "Productivity and macroevolution", "Peer review exercise");
-        deadline = document.createElement('tr')
-        ddl1 = document.createElement('td');
-        ddl1.innerHTML = 'Deadline';
-        addWidth(ddl1, 2);
-        const dat = document.createElement('td');
-        ddl2 = document.createElement('td');
-        addWidth(ddl2, 2);
-        ddl2.innerHTML = wenlockDeadline.toDateString();
-        ddl3 = document.createElement('td');
-        ddl3.colSpan = 2;
-        addWidth(ddl3, 8);
-        ddl3.innerHTML = '<strong>Final submission</strong> of <a href="wenlock.html">Wenlock project</a>';
-        ddl3.classList.add('task');
-        deadline.appendChild(ddl1);
-        deadline.appendChild(ddl2);
-        deadline.appendChild(ddl3);
-        timetable.appendChild(deadline)
+        addRow(1, "Introduction", "Topic selection and group assignment");
+        addRow(2, "Approaches to phylogenetics", "Paper discussion");
+        addRow(3, "Approaches to phylogenetics", "Debate");
+        addRow(4, "The Cambrian 'explosion'?", "Paper discussion");
+        addRow(5, "The Cambrian 'explosion'?", "Debate");
+        addRow(6, "Group project", "Independent group work");
+        addRow(7,	"Group project", "Preliminary report", "Oral presentation");
+        addRow(8,	"Group project", "Feedback on draft microsite from staff", "Bring draft microsite");
+        addRow(9,	"Peer presentations", "Microsite presentation", "Oral presentation of complete microsite");
+        addRow(10, "Surgery", "Staff Q&amp;A");
       </script>
 
 	</body>

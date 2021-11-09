@@ -1,4 +1,4 @@
-firstClass = new Date("2021-10-07");
+firstClass = new Date("2022-01-13");
 wenlockDeadline = new Date(firstClass.valueOf());
 wenlockDeadline.setDate(wenlockDeadline.getDate() + 72 + 17);
 

@@ -2451,7 +2451,7 @@ div.resources > h4:before {
 	#header {
 		position: relative;
 		margin: 0;
-		background-image: url("images/overlay.png"), url("../../images/943461d4.jpg");
+		background-image: url("images/overlay.png"), url("../../images/943461d4.jpg"); /* Merlin74 @ Shutterstock;  https://www.shutterstock.com/image-photo/636613708 */
 		background-size: auto, cover;
 		background-position: top left, center center;
 		background-repeat: repeat, no-repeat;
