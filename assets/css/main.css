@@ -511,6 +511,15 @@ div.resources > h4:before {
   content: "\f00e"; /* search+*/
 }
 
+div.slideInfo {
+  border: solid rgb(61, 61, 61);
+  margin-top: 2em;
+  padding-top: 0;
+  padding-bottom: 2em;
+  border-radius: 0.25em;
+}
+
+
 /* Row */
 
 	.row {

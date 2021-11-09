@@ -60,10 +60,32 @@
             <section>
               <div class="row">
                 <div class="col-6 col-12-narrow">
-                  <a href="0.html" class="button scrolly wide"><span class="fa fa-info"></span> Term introduction</a>
+                  <a id="showIntro" class="button scrolly wide"><span class="fa fa-info"></span> Term introduction</a>
                 </div>
                 <div class="col-6 col-12-narrow">
-                  <a href="exam.html" class="button scrolly wide"><span class="fa fa-diagnoses"></span> Assessment</a>
+                  <a id="showExam" class="button scrolly wide"><span class="fa fa-diagnoses"></span> Assessment</a>
+                </div>
+              </div>
+              <div class="row moreInfo">
+                <div class="col-1 col-12-narrow"></div>
+                <div class="col-10 col-12-narrow">
+                  <div class="hidden slideInfo"  id="course-intro">
+                    <p>
+                      This term will improve your skills in research and presentation by addressing current controversies in palaeontology.
+                      By engaging with active debates, you will learn to weigh evidence, to balance and present competing perspectives, and to acknowledge and represent uncertainty.
+                    </p>
+                    <p>
+                      The term kicks off with two topical topics.  After an introduction to the key concepts, we will engage in a class discussion ("Journal club") of an influential paper, then in groups you will have a week to prepare your case for a class debate in which your group must convince a judge of the rightness of your allocated side of the argument.
+                    </p>
+                    <p>
+                      In the second part of the term, your group will focus on a more tightly defined research controversy. You will work to produce a microsite and brief oral primer that will together introduce your peers to the topic, and equip them to engage with the literature and reach their own conclusion about the issue.
+                    </p>
+                  </div>
+                  <div class="hidden slideInfo"  id="course-exam">
+                    <p>
+                      This term is assessed by a two-hour final examination in which you will produce one essay on a topic addressed by one of the group presentations, and a second essay that may address either one of these group topics, or a 'topical topic' covered as a class in weeks 2–5.  Essay questions will invite you to present an argument that draws on multiple aspects of the topic, including your own reading.
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>
@@ -210,7 +232,20 @@
         addRow(7,	"Group project", "Preliminary report", "Oral presentation");
         addRow(8,	"Group project", "Feedback on draft microsite from staff", "Bring draft microsite");
         addRow(9,	"Peer presentations", "Microsite presentation", "Oral presentation of complete microsite");
-        addRow(10, "Surgery", "Staff Q&amp;A");
+        addRow(10, "Surgery", "Q&amp;A on group topics", "Your chance to \"stump the staff\"");
+        
+        $(function() {
+            $('a#showIntro').click(function () {
+              $('#course-intro').slideToggle();
+              $('#course-exam').slideUp();
+            })
+          })
+        $(function() {
+            $('a#showExam').click(function () {
+              $('#course-intro').slideUp();
+              $('#course-exam').slideToggle();
+            })
+          })
       </script>
 
 	</body>
