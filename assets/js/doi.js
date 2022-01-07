@@ -19,7 +19,6 @@ $(document).ready(async function() {
     ref.appendChild(bib);
   })
   
-  console.log("AOISHGAIUHI£");
   await Promise.all(Object.keys(dois).map(async (ref) => {
     UpdateDoi(dois[ref]);
   }));
