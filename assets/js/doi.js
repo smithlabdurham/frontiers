@@ -1,16 +1,26 @@
-$(document).ready(function(){
+UpdateDoi = async function (ref) {
+  const Cite = require('citation-js');
+  const doi = ref.getAttribute('doi');
+  const data = await Cite.async(doi);
+  ref.firstChild.innerHTML = data.format('bibliography', {
+      format: 'html', template: 'apa', lang: 'en-GB'
+    });
+}
+
+$(document).ready(async function() {
   // Display info
-  var Cite = require('citation-js');
-  
-  dois = document.getElementsByTagName('doi')
+  const dois = document.getElementsByTagName('doi');
   dois.forEach(function (ref) {
     let doi = ref.getAttribute('doi');
-    bib = document.createElement('a');
+    let bib = document.createElement('a');
     bib.href = "https://dx.doi.org/" + doi;
     bib.classList.add("doi-ref");
-    bib.innerHTML = new Cite(doi).format('bibliography', {
-        format: 'html', template: 'apa', lang: 'en-GB'
-      });
+    bib.innerHTML = doi;
     ref.appendChild(bib);
-  });
+  })
+  
+  console.log("AOISHGAIUHI£");
+  await Promise.all(Object.keys(dois).map(async (ref) => {
+    UpdateDoi(dois[ref]);
+  }));
 });
