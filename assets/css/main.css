@@ -34,8 +34,19 @@ body {
 }
 
 ol, ul {
-	list-style: none;
+  counter-reset: item;
 }
+
+@counter-style ms { system: extends decimal; prefix: "MS"; }
+@counter-style or { system: extends decimal; prefix: "OR"; }
+@counter-style pa { system: extends decimal; prefix: "PA"; }
+@counter-style pr { system: extends decimal; prefix: "PR"; }
+
+ol.li-ms { list-style: ms; }
+ol.li-or { list-style: or; }
+ol.li-pa { list-style: pa; }
+ol.li-pr { list-style: pr; }
+
 
 blockquote, q {
 	quotes: none;
