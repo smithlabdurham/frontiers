@@ -42,11 +42,19 @@ ol, ul {
 @counter-style pa { system: extends decimal; prefix: "PA"; }
 @counter-style pr { system: extends decimal; prefix: "PR"; }
 
-ol.li-ms { list-style: ms; }
-ol.li-or { list-style: or; }
-ol.li-pa { list-style: pa; }
-ol.li-pr { list-style: pr; }
+ol.li-ms { list-style: ms; padding-left: 2.25em; }
+ol.li-or { list-style: or; padding-left: 2.25em; }
+ol.li-pa { list-style: pa; padding-left: 2.25em; }
+ol.li-pr { list-style: pr; padding-left: 2.25em; }
 
+img.li-ad {
+  float: right;
+  clear: both;
+  max-width: 9em;
+  max-height: 9em;
+  margin-bottom: 1em;
+  border: 1px solid black;
+}
 
 blockquote, q {
 	quotes: none;

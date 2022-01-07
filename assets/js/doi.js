@@ -1,4 +1,4 @@
-$(window).on('load', function(){
+$(document).ready(function(){
   // Display info
   var Cite = require('citation-js');
   
