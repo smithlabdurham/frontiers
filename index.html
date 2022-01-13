@@ -226,6 +226,8 @@
           var rdgLinks = [];
           for (let linkI = 0; linkI < readingText.length; linkI++) {
             rdgLinks.push(document.createElement('a'));
+            rdgLinks[linkI].target = "_blank";
+            rdgLinks[linkI].rel = "noopener";
             rdgLinks[linkI].innerHTML = readingText[linkI];
             rdgLinks[linkI].href = readingURL[linkI];
             rdgLinks[linkI].classList.add("importance-" + readingImportance[linkI]);
