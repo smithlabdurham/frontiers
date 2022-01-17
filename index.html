@@ -260,11 +260,6 @@
           row.appendChild(xrcs);
           timetable.appendChild(row);
         }
-        release1 = new Date(firstClass.valueOf());
-        release1.setDate(release1.getDate() + 1);
-        if (new Date().getTime() > release1.getTime()) {
-          document.getElementById('Ans1A').style.display = 'inline';
-        }
         addRow(1, "Introduction", ["Evolutionary trees: A primer", "Tree misinterpretations", "How to build a tree"],
           ["https://evolution.berkeley.edu/the-tree-room/evolutionary-trees-a-primer/",
           "https://evolution.berkeley.edu/the-tree-room/tree-misinterpretations/",
