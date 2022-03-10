@@ -85,10 +85,13 @@
             </section>
             <section>
               <div class="row">
-                <div class="col-6 col-12-narrow">
+                <div class="col-4 col-12-narrow">
                   <a id="showIntro" class="button scrolly wide"><span class="fa fa-info"></span> Term introduction</a>
                 </div>
-                <div class="col-6 col-12-narrow">
+                <div class="col-4 col-12-narrow">
+                  <a id="showGroups" class="button scrolly wide"><span class="fa fa-user-friends"></span> Groups</a>
+                </div>
+                <div class="col-4 col-12-narrow">
                   <a id="showExam" class="button scrolly wide"><span class="fa fa-diagnoses"></span> Assessment</a>
                 </div>
               </div>
@@ -110,6 +113,11 @@
                   <div class="hidden slideInfo"  id="course-exam">
                     <p>
                       This term is assessed by a two-hour final examination in which you will produce one essay on a topic addressed by one of the group presentations, and a second essay that may address either one of these group topics, or a 'topical topic' covered as a class in weeks 2–5.  Essay questions will invite you to present an argument that draws on multiple aspects of the topic, including your own reading.
+                    </p>
+                  </div>
+                  <div class="hidden slideInfo"  id="course-groups">
+                    <p>
+                      You will work in groups of three or four throughout this term.  To sign up to groups, select a research topic, and (eventually) to view links to groups' microsites, use <a class="groupList">this spreadsheet</a>.
                     </p>
                   </div>
                 </div>
@@ -292,12 +300,21 @@
             $('a#showIntro').click(function () {
               $('#course-intro').slideToggle();
               $('#course-exam').slideUp();
+              $('#course-groups').slideUp();
             })
           })
         $(function() {
             $('a#showExam').click(function () {
+              $('#course-groups').slideUp();
               $('#course-intro').slideUp();
               $('#course-exam').slideToggle();
+            })
+          })
+        $(function() {
+            $('a#showGroups').click(function () {
+              $('#course-exam').slideUp();
+              $('#course-intro').slideUp();
+              $('#course-groups').slideToggle();
             })
           })
       </script>
