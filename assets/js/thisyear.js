@@ -1,6 +1,4 @@
-firstClass = new Date("2022-01-13");
-wenlockDeadline = new Date(firstClass.valueOf());
-wenlockDeadline.setDate(wenlockDeadline.getDate() + 72 + 17);
+firstClass = new Date("2023-01-12");
 
 days = document.querySelectorAll("[day]");
 for (var i = 0; i != days.length; i++) {
@@ -17,10 +15,10 @@ for (var i = 0; i != weeks.length; i++) {
 }
 
 const links = {
-  "discussionBoard": "https://blackboard.durham.ac.uk/ultra/courses/_5402_1/outline/discussion/_685527_1?view=discussions&courseId=_5402_1",
-  "blackboard": "https://blackboard.durham.ac.uk/ultra/courses/_5402_1/outline",
+  "discussionBoard": "https://blackboard.durham.ac.uk/ultra/courses/_43451_1/outline/discussion/_851151_1?view=discussions&courseId=_43451_1",
+  "blackboard": "https://blackboard.durham.ac.uk/ultra/courses/_43451_1/outline/",
   "groupList": "https://docs.google.com/spreadsheets/d/1k1-IIILRZWNH5PuNZLF4YSzke9eNJ_AiO-T4f64lEbE/edit?usp=sharing",
-  "readingList": "https://rl.talis.com/3/durham/lists/719102AD-4B96-6917-9F03-5537497D5654.html",
+  "readingList": "https://rl.talis.com/3/durham/lists/4B349AEB-4D6B-CCC6-19DB-560AD8E1A68A.html",
 };
 
 for (const [aClass, aHref] of Object.entries(links)) {
