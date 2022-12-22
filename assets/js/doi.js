@@ -4,7 +4,7 @@ UpdateDoi = async function (ref) {
   const data = await Cite.async(doi);
   ref.firstChild.innerHTML = data.format('bibliography', {
       format: 'html', template: 'apa', lang: 'en-GB'
-    });
+    }).replace("&#38;amp;", "&");
 }
 
 $(document).ready(async function() {
