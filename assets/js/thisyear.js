@@ -1,4 +1,4 @@
-firstClass = new Date("2023-01-12");
+firstClass = new Date("2024-01-08");
 
 days = document.querySelectorAll("[day]");
 for (var i = 0; i != days.length; i++) {
@@ -15,10 +15,10 @@ for (var i = 0; i != weeks.length; i++) {
 }
 
 const links = {
-  "discussionBoard": "https://blackboard.durham.ac.uk/ultra/courses/_43451_1/outline/discussion/_851151_1?view=discussions&courseId=_43451_1",
-  "blackboard": "https://blackboard.durham.ac.uk/ultra/courses/_43451_1/outline/",
+  "discussionBoard": "https://blackboard.durham.ac.uk/ultra/courses/_53963_1/outline/discussion/_1678911_1?courseId=_53963_1",
+  "blackboard": "https://blackboard.durham.ac.uk/ultra/courses/_53963_1/outline/",
   "groupList": "https://docs.google.com/spreadsheets/d/1k1-IIILRZWNH5PuNZLF4YSzke9eNJ_AiO-T4f64lEbE/edit?usp=sharing",
-  "readingList": "https://rl.talis.com/3/durham/lists/4B349AEB-4D6B-CCC6-19DB-560AD8E1A68A.html",
+  "readingList": "https://rl.talis.com/3/durham/lists/4E54C64F-DBE1-5B97-B7CD-BB56DBB4A229.html",
 };
 
 for (const [aClass, aHref] of Object.entries(links)) {
