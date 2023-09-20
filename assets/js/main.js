@@ -1,3 +1,12 @@
+/* Footer addition */
+function FooterButton(liText, href, icon = '', label) {
+  return $('<li>' + liText + ' </li>')
+    .append($('<a href="' + href + '"></a>')
+    .addClass('icon solid ' + icon)
+    .append($('<span class="label">' + label + '</span>'))
+  );
+}
+
 /*
 	Tessellate by HTML5 UP
 	html5up.net | @ajlkn
@@ -30,7 +39,34 @@
       writeHere.placeholder = "Type your answer here. Clicking the question text will reveal the answer.";
       this.parentNode.insertBefore(writeHere, this);        
     })
+    
+    // Populate footer
+    let footer = document.getElementById('footer');
+    if (footer) {
+      let gotoIcons = document.createElement('ul')
+      $(gotoIcons).addClass('icons');
+      $(gotoIcons)
+        .append('<li>Go to:</li>')
+        .append(FooterButton('top', '#', 'fa-arrow-up', 'Top'))
+        .append(FooterButton('index', 'index.html', 'fa-bars', 'Index'))
+        .append(FooterButton('discussion', '', 'discussionBoard fa-comment', 'Discussion board'))
+        .append(FooterButton('encore', 'https://durham.cloud.panopto.eu/', 'fa-play', 'Encore'))
+        .append(FooterButton('blackboard', '', 'blackboard fa-university', 'Blackboard'))
+      ;
+      $(footer).prepend(gotoIcons);
+    }
 
+    let reading = document.getElementById('further-reading');
+    if (reading) {
+      let readingLinks = document.createElement('ul');
+      $(readingLinks).addClass('icons');
+      $(readingLinks)
+        .append(FooterButton('How to access articles', 'access-articles.html', 'fa-unlock', 'Access articles'))
+        .append(FooterButton('Course reading list', '', 'readingList fa-scroll', 'Reading list'))
+        ;
+      $(footer).prepend(readingLinks);
+    }
+    
 	// Scrolly.
 		$('.scrolly').scrolly();
 
