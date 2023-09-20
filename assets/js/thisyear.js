@@ -1,4 +1,5 @@
 firstClass = new Date("2024-01-08");
+essayDeadline = new Date("2024-04-29");
 
 days = document.querySelectorAll("[day]");
 for (var i = 0; i != days.length; i++) {

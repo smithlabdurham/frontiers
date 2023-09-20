@@ -150,12 +150,13 @@
                 </tbody>
               </table>
             </div>
-          </section>
-          <section>
             <div class="row">
+              <p>Essay submission deadline:
+                <strong id="essayDeadline">(...)</strong>
+              </p>
               <p>Meeting deadlines is your responsibility – please note them in your diaries today.</p>
             </div>
-          </section>            
+          </section>           
         </div>
       </div>
     </section>
@@ -299,6 +300,7 @@
       addRow(9,	"Peer presentations", [""], [""], [""], "Microsite presentation", "Oral presentation of complete microsite");
       addRow(10, "Surgery", [""], [""], [""], "Q&amp;A on group topics", "");
       
+      document.getElementById("essayDeadline").innerHTML = essayDeadline.toDateString();
       
       $(function() {
           $('a#showIntro').click(function () {
