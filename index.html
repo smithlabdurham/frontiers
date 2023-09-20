@@ -214,11 +214,14 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/thisyear.js"></script>
     <script>
-      timetable = document.getElementById('timetable');
-      addWidth = function(elem, wd) {
+      "use strict";
+      let timetable = document.getElementById('timetable');
+      
+      function addWidth(elem, wd) {
         elem.width = (wd * 100 / 12);
       }
-      addRow = function(i, topic,
+      
+      function addRow(i, topic,
         readingText, readingURL, readingImportance,
         exercise, task = "") {
         const row = document.createElement('tr');
@@ -244,17 +247,17 @@
           }
         }
         const xrcs = document.createElement('td');
-        xrc1 = document.createElement('p');
+        let xrc1 = document.createElement('p');
         xrc1.innerHTML = exercise;
         xrcs.appendChild(xrc1);
         if (task != "") {
-          xrc2 = document.createElement('p');
+          let xrc2 = document.createElement('p');
           xrc2.innerHTML = task;
           xrc2.classList.add('task');
           xrcs.appendChild(xrc2);
         }
         const dat = document.createElement('td');
-        rowDate = new Date(firstClass.valueOf());
+        let rowDate = new Date(firstClass.valueOf());
         rowDate.setDate(rowDate.getDate() + (7 * (i - 1)));
         dat.innerHTML = '<strong>Week ' + i + "</strong><br />" + rowDate.toDateString();
         addWidth(dat, 2);
@@ -267,6 +270,7 @@
         row.appendChild(xrcs);
         timetable.appendChild(row);
       }
+      
       addRow(1, "Introduction", ["Evolutionary trees: A primer", "Tree misinterpretations", "How to build a tree"],
         ["https://evolution.berkeley.edu/the-tree-room/evolutionary-trees-a-primer/",
         "https://evolution.berkeley.edu/the-tree-room/tree-misinterpretations/",
@@ -294,6 +298,7 @@
       addRow(8,	"Group project", [""], [""], [""], "Feedback on draft microsite from staff", "Bring draft microsite");
       addRow(9,	"Peer presentations", [""], [""], [""], "Microsite presentation", "Oral presentation of complete microsite");
       addRow(10, "Surgery", [""], [""], [""], "Q&amp;A on group topics", "");
+      
       
       $(function() {
           $('a#showIntro').click(function () {
