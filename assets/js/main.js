@@ -61,7 +61,7 @@ function FooterButton(liText, href, icon = '', label) {
       let readingLinks = document.createElement('ul');
       $(readingLinks).addClass('icons');
       $(readingLinks)
-        .append(FooterButton('How to access articles', 'access-articles.html', 'fa-unlock', 'Access articles'))
+        .append(FooterButton('How to access articles', 'https://smithlabdurham.github.io/GEOL2301/access-articles.html" ', 'fa-unlock', 'Access articles'))
         .append(FooterButton('Course reading list', '', 'readingList fa-scroll', 'Reading list'))
         ;
       $(footer).prepend(readingLinks);
