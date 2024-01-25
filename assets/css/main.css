@@ -60,6 +60,7 @@ img.right {
 	float: right;
 	clear: both;
 	border: 1px solid black;
+	margin-bottom: 1em;
 }
 
 blockquote, q {
