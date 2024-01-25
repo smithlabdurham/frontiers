@@ -333,10 +333,97 @@
 									title="Cut direct to page">[→]</a>.
 									This detailed information is only available for vertebrates.
 								</li>
+								<p>Now let's choose some taxa to study.</p>
 								<li>
-									Now let's choose some sequences
+									Type Marsupials into the "Enter taxonomic name" box and select
+									Marsupials (Metatheria) from the dropdown to filter results.
 								</li>
+								<li>
+									You should see half a dozen available sequences.
+									Note the taxa for which data are available (the common name
+									is given after the binomial epithet), and the length
+									of the gene sequences (in amino acids, aa);
+									some genes are different lengths.
+								</li>
+								<li>
+									Select four or five taxa and click “Add to cart”.
+									Prefer taxa that are included in one of the
+									"well-corroborated trees" figured by
+									<a href="https://academic.oup.com/view-large/figure/362010550/syab072f1.tif"
+									target="_blank">Asher & Smith (2023)</a> –
+									it will help to know something about the relationships
+									between your chosen taxa.
+								</li>
+								<li>
+									Clear the taxonomic name box and repeat for
+									placentals (Eutheria)
+								</li>
+								<li>
+									Now add both the avaialble species of monotreme to your cart.
+									The platypus and echidna will together form our outgroup.
+								</li>
+								<li>
+									Open your cart (trolley icon, should read e.g. “12 items”).
+								</li>
+								<li>
+									Select “Protein alignment → one sequence per gene”.
+								</li>
+								<li>
+									Click “Advanced parameters” (under the "Align" button").
+								</li>
+								<li class="question">Notice the gap opening penalties.
+									What do these mean?
+									Are the default values sensible?
+								</li>
+								<li>
+									Click "Align" to start computing an alignment.
+									This will take a few seconds as the algorithm tries to find
+									the best fit match of AA sequences.
+								</li>
+								<li class="question">
+									If the alignment is incorrect,
+									what will the consequences be for inference?
+								</li>
+								<li>
+									Observe the graphical overview of the alignment.
+									Note the highly conserved nature of the amino acid sequences.
+									Scroll down to see the aligned sequences themselves.
+								</li>
+								<li class="question">
+									The monotremes have more amino acids than other mammals.
+									Were these extra elements present in the common ancestor?
+								</li>
+								<p>
+									So far we've been aligning the amino acid sequences.
+									We could work backwards from this alignment to produce a
+									DNA alignment.  But we're instead going to use the mRNA
+									nucleotide sequences directly.
+								</p>
+								<li>
+									Close the COBALT alignment tool and return to your Cart.
+								</li>
+								<li>
+									Click "Download" → "RefSeq transcripts (FASTA)"
+									(one sequence per gene). This will download the mRNA
+									sequences.
+								</li>
+								<li>
+									Open the file in a text editor (I recommend
+									<a href="https://notepad-plus-plus.org/downloads/" title="Download Notepad++"
+									target="_blank">Notepad++</a>;
+									Apple users might prefer
+									<a href="https://zed.dev/" target="_blank" title="Zed editor">Zed</a>)
+								</li>
+								<li>
+									Perform a search & replace to replace spaces (<code> </code>)
+									with underscores (<code>_</code>).  Optionally,
+									also remove the sequence identifiers that prefix the
+									species names, but be sure to retain the initial <code>&gt;</code>
+									(e.g.
+									<code>&gt;NM_001035386.2 Bos taurus catalase (CAT), mRNA</code>
+									becomes <code>&gt;Bos taurus catalase (CAT), mRNA</code>
 
+								</li>
 							</ol>
 
 
