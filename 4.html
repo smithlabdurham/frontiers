@@ -49,7 +49,156 @@
         <div class="container">
           <div class="row">
             <div class="col-8 col-12-narrow">
-              <h3>Content to follow</h3>
+              <h3>How DNA makes proteins</h3>
+              <p>
+                DNA comprises a backbone of the sugar deoxyribose that holds
+                in place a series of nucleotide <strong>bases</strong>,
+                typically referred to by their initial letters:
+                adenine (A), cytosine (C), guanine (G) and thymine (T).
+              </p>
+              
+              <p>
+                A sequence of three bases forms a <strong>codon</strong>, which
+                encodes a specific amino acid.
+                Notice that the base in the third position of a codon is often
+                redundant – this base can often be changed without affecting
+                the translation.
+              </p>
+              <img src="images/clock/Codon-Chart-2.svg" />
+              
+              <p>
+                Some sections of DNA encode <strong>genes</strong>.
+                In animals, genes start with an <code>ATG</code> codon, and end 
+                with one of three "STOP" codons.
+                An enzyme, RNA polymerase, binds to the start codon (perhaps
+                with the help of transcription factors that bind to the DNA
+                sequence before the start of the gene) and makes
+                messenger RNA copies of the nucleotide sequence.
+              </p>
+              <p>
+                <strong>Ribosomes</strong> then bind to the start of the mRNA 
+                sequences and work their way along.
+                At each codon position, they bind the corresponding amino acid
+                to a growing chain.  When they reach the STOP codon at the end
+                of the mRNA sequence, the completed amino acid sequence folds
+                to form a protein, often with a complex three-dimensional
+                structure.
+              </p>
+              
+              <p>
+                Mutations cause changes to individual nucleotide bases within
+                a DNA sequence – or may cause bases to be added or lost.
+                What impact might mutations have on the resulting protein?
+              </p>
+              
+              <ul>
+                <li class="question" onclick="Reveal('mutate-base');">Changing an individual base</li>
+                <li class="bulb">Think about the specific codons <code>TTG</code> and <code>TGT</code></li>
+                <li class="hidden written answer" id="mutate-base">
+                  <p>If the base is in the third codon position, often there will be no effect.
+                  Some first-position changes have no effect, too.
+                  </p><p>
+                  Changes in the second position usually change the amino acid. 
+                  Amino acids with similar chemical properties often share similar codes – 
+                  but a change in an amino acid in the active site of an enzyme could
+                  render the protien non-functional.
+                  </p><p>
+                  Cystine (Cys) contains sulfur and forms strong S-S bonds that often 
+                  control how a protein folds; removing these structural elements may be
+                  more catastrophic than swapping two amino acids with similar chemistry.
+                  </p>
+                </li>
+                <li class="question" onclick="Reveal('add-base');">Adding a new base</li>
+                <li class="hidden written answer" id="add-base">
+                  This will shift the reading frame; every codon after the insertion will encode a different amino acid.
+                  This is likely disastrous for the protein, as the sequence of amino acids will be essentially random.
+                </li>
+                <li class="question" onclick="Reveal('lose-bases');">Losing a series of bases</li>
+                <li class="hidden written answer" id="lose-bases">If the number of bases lost is a multiple of three, the odds of a functional output are higher, as the reading frame is not shifted.</li>
+              </ul>
+              
+              <p>
+                Deleterious mutations – those that decrease the fitness of an 
+                individual – are unlikely to persist in the gene pool.
+                Hence the rate at which (germ line) mutations occur is higher
+                than the rate at which <em>persistent</em> mutations are added
+                to the gene pool of a population or species.
+              </p>
+              
+              <p>
+                If this latter rate is approximately uniform over time, we might
+                in principle use it to deduce how recently two lineages diverged.
+              </p>
+              
+              <ul>
+                <li class="question" onclick="Reveal('mol-calc');">
+                  Assume that one mutation modifies a particular gene's sequence
+                  every million years.  Two species have sequences that
+                  differ in 50 places.  Based on a quick calculation, estimate 
+                  how many years may have elapsed since their last common ancestor.
+                </li>
+                <li class="bulb">It may help to draw a simple phylogenetic tree</li>
+                <li class="hidden written answer" id="mol-calc">
+                  <p>
+                  A good first guess might be 25&nbsp;million years.
+                  The two species each followed separate evolutionary pathways
+                  for 25&nbsp;Ma; the <strong>ancestral</strong> sequence would
+                  differ from each living descendant in 25 places.
+                  </p>
+                </li>
+                <li class="question" onclick="Reveal('mol-more');">
+                  Why might the true divergence date be higher than a simple
+                  calculation would suggest?
+                </li>
+                <li class="bulb">
+                  Consider a case where the common ancestor had an
+                  <code>A</code> at a specific position.
+                  Think of scenarios where mutations may have occurred, but
+                  not be observable based on the sequences available.
+                </li>
+                <li class="hidden written answer" id="mol-more">
+                  <p>
+                    If our ancestor has <code>A</code>:
+                    <ul>
+                      <li>
+                        One descendant may have mutated to <code>C</code>,
+                        then mutated again to <code>G</code>.
+                        We'd count one mutation where two had occurred.
+                      </li>
+                      <li>
+                        One descendant may have mutated to <code>C</code>,
+                        then mutated again to the original <code>A</code>.
+                        We'd count no mutations, where two had occurred.
+                      </li>
+                      <li>
+                        One descendant might have mutated to <code>C</code>,
+                        the other to <code>G</code>.
+                        We'd count one mutation where two had occurred.
+                      </li>
+                      <li>
+                        Both descendants might have mutated to <code>C</code>.
+                        We'd count no mutations, where two had occurred.
+                      </li>
+                    </ul>
+                  </p>
+                </li>
+
+                <li class="question" onclick="Reveal('mol-const');">
+                  How confident do you feel that we can assume a single, constant
+                  mutation rate across all taxa?
+                </li>
+                <li class="hidden written answer" id="mol-const">
+                  Many factors might work against this – population size; 
+                  generation time (i.e. opportunities for mutations to occur);
+                  plasticity of organisms; whether taxa are generalists or specialists
+                  (likelihood that deleterious mutations might be overcome);
+                  mass extinctions or evolutionary radiations 
+                  (new opportunities may change selection constraints).
+                </li>
+              </ul>
+              <h3>Under construction</h3>
+              <p>The rest of this content is on its way.</p>
+              
               <p>Meanwhile, you might find a primer on 
               <a href="https://www.nature.com/scitable/topicpage/the-molecular-clock-and-estimating-species-divergence-41971/" target="_blank">molecular clocks</a>
               useful.
@@ -91,5 +240,14 @@
         </ul>
       </div>
     </section>
+    
+		<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script defer src="assets/js/thisyear.js"></script>
+    <script defer src="assets/js/main.js"></script>
 	</body>
 </html>
