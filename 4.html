@@ -33,33 +33,33 @@
         <a href="#first" class="button scrolly">Begin</a>
       </footer>
     </section>
-    
-    
+
+
     <!-- First -->
     <section id="first" class="main">
       <header>
         <div class="container">
           <h2>Molecular clocks</h2>
           <p>
-            This week we&rsquo;ll explore the journey from DNA sequences to 
+            This week we&rsquo;ll explore the journey from DNA sequences to
             dated phylogenies by performing our own molecular clock analyses.
           </p>
           <p>
             Before you start, download and unpack
             <a href="https://www.beast2.org/" target="_blank" title="Download BEAST">BEAST2</a>,
             <a href="https://github.com/beast-dev/tracer/releases/tag/v1.7.2" title="Download Tracer" target="_blank">Tracer</a>,
-            and (Windows users only) 
+            and (Windows users only)
             <a href="https://www.java.com/en/" target="_blank" title="Download Java Runtime Environment">Java</a>.
             <br />
             (For Tracer, Look under “Assets” for the release appropriate to your computer:
-            Windows = <code>Tracer.zip</code>; Mac = <code>.dmg</code>)  
-          </p>            
+            Windows = <code>Tracer.zip</code>; Mac = <code>.dmg</code>)
+          </p>
         </div>
       </header>
       <div class="content dark style1 featured">
         <div class="container">
           <div class="row">
-            <div class="col-4 col-12-narrow">              
+            <div class="col-4 col-12-narrow">
               <span class="feature-icon"><span class="icon solid fa-dice-one"></span></span>
               <p>Understand what controls the accumulation of mutations in species&rsquo; DNA</p>
             </div>
@@ -80,7 +80,7 @@
         </div>
       </div>
     </section>
-    
+
   <!-- Second -->
     <section id="second" class="main">
       <header>
@@ -97,12 +97,13 @@
             <div class="col-8 col-12-narrow">
               <h3>How DNA makes proteins</h3>
               <p>
-                DNA comprises a backbone of the sugar deoxyribose that holds
+                DNA, bundled in the chromosomes within the nucleus of each cell,
+                comprises a backbone of the sugar deoxyribose that holds
                 in place a series of nucleotide <strong>bases</strong>,
                 typically referred to by their initial letters:
                 adenine (A), cytosine (C), guanine (G) and thymine (T).
               </p>
-              
+
               <p>
                 A sequence of three bases forms a <strong>codon</strong>, which
                 encodes a specific amino acid.
@@ -111,10 +112,10 @@
                 the translation.
               </p>
               <img src="images/clock/Codon-Chart-2.svg" />
-              
+
               <p>
                 Some sections of DNA encode <strong>genes</strong>.
-                In animals, genes start with an <code>ATG</code> codon, and end 
+                In animals, genes start with an <code>ATG</code> codon, and end
                 with one of three "STOP" codons.
                 An enzyme, RNA polymerase, binds to the start codon (perhaps
                 with the help of transcription factors that bind to the DNA
@@ -122,7 +123,7 @@
                 messenger RNA copies of the nucleotide sequence.
               </p>
               <p>
-                <strong>Ribosomes</strong> then bind to the start of the mRNA 
+                <strong>Ribosomes</strong> then bind to the start of the mRNA
                 sequences and work their way along.
                 At each codon position, they bind the corresponding amino acid
                 to a growing chain.  When they reach the STOP codon at the end
@@ -130,13 +131,13 @@
                 to form a protein, often with a complex three-dimensional
                 structure.
               </p>
-              
+
               <p>
                 Mutations cause changes to individual nucleotide bases within
                 a DNA sequence – or may cause bases to be added or lost.
                 What impact might mutations have on the resulting protein?
               </p>
-              
+
               <ul>
                 <li class="question" onclick="Reveal('mutate-base');">Changing an individual base</li>
                 <li class="bulb">Think about the specific codons <code>TTG</code> and <code>TGT</code></li>
@@ -144,12 +145,12 @@
                   <p>If the base is in the third codon position, often there will be no effect.
                   Some first-position changes have no effect, too.
                   </p><p>
-                  Changes in the second position usually change the amino acid. 
-                  Amino acids with similar chemical properties often share similar codes – 
+                  Changes in the second position usually change the amino acid.
+                  Amino acids with similar chemical properties often share similar codes –
                   but a change in an amino acid in the active site of an enzyme could
                   render the protien non-functional.
                   </p><p>
-                  Cystine (Cys) contains sulfur and forms strong S-S bonds that often 
+                  Cystine (Cys) contains sulfur and forms strong S-S bonds that often
                   control how a protein folds; removing these structural elements may be
                   more catastrophic than swapping two amino acids with similar chemistry.
                   </p>
@@ -162,25 +163,25 @@
                 <li class="question" onclick="Reveal('lose-bases');">Losing a series of bases</li>
                 <li class="hidden written answer" id="lose-bases">If the number of bases lost is a multiple of three, the odds of a functional output are higher, as the reading frame is not shifted.</li>
               </ul>
-              
+
               <p>
-                Deleterious mutations – those that decrease the fitness of an 
+                Deleterious mutations – those that decrease the fitness of an
                 individual – are unlikely to persist in the gene pool.
                 Hence the rate at which (germ line) mutations occur is higher
                 than the rate at which <em>persistent</em> mutations are added
                 to the gene pool of a population or species.
               </p>
-              
+
               <p>
                 If this latter rate is approximately uniform over time, we might
                 in principle use it to deduce how recently two lineages diverged.
               </p>
-              
+
               <ul>
                 <li class="question" onclick="Reveal('mol-calc');">
                   Assume that one mutation modifies a particular gene's sequence
                   every million years.  Two species have sequences that
-                  differ in 50 places.  Based on a quick calculation, estimate 
+                  differ in 50 places.  Based on a quick calculation, estimate
                   how many years may have elapsed since their last common ancestor.
                 </li>
                 <li class="bulb">It may help to draw a simple phylogenetic tree</li>
@@ -234,11 +235,11 @@
                   mutation rate across all taxa?
                 </li>
                 <li class="hidden written answer" id="mol-const">
-                  Many factors might work against this – population size; 
+                  Many factors might work against this – population size;
                   generation time (i.e. opportunities for mutations to occur);
                   plasticity of organisms; whether taxa are generalists or specialists
                   (likelihood that deleterious mutations might be overcome);
-                  mass extinctions or evolutionary radiations 
+                  mass extinctions or evolutionary radiations
                   (new opportunities may change selection constraints).
                 </li>
               </ul>
@@ -247,7 +248,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Third -->
     <section id="third" class="main">
       <header>
@@ -262,11 +263,61 @@
         <div class="container">
           <div class="row">
             <div class="col-8 col-12-narrow">
-              
+              <h3>Objectives</h3>
+              <p>
+                We will conduct a simple molecular clock to estimate the timing
+                of mammal origins, using sequences of the gene catalase –
+                a core cellular enzyme responsible for breaking down the
+                "free radical" (oxidative stressor) hydrogen peroxide
+                (H<sub>2</sub>O<sub>2</sub>) to water and oxygen.
+              </p>
+              <p>
+                We will collect gene sequences from some representative mammals,
+                consider appropriate callibration points, and explore the
+                sensitivity of our analysis to our assumptions.
+              </p>
+
+              <h3>Obtaining DNA sequences</h3>
+              <p>
+                We will download sequences of the catalase gene from the
+                <acronym title="National Center for Biotechnology information">NCBI</acronym>,
+                a database covering the majority of DNA sequences that have been
+                collected.
+              </p>
+              <ol>
+                <li>
+                  Head to <a href="https://www.ncbi.nlm.nih.gov/gene" target="_blank" title="NCBI gene search">
+                https://www.ncbi.nlm.nih.gov/gene</a>.
+                </li>
+                <li>
+                  Type <code>catalase</code> into the search (<code>Gene</code>) box
+                </li>
+                <li>Click "Search"</li>
+								<img class="right" src="images/clock/results-by-taxon.png" />
+                <li>
+                  Under "Results by Taxon",
+									“Top Organisms” displays numbers of sequences from specific taxa.
+									click "Tree" to display taxa grouped phylogenetically.
+                </li>
+								<li>
+									Expand animals → chordates → vertebrates → mammals to view
+									all available gene sequences.  Notice the taxa for which
+									data is available.
+								</li>
+								<img class="right" src="images/clock/gene-id-cat.png" />
+								<li>
+									Find a taxon of your choice with the gene ID "CAT" and
+									click the gene ID.
+
+								</li>
+              </ol>
+
+
+
               <h3>Under construction</h3>
               <p>The rest of this content is on its way.</p>
-              
-              <p>Meanwhile, you might find a primer on 
+
+              <p>Meanwhile, you might find a primer on
               <a href="https://www.nature.com/scitable/topicpage/the-molecular-clock-and-estimating-species-divergence-41971/" target="_blank">molecular clocks</a>
               useful.
               </p>
@@ -276,7 +327,7 @@
       </div>
     </section>
 
-    <section id="q-and-a" class="main">
+    <!--section id="q-and-a" class="main">
       <header>
         <div class="container">
           <span class="feature-icon">
@@ -295,7 +346,7 @@
                   height="100%" width="100%" style="min-height: 560px;">Loading…</iframe>
         </div>
       </div>
-    </section>
+    </section-->
 
 		<!-- Footer -->
     <section id="footer">
@@ -307,7 +358,7 @@
         </ul>
       </div>
     </section>
-    
+
 		<!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
