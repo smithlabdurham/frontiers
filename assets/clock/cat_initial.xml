@@ -106,6 +106,8 @@ name="alignment">
             <parameter id="birthRateY.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
                     
             <parameter id="clockRate.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+                    
+            <parameter id="kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="parameter.RealParameter" lower="0.0" name="stateNode">2.0</parameter>
                 
         </state>
             
@@ -134,6 +136,18 @@ name="alignment">
                 <prior id="ClockPrior.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" name="distribution" x="@clockRate.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa">
                                     
                     <Uniform id="Uniform.0" name="distr" upper="Infinity"/>
+                                
+                </prior>
+                            
+                <prior id="KappaPrior.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" name="distribution" x="@kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa">
+                                    
+                    <LogNormal id="LogNormalDistributionModel.0" name="distr">
+                                            
+                        <parameter id="RealParameter.0" spec="parameter.RealParameter" estimate="false" name="M">1.0</parameter>
+                                            
+                        <parameter id="RealParameter.1" spec="parameter.RealParameter" estimate="false" name="S">1.25</parameter>
+                                        
+                    </LogNormal>
                                 
                 </prior>
                             
@@ -264,6 +278,8 @@ name="alignment">
                 <transformations id="AVMNLogTransform.CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="operator.kernel.Transform$LogTransform">
                                     
                     <f idref="clockRate.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                                    
+                    <f idref="kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
                                 
                 </transformations>
                             
@@ -297,6 +313,16 @@ name="alignment">
                 
         </operator>
             
+        <operator id="KappaScaler.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="AdaptableOperatorSampler" weight="0.05">
+                    
+            <parameter idref="kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                    
+            <operator idref="AVMNOperator.CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                    
+            <operator id="KappaScalerX.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="kernel.BactrianScaleOperator" parameter="@kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" scaleFactor="0.1" upper="10.0" weight="0.1"/>
+                
+        </operator>
+            
         <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="1000" model="@posterior" sanitiseHeaders="true" sort="smart">
                     
             <log idref="posterior"/>
@@ -313,7 +339,11 @@ name="alignment">
                                             
                         <parameter id="proportionInvariant.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                                             
-                        <substModel id="JC69.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="JukesCantor"/>
+                        <substModel id="hky.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="HKY" kappa="@kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa">
+                                                    
+                            <frequencies id="empiricalFreqs.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="Frequencies" data="@CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                                                
+                        </substModel>
                                         
                     </siteModel>
                                     
@@ -342,6 +372,8 @@ name="alignment">
             <log idref="Eutheria.prior"/>
                     
             <log idref="clockRate.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                    
+            <log idref="kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
                 
         </logger>
             
