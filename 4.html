@@ -350,7 +350,7 @@
 									Prefer taxa that are included in one of the
 									"well-corroborated trees" figured by
 									<a href="https://academic.oup.com/view-large/figure/362010550/syab072f1.tif"
-									target="_blank">Asher & Smith (2023)</a> –
+									target="_blank">Asher &amp; Smith (2023)</a> –
 									it will help to know something about the relationships
 									between your chosen taxa.
 								</li>
@@ -430,7 +430,9 @@
 										</li>
 									</ul>
 								</li>
-								<p>Now we are ready to align our nucleotide sequences.</p>
+							<h3>Aligning DNA sequences</h3>
+							<p>Now we are ready to align our nucleotide sequences.</p>
+
 								<li>
 									Open the <a href="https://www.ebi.ac.uk/jdispatcher/msa/muscle"
 									title="MUSCLE multiple sequence alignment" target="_blank">
@@ -450,18 +452,226 @@
 									Under "Parameters", select "Output Format: Pearson/FASTA".
 								</li>
 								<li>
-									Optionally, give your job a name
-								</li>
-								<li>
 									Click "Submit" and wait for your results to be ready.
 								</li>
 								<li>
 									Explore your alignment; zoom and drag using the axis.
 								</li>
 								<img src="images/clock/muscle-alignment.png" />
+								<li>
+									Notice that the MUSCLE algorithm aligns the sequences assuming
+									a phylogenetic explanation for differences; it thus generates
+									an <strong>unrooted</strong> phylogenetic tree as part of
+									finding the best alignment.
+								</li>
+								<li class="question">
+									How would the tree look different if a root was specified?
+								</li>
+								<li class="question">
+									How do the relationships in your tree compare to those in the
+									<a href="https://academic.oup.com/view-large/figure/362010550/syab072f1.tif"
+									target="_blank">well-corroborated trees</a>?
+								</li>
+								<li>
+									Download the results in FASTA format by heading to "Tool Output→Download".
+									<ul>
+										<li>
+											If that doesn't work, try "Result Files→Alignment in FASTA format"
+										</li>
+										<li>
+											If necessary, use my
+											<a href="assets/clock/cat_aligned.fasta">sample output file</a>.
+										</li>
+									</ul>
+								</li>
+								<li>
+									Rename the file so it has a <code>.fasta</code> extension
+									(replacing the default <code>.txt</code>).
+									<ul>
+										<li class="bulb">
+											Stuck?
+											Try asking e.g.
+											 <a href="https://bard.google.com/" target="_blank">Bard</a>,
+											<a href="https://chat.openai.com/" target="_blank">ChatGPT</a>
+											 "How do I change a file extension in Windows 10?"
 
-Results files: Alignment in FASTA format → Download
-</li>
+											 Generative AI often gets to the point faster than top-ranked
+											 <a href="https://www.indeed.com/career-advice/career-development/how-to-change-file-type" target="_blank" rel="nofollow">search results</a>,
+											 which are often bloated with
+											 <acronym title="Search Engine Optimization">SEO</acronym>
+											 blather.
+										 </li>
+									 </ul>
+								</li>
+								<h3>Designing a molecular clock analysis</h3>
+								<li>
+									If you haven't already done so,
+									download BEAST2 and unzip the contents to a folder on your computer.
+								</li>
+								<li>
+									Navigate to this folder and run "BEAUti".
+									You may need to approve a security prompt.
+								</li>
+								<li>
+									Import your alignment file using "File→Import alignment"
+									<ul>
+										<li class="bulb">
+											If you see "Unsupported alignment",
+										  check that you changed the file extension to <code>.fasta</code>
+										</li>
+								  </ul>
+								</li>
+								<img src="images/clock/beauti-import.png" />
+								<li>Confirm that the data type is "nucleotide"</li>
+								<li>
+									Open the "Priors" tab and update the "Tree.t" prior from
+									"Yule Model" to "Calibrated Yule Model"
+								</li>
+								<li>
+									Save your progress (File → Save)
+								</li>
+								<li>
+									At the bottom of the "Priors" tab, click "+ Add Prior".
+								</li>
+								<p>We are going to constrain the age of the common ancestor of a clade.
+									Our prior allows us to set a probability distribution on the
+									date of the most recent common ancestor
+									(<acronym title="most recent common ancestor">MRCA</acronym>)
+									of a set of taxa.
+								<li>
+									Select "MRCA Prior".
+									<ul><li class="bulb"><strong>Be careful!</strong>
+									Priors cannot be deleted – if you select the wrong one,
+									you'll have to start again from your last save file (!)
+								</li></ul>
+								</li>
+								<li>
+									Select the taxa in the group you wish to constrain.
+									We'll start with the monotremes, <i>Ornithorhynchus</i> and
+									<i>Tachyglossus</i>.  Move these taxa to the right-hand
+									list (by pressing "&gt;&gt;").
+								</li>
+								<li>
+									Enter "Monotremes" as a taxon set label
+								</li>
+								<li>
+									Click "OK".
+								</li>
+								<p>
+									The prior should now appear on your "Priors" tab.
+									At the moment it is an "empty" prior and will not affect
+									the analysis.
+								</p>
+								<li>
+									Tick the "Monophyletic" checkbox. This forces these taxa
+									to form a clade – and allows us to constrain the date of
+									the clade's MRCA.
+								</li>
+								<li>
+									Choose a prior from the the "[none]" drop-down box.
+									A "Gamma" prior is probably appropriate here.
+								</li>
+								<li>
+									Select the &#x25B6; button to expand the prior.
+									Specify appropriate values for the "Alpha", "Beta" and
+									"Offset" parameters.
+								</li>
+								<img src="images/clock/monotreme-prior.png" />
+								<h4>Specifying a prior</h4>
+								<p>
+									This is a good point to ask what an appropriate prior
+									distribution might look like.
+									Bayesian priors attempt to encapuslate our prior beliefs,
+									i.e. what we think we know before we run the analysis.
+								</p>
+								<p>
+									At this point you probably don't have much prior
+									knowledge about monotreme origination.  But such information
+									is seldom far away; a Google Scholar search for
+									“<a href="https://scholar.google.co.uk/scholar?q=Oldest+monotreme" target="_blank">
+									Oldest monotreme</a>” throws up a 2008 PNAS article
+									(fourth result for me)
+									“<a href="https://dx.doi.org/10.1073/pnas.0706385105" title="The oldest platypus and its bearing on divergence timing
+									of the platypus and echidna clades" target="_blanks">
+									The oldest platypus and its bearing on divergence timing
+									of the platypus and echidna clades</a>”.
+								</p>
+								<p>
+									This study is perfect for our needs:
+									it reports a total-group platypus, which is by definition a
+									crown-group member of the clade we have constrained
+									(strictly, Platypus + Echidna – there may be other crown-group
+									monotremes not included in our analysis).
+									This fossil is dated to 121–112.5&nbsp;Ma, so the MRCA of
+									platypus and echidna <strong>must</strong> be older than 112.5&nbsp;Ma;
+									this gives us a value for our "Offset" parameter.
+								</p>
+								<p>
+									The other parameters are more subjective.
+									This this is a rather derived fossil and
+									(based on the PNAS abstract and the snippets in the other Google Scholar results)
+									the fossil record of monotremes seems to be quite sparse,
+									so I think it’s quite likely that there are older fossils
+									remaining to be discovered – it would be surprising if the
+									only relevant fossil we'd found was so close in time to the MRCA.
+								</p>
+								<p>
+									The Beta parameter allows us to scale ("stretch") the distribution.
+									The default value of 2 seems too small for me;
+									our default priors assign a 95% probability to the MRCA
+									being younger than 122&nbsp;Ma (see the Quantile report under
+									the curve visualization), but our dating uncertainty on the
+									fossil itself spreads back to 121&nbsp;Ma.
+									Let's try a larger value: perhaps 200?
+								</p>
+								<p>
+									Does this prior look reasonable?  Check the shape of the
+									curve and its summary statistics.
+									The very earliest stem-group mammal fossils are ~320&nbsp;Ma,
+									so it's highly unlikely that the
+									platupus-echidna MRCA dates back that far –
+									The mammal crown group is probably not older than
+									Morganucodonts, late Triassic (205&nbsp;Ma) upper-stem Mammals,
+									so we probably don’t want a prior that assigns much probability
+									to ages older than 205&nbsp;Ma for our monotreme divergence node.
+									Perhaps a Beta value of 20 looks more reasonable?
+								</p>
+								<p>
+									We should also consider that the fossil is quite derived,
+									and that the ~30&nbsp;Ma gap to the second-oldest platypus
+									fossil suggests that the monotreme fossil record is rather
+									incomplete.
+									These considerations can be reflected in our Alpha parameter.
+									Compare values of 1 and 10 to get a feeling for how
+									this parameter changes the shape of the probability
+									distribution.
+									If we felt it was likely that our constraining fossil was
+									very close to the date of the MRCA, we might pick a small
+									value of alpha; in this case, I am inclined to opt for a
+									larger value of Alpha, which increases the mean of the
+									distribution – simply put, it moves the "hump" of the
+									distribution further back in time.
+								</p>
+								<p>
+									Increasing Alpha also extends the tail of the distribution,
+									so Beta will need adjusting accordingly: I'm happy with values
+									of Alpha = 3; Beta = 10; Offset = 112.5.
+								</p>
+								<p>
+									A vertebrate palaeontologist with a better understanding
+									of platypus morphology and mammal taphonomy would no doubt
+									come up with a different set of values.
+									If we have lots of informative data, we hope that the signal
+									will outweigh the prior: we update our beliefs in light
+									of new evidence.
+								  But if our data are not particularly informative, we might
+									find that our results simply echo our priors back to us:
+									in which case, justifying the precise shape of our prior
+									distribution becomes even more important.
+								</p>
+
+
+
 
 							</ol>
 
