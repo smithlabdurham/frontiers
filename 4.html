@@ -762,8 +762,41 @@
 								<li>
 									Note the Estimated Sample Size for each parameter.
 									This is an indication of how well the range of possible values
-									has been explored; values &lt; 200 are not likely to be
-									statistically robust estimates.
+									has been explored; values &lt; 200 indicate that reconstructed
+									values are unlikely to be statistically robust.
+								</li>
+								<li>
+									Click on the "likelihood" Statistic in the Traces: list.
+									Select the "Trace" tab and untick "Draw line plot"
+									to view the likelihood of successive samples.
+								</li>
+								<img src="assets/clock/tracer-likelihood.png" />
+								<p>
+									When a run has converged on the posterior distribution,
+									the samples should plateau to form a cloud about a steady
+									likelihood value – they are often sampling likely parameter
+									values, and sampling unlikely values in proportion to their
+									probability.
+								</p><p>
+									The low values early in this run suggest that it took a
+									while for the run to converge on a sensible set of parameters.
+									These early results should be "burned off" and ignored,
+									or they will skew the sample; the simplest solution
+									is to run the chain for longer, which will also increase our
+									sample size.
+								</p>
+								<li>
+									Return to BEAUti and increase the MCMC Chain Length.
+									2&nbsp;000&nbsp;000 should be enough.
+								</li>
+								<li>
+									Save the BEAUti configuration. Use the same filename.
+								</li>
+								<li>
+									Launch BEAST, select your file, and change from "default" to
+									 "resume" to append the new steps to your previous chain.
+								 </li>
+
 
 							</ol>
 
