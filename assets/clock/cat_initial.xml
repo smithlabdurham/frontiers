@@ -156,15 +156,15 @@
                                             
                         <taxon id="Felis_catus" spec="Taxon"/>
                                             
+                        <taxon id="Heterocephalus_glaber" spec="Taxon"/>
+                                            
                         <taxon id="Lutra_lutra" spec="Taxon"/>
+                                            
+                        <taxon id="Manis_pentadactyla" spec="Taxon"/>
                                             
                         <taxon id="Phascolarctos_cinereus" spec="Taxon"/>
                                             
                         <taxon id="Rattus_norvegicus" spec="Taxon"/>
-                                            
-                        <taxon id="Heterocephalus_glaber" spec="Taxon"/>
-                                            
-                        <taxon id="Manis_pentadactyla" spec="Taxon"/>
                                         
                     </taxonset>
                                 
@@ -194,9 +194,9 @@
                                     
                     <taxonset id="Rodentia" spec="TaxonSet">
                                             
-                        <taxon idref="Rattus_norvegicus"/>
-                                            
                         <taxon idref="Heterocephalus_glaber"/>
+                                            
+                        <taxon idref="Rattus_norvegicus"/>
                                         
                     </taxonset>
                                     
