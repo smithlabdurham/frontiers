@@ -162,6 +162,8 @@ name="alignment">
                         <taxon id="Sarcophilus_harrisii" spec="Taxon"/>
                                             
                         <taxon id="Vombatus_ursinus" spec="Taxon"/>
+                                            
+                        <taxon id="Phascolarctos_cinereus" spec="Taxon"/>
                                         
                     </taxonset>
                                 
@@ -195,15 +197,13 @@ name="alignment">
                                             
                         <taxon id="Felis_catus" spec="Taxon"/>
                                             
+                        <taxon id="Heterocephalus_glaber" spec="Taxon"/>
+                                            
                         <taxon id="Lutra_lutra" spec="Taxon"/>
                                             
                         <taxon id="Manis_pentadactyla_catalase_(CAT),_transcript_variant_X1,_mRNA" spec="Taxon"/>
                                             
-                        <taxon id="Phascolarctos_cinereus" spec="Taxon"/>
-                                            
                         <taxon id="Rattus_norvegicus" spec="Taxon"/>
-                                            
-                        <taxon id="Heterocephalus_glaber" spec="Taxon"/>
                                         
                     </taxonset>
                                 
