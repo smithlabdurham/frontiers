@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.base.evolution.alignment:beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.evolution.tree.coalescent:beast.pkgmgmt:beast.base.core:beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood" required="BEAST.base v2.7.6" version="2.7">
         
 
-    <data
-id="CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"
-spec="Alignment"
-name="alignment">
+    <data id="cat_aligned" spec="Alignment" name="alignment">
                             
         <sequence id="seq_Canis_lupus_familiaris" spec="Sequence" taxon="Canis_lupus_familiaris" totalcount="4" value="---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------GGCAACATGGCGGACAGCCGGGACCCAGCCAGCGACCAGATGAAGCTCTGGAAGGAGCAGCGCGCCGCGCAGAAACCTGATGTCCTGACCACCGGGGGCGGTAATCCAATAGGAGACAAACTTAATGTGATGACAGCAGGGCCTCGGGGGCCCCTTCTTGTTCAGGATGTGGTTTTCACTGATGAAATGGCTCACTTTGACCGGGAGAGAATCCCTGAGAGAGTCGTGCACGCTAAAGGAGCAGGGGCTTTTGGCTACTTCGAGGTCACACATGACATTACCAAATACTCCAAAGCAAAGGTGTTTGAGCATATTGGAAAGAGGACCCCCATTGCAGTTCGATTCTCCACTGTTGCTGGAGAATCAGGCTCGGCTGACACAGTTCGTGACCCTCGTGGGTTTGCAGTGAAATTTTACACAGAGGATGGTAATTGGGATCTTGTTGGAAATAACACCCCCATTTTCTTCATCAGAGATGCCATATTGTTTCCGTCCTTTATCCATAGTCAAAAGAGAAACCCTCAAACACACCTGAAGGATCCGGACATGGTCTGGGACTTCTGGAGCCTGCGCCCTGAGTCTCTGCACCAGGTTTCCTTCTTGTTCAGTGATCGAGGGATTCCAGATGGACACAGGCACATGAATGGATATGGATCACATACTTTTAAGCTGGTTAATGCAGCGGGAGAGGCGGTTTATTGCAAATTCCATTATAAGACTGACCAGGGCATCAAAAACCTTTCTGTTGAAGACGCAGCAAGACTTTCTCATGAAGATCCTGACTACGGCCTCCGGGATCTTTTCAATGCCATTGCCACAGGCAACTACCCCTCCTGGACATTTTATATCCAAGTCATGACTTTTAGTCAGGCAGAAACTTTTCCATTCAATCCATTTGATCTTACCAAGATTTGGCCTCACCAAGACTACCCTCTTATCCCAGTTGGTAAACTGGTCTTAAACCGGAATCCAGTTAATTACTTCGCTGAGGTTGAACAGATGGCATTTGACCCAAGCAACATGCCACCTGGCATTGAGCCCAGCCCTGACAAAATGCTTCAGGGTCGTCTTTTTGCCTATCCTGACACTCACCGCCACCGCCTGGGACCCAACTATCTTCAGATACCTGTGAACTGTCCTTTCCGGGCTCGAGTGGCCAACTACCAACGGGATGGCCCCATGTGCATGCTCGACAATCAGGGTGGTGCTCCAAATTACTACCCCAATAGCTTTAGTGCTCCTGAACAACAGCGTTGTGTCCTAGAGCATAGCAGCCAATGTTCGCCAGATGTGCAGCGCTTCAACAGTGCCAATGAAGATAATGTCACTCAGGTGCGGACCTTCTATTTGAAGGTACTTGGTGAAGAGGAGAGGAAACGCCTGTGCGAGAACATTGCTGGCCATCTGAAGGACGCACAACTTTTCATCCAGAAGAAAGCGGTCAAGAACTTCAGTGATGTCCACCCTGACTACGGGGCCCGCATTCAGGCTCTTTTGGACAAATACAATGCTGAGAAACCTA---AGAACGCGATTCACACCTTTATGCAGCATGGGTCTCACCTGGCTGCCAGGGAAAAAGCCAATCTGTGAG--------------------AGTCGTGCCCCAGGTTGCTCTCCACCTGTGAAGCAAAGCGTGGTGTTCGCACACGTACCCACCCTTCGCTGGATA-GAAGATT----CTCCTGTGCTAGGTGCGCAGATGCAAGCTTACGCCTTTAAA---ATAAGCCAGGTTTCTATCGCAAGT--------AATGTAGCAGTGGCTTTTAATGCTATT--------------------------------TCCCTAGGGGGAAG-------------------TAAGGGTAGGGCTTAA-CAATGATATAAAAGAAA-ATGTATTTGCTTTTGGCAGTGGGTTGGATTATTCACTTA---AAATG-ACTAGAATGAAAG-TTTCTGG-CAGAA---ATATGATTTTATTTGATAAG-------ATAAAGTCTTGGTGAAATTAGTAT-GTTTATATATAT----CATCTCATGGCCTTATTAAATA-AAAGTGTGG---------------------------------------------------------------------------------CTGTAATTATGTAAGA-----------------------------------------------------------------------------------------------------------------------------------AGAAAAGATGA-----------------------TCTACCCAGAAATTTA--------------------------------------------------------------------------------------------------AATTTTT----------CTCAGTTCCATATGGGAAAAACA--CATTTAATGCATTGATGTCTTTT-GAAAATAACTTCAGTGACATCA---TAGCTTAATGC-TTATTCCTGCCTGGAATTGATCAG-------ATTTTTTTAAAACCTGGAATTACATTCATGCTA-----ATATAGCATTGATTTTA--CAACAGACTGATTTGTAACTGC-TACAT-TTTTACAATAAAATAATCTGTAC----------------------------------------------------------------------------------------------------------------------------"/>
                             
@@ -93,29 +90,29 @@ name="alignment">
             
         <state id="state" spec="State" storeEvery="5000">
                     
-            <tree id="Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="beast.base.evolution.tree.Tree" name="stateNode">
+            <tree id="Tree.t:cat_aligned" spec="beast.base.evolution.tree.Tree" name="stateNode">
                             
-                <taxonset id="TaxonSet.CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="TaxonSet">
+                <taxonset id="TaxonSet.cat_aligned" spec="TaxonSet">
                                     
-                    <alignment idref="CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                    <alignment idref="cat_aligned"/>
                                 
                 </taxonset>
                         
             </tree>
                     
-            <parameter id="birthRateY.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+            <parameter id="birthRateY.t:cat_aligned" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
                     
-            <parameter id="clockRate.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
+            <parameter id="clockRate.c:cat_aligned" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
                     
-            <parameter id="kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="parameter.RealParameter" lower="0.0" name="stateNode">2.0</parameter>
+            <parameter id="kappa.s:cat_aligned" spec="parameter.RealParameter" lower="0.0" name="stateNode">2.0</parameter>
                 
         </state>
             
-        <init id="RandomTree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="RandomTree" estimate="false" initial="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" taxa="@CAT-muscle-I20240123-130448-0268-59166034-p1m-fa">
+        <init id="RandomTree.t:cat_aligned" spec="RandomTree" estimate="false" initial="@Tree.t:cat_aligned" taxa="@cat_aligned">
                     
-            <populationModel id="ConstantPopulation0.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="ConstantPopulation">
+            <populationModel id="ConstantPopulation0.t:cat_aligned" spec="ConstantPopulation">
                             
-                <parameter id="randomPopSize.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="parameter.RealParameter" name="popSize">1.0</parameter>
+                <parameter id="randomPopSize.t:cat_aligned" spec="parameter.RealParameter" name="popSize">1.0</parameter>
                         
             </populationModel>
                 
@@ -125,21 +122,21 @@ name="alignment">
                     
             <distribution id="prior" spec="CompoundDistribution">
                             
-                <distribution id="CalibratedYuleModel.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="beast.base.evolution.speciation.CalibratedYuleModel" birthRate="@birthRateY.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                <distribution id="CalibratedYuleModel.t:cat_aligned" spec="beast.base.evolution.speciation.CalibratedYuleModel" birthRate="@birthRateY.t:cat_aligned" tree="@Tree.t:cat_aligned"/>
                             
-                <prior id="CalibratedYuleBirthRatePrior.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" name="distribution" x="@birthRateY.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa">
+                <prior id="CalibratedYuleBirthRatePrior.t:cat_aligned" name="distribution" x="@birthRateY.t:cat_aligned">
                                     
                     <Uniform id="Uniform.3" name="distr" upper="1000.0"/>
                                 
                 </prior>
                             
-                <prior id="ClockPrior.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" name="distribution" x="@clockRate.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa">
+                <prior id="ClockPrior.c:cat_aligned" name="distribution" x="@clockRate.c:cat_aligned">
                                     
                     <Uniform id="Uniform.0" name="distr" upper="Infinity"/>
                                 
                 </prior>
                             
-                <prior id="KappaPrior.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" name="distribution" x="@kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa">
+                <prior id="KappaPrior.s:cat_aligned" name="distribution" x="@kappa.s:cat_aligned">
                                     
                     <LogNormal id="LogNormalDistributionModel.0" name="distr">
                                             
@@ -151,7 +148,7 @@ name="alignment">
                                 
                 </prior>
                             
-                <distribution id="Eutheria.prior" spec="beast.base.evolution.tree.MRCAPrior" monophyletic="true" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa">
+                <distribution id="Eutheria.prior" spec="beast.base.evolution.tree.MRCAPrior" monophyletic="true" tree="@Tree.t:cat_aligned">
                                     
                     <taxonset id="Eutheria" spec="TaxonSet">
                                             
@@ -173,7 +170,7 @@ name="alignment">
                                 
                 </distribution>
                             
-                <distribution id="Monotremes.prior" spec="beast.base.evolution.tree.MRCAPrior" monophyletic="true" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa">
+                <distribution id="Monotremes.prior" spec="beast.base.evolution.tree.MRCAPrior" monophyletic="true" tree="@Tree.t:cat_aligned">
                                     
                     <taxonset id="Monotremes" spec="TaxonSet">
                                             
@@ -193,7 +190,7 @@ name="alignment">
                                 
                 </distribution>
                             
-                <distribution id="Rodentia.prior" spec="beast.base.evolution.tree.MRCAPrior" monophyletic="true" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa">
+                <distribution id="Rodentia.prior" spec="beast.base.evolution.tree.MRCAPrior" monophyletic="true" tree="@Tree.t:cat_aligned">
                                     
                     <taxonset id="Rodentia" spec="TaxonSet">
                                             
@@ -213,7 +210,7 @@ name="alignment">
                                 
                 </distribution>
                             
-                <distribution id="ingroup.prior" spec="beast.base.evolution.tree.MRCAPrior" monophyletic="true" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa">
+                <distribution id="ingroup.prior" spec="beast.base.evolution.tree.MRCAPrior" monophyletic="true" tree="@Tree.t:cat_aligned">
                                     
                     <taxonset id="ingroup" spec="TaxonSet">
                                             
@@ -247,79 +244,79 @@ name="alignment">
                 
         </distribution>
             
-        <operator id="CalibratedYuleModelBICEPSEpochTop.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" weight="2.0"/>
+        <operator id="CalibratedYuleModelBICEPSEpochTop.t:cat_aligned" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:cat_aligned" weight="2.0"/>
             
-        <operator id="CalibratedYuleModelBICEPSEpochAll.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" weight="2.0"/>
+        <operator id="CalibratedYuleModelBICEPSEpochAll.t:cat_aligned" spec="EpochFlexOperator" fromOldestTipOnly="false" scaleFactor="0.1" tree="@Tree.t:cat_aligned" weight="2.0"/>
             
-        <operator id="CalibratedYuleModelBICEPSTreeFlex.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" weight="2.0"/>
+        <operator id="CalibratedYuleModelBICEPSTreeFlex.t:cat_aligned" spec="TreeStretchOperator" scaleFactor="0.01" tree="@Tree.t:cat_aligned" weight="2.0"/>
             
-        <operator id="CalibratedYuleModelTreeRootScaler.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" upper="10.0" weight="3.0"/>
+        <operator id="CalibratedYuleModelTreeRootScaler.t:cat_aligned" spec="kernel.BactrianScaleOperator" rootOnly="true" scaleFactor="0.1" tree="@Tree.t:cat_aligned" upper="10.0" weight="3.0"/>
             
-        <operator id="CalibratedYuleModelUniformOperator.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="kernel.BactrianNodeOperator" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" weight="30.0"/>
+        <operator id="CalibratedYuleModelUniformOperator.t:cat_aligned" spec="kernel.BactrianNodeOperator" tree="@Tree.t:cat_aligned" weight="30.0"/>
             
-        <operator id="CalibratedYuleModelSubtreeSlide.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="kernel.BactrianSubtreeSlide" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" weight="15.0"/>
+        <operator id="CalibratedYuleModelSubtreeSlide.t:cat_aligned" spec="kernel.BactrianSubtreeSlide" tree="@Tree.t:cat_aligned" weight="15.0"/>
             
-        <operator id="CalibratedYuleModelNarrow.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="Exchange" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" weight="15.0"/>
+        <operator id="CalibratedYuleModelNarrow.t:cat_aligned" spec="Exchange" tree="@Tree.t:cat_aligned" weight="15.0"/>
             
-        <operator id="CalibratedYuleModelWide.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="Exchange" isNarrow="false" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" weight="3.0"/>
+        <operator id="CalibratedYuleModelWide.t:cat_aligned" spec="Exchange" isNarrow="false" tree="@Tree.t:cat_aligned" weight="3.0"/>
             
-        <operator id="CalibratedYuleModelWilsonBalding.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="WilsonBalding" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" weight="3.0"/>
+        <operator id="CalibratedYuleModelWilsonBalding.t:cat_aligned" spec="WilsonBalding" tree="@Tree.t:cat_aligned" weight="3.0"/>
             
-        <operator id="CalibratedYuleBirthRateScaler.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="kernel.BactrianScaleOperator" parameter="@birthRateY.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" upper="10.0" weight="3.0"/>
+        <operator id="CalibratedYuleBirthRateScaler.t:cat_aligned" spec="kernel.BactrianScaleOperator" parameter="@birthRateY.t:cat_aligned" upper="10.0" weight="3.0"/>
             
-        <operator id="StrictClockRateScaler.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="AdaptableOperatorSampler" weight="1.5">
+        <operator id="StrictClockRateScaler.c:cat_aligned" spec="AdaptableOperatorSampler" weight="1.5">
                     
-            <parameter idref="clockRate.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+            <parameter idref="clockRate.c:cat_aligned"/>
                     
-            <operator id="AVMNOperator.CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="kernel.AdaptableVarianceMultivariateNormalOperator" allowNonsense="true" beta="0.05" burnin="400" initial="800" weight="0.1">
+            <operator id="AVMNOperator.cat_aligned" spec="kernel.AdaptableVarianceMultivariateNormalOperator" allowNonsense="true" beta="0.05" burnin="400" initial="800" weight="0.1">
                             
-                <transformations id="AVMNSumTransform.CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="operator.kernel.Transform$LogConstrainedSumTransform"/>
+                <transformations id="AVMNSumTransform.cat_aligned" spec="operator.kernel.Transform$LogConstrainedSumTransform"/>
                             
-                <transformations id="AVMNLogTransform.CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="operator.kernel.Transform$LogTransform">
+                <transformations id="AVMNLogTransform.cat_aligned" spec="operator.kernel.Transform$LogTransform">
                                     
-                    <f idref="clockRate.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                    <f idref="clockRate.c:cat_aligned"/>
                                     
-                    <f idref="kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                    <f idref="kappa.s:cat_aligned"/>
                                 
                 </transformations>
                             
-                <transformations id="AVMNNoTransform.CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="operator.kernel.Transform$NoTransform">
+                <transformations id="AVMNNoTransform.cat_aligned" spec="operator.kernel.Transform$NoTransform">
                                     
-                    <f idref="Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                    <f idref="Tree.t:cat_aligned"/>
                                 
                 </transformations>
                         
             </operator>
                     
-            <operator id="StrictClockRateScalerX.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="kernel.BactrianScaleOperator" parameter="@clockRate.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" upper="10.0" weight="3.0"/>
+            <operator id="StrictClockRateScalerX.c:cat_aligned" spec="kernel.BactrianScaleOperator" parameter="@clockRate.c:cat_aligned" upper="10.0" weight="3.0"/>
                 
         </operator>
             
-        <operator id="strictClockUpDownOperator.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="AdaptableOperatorSampler" weight="1.5">
+        <operator id="strictClockUpDownOperator.c:cat_aligned" spec="AdaptableOperatorSampler" weight="1.5">
                     
-            <parameter idref="clockRate.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+            <parameter idref="clockRate.c:cat_aligned"/>
                     
-            <tree idref="Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+            <tree idref="Tree.t:cat_aligned"/>
                     
-            <operator idref="AVMNOperator.CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+            <operator idref="AVMNOperator.cat_aligned"/>
                     
-            <operator id="strictClockUpDownOperatorX.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="operator.kernel.BactrianUpDownOperator" scaleFactor="0.75" weight="3.0">
+            <operator id="strictClockUpDownOperatorX.c:cat_aligned" spec="operator.kernel.BactrianUpDownOperator" scaleFactor="0.75" weight="3.0">
                             
-                <up idref="clockRate.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                <up idref="clockRate.c:cat_aligned"/>
                             
-                <down idref="Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                <down idref="Tree.t:cat_aligned"/>
                         
             </operator>
                 
         </operator>
             
-        <operator id="KappaScaler.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="AdaptableOperatorSampler" weight="0.05">
+        <operator id="KappaScaler.s:cat_aligned" spec="AdaptableOperatorSampler" weight="0.05">
                     
-            <parameter idref="kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+            <parameter idref="kappa.s:cat_aligned"/>
                     
-            <operator idref="AVMNOperator.CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+            <operator idref="AVMNOperator.cat_aligned"/>
                     
-            <operator id="KappaScalerX.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="kernel.BactrianScaleOperator" parameter="@kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" scaleFactor="0.1" upper="10.0" weight="0.1"/>
+            <operator id="KappaScalerX.s:cat_aligned" spec="kernel.BactrianScaleOperator" parameter="@kappa.s:cat_aligned" scaleFactor="0.1" upper="10.0" weight="0.1"/>
                 
         </operator>
             
@@ -329,25 +326,25 @@ name="alignment">
                     
             <log id="likelihood" spec="CompoundDistribution" useThreads="true">
                             
-                <distribution id="treeLikelihood.CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="ThreadedTreeLikelihood" data="@CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa">
+                <distribution id="treeLikelihood.cat_aligned" spec="ThreadedTreeLikelihood" data="@cat_aligned" tree="@Tree.t:cat_aligned">
                                     
-                    <siteModel id="SiteModel.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="SiteModel">
+                    <siteModel id="SiteModel.s:cat_aligned" spec="SiteModel">
                                             
-                        <parameter id="mutationRate.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="parameter.RealParameter" estimate="false" lower="0.0" name="mutationRate">1.0</parameter>
+                        <parameter id="mutationRate.s:cat_aligned" spec="parameter.RealParameter" estimate="false" lower="0.0" name="mutationRate">1.0</parameter>
                                             
-                        <parameter id="gammaShape.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="parameter.RealParameter" estimate="false" lower="0.1" name="shape">1.0</parameter>
+                        <parameter id="gammaShape.s:cat_aligned" spec="parameter.RealParameter" estimate="false" lower="0.1" name="shape">1.0</parameter>
                                             
-                        <parameter id="proportionInvariant.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
+                        <parameter id="proportionInvariant.s:cat_aligned" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
                                             
-                        <substModel id="hky.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="HKY" kappa="@kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa">
+                        <substModel id="hky.s:cat_aligned" spec="HKY" kappa="@kappa.s:cat_aligned">
                                                     
-                            <frequencies id="empiricalFreqs.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="Frequencies" data="@CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                            <frequencies id="empiricalFreqs.s:cat_aligned" spec="Frequencies" data="@cat_aligned"/>
                                                 
                         </substModel>
                                         
                     </siteModel>
                                     
-                    <branchRateModel id="StrictClock.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="beast.base.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+                    <branchRateModel id="StrictClock.c:cat_aligned" spec="beast.base.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate.c:cat_aligned"/>
                                 
                 </distribution>
                         
@@ -355,13 +352,13 @@ name="alignment">
                     
             <log idref="prior"/>
                     
-            <log idref="treeLikelihood.CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+            <log idref="treeLikelihood.cat_aligned"/>
                     
-            <log id="TreeHeight.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="beast.base.evolution.tree.TreeStatLogger" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+            <log id="TreeHeight.t:cat_aligned" spec="beast.base.evolution.tree.TreeStatLogger" tree="@Tree.t:cat_aligned"/>
                     
-            <log idref="CalibratedYuleModel.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+            <log idref="CalibratedYuleModel.t:cat_aligned"/>
                     
-            <log idref="birthRateY.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+            <log idref="birthRateY.t:cat_aligned"/>
                     
             <log idref="Monotremes.prior"/>
                     
@@ -371,9 +368,9 @@ name="alignment">
                     
             <log idref="Eutheria.prior"/>
                     
-            <log idref="clockRate.c:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+            <log idref="clockRate.c:cat_aligned"/>
                     
-            <log idref="kappa.s:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+            <log idref="kappa.s:cat_aligned"/>
                 
         </logger>
             
@@ -387,9 +384,9 @@ name="alignment">
                 
         </logger>
             
-        <logger id="treelog.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="Logger" fileName="$(filebase)-$(tree).trees" logEvery="1000" mode="tree">
+        <logger id="treelog.t:cat_aligned" spec="Logger" fileName="$(filebase)-$(tree).trees" logEvery="1000" mode="tree">
                     
-            <log id="TreeWithMetaDataLogger.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:CAT-muscle-I20240123-130448-0268-59166034-p1m-fa"/>
+            <log id="TreeWithMetaDataLogger.t:cat_aligned" spec="beast.base.evolution.TreeWithMetaDataLogger" tree="@Tree.t:cat_aligned"/>
                 
         </logger>
             
