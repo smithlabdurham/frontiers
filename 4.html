@@ -524,6 +524,37 @@
 								<img src="images/clock/beauti-import.png" />
 								<li>Confirm that the data type is "nucleotide"</li>
 								<li>
+									<p>
+										Open the "Site Model" tab and select a Substitution Model.
+									</p>
+									<p>
+										The default, JC69, assumes a constant mutation rate between
+										any of the four nucleotide bases.
+									</p>
+									<p>
+										The HKY model incorporates the fact that chemically similar
+										bases are easier to substitute – and tend to encode chemically
+										similar amino acids, so mutations are less likely to be
+										deleterious.
+										The TN93 model fine-tunes this further by adding further
+										parameters, whereas the fully generalized GTR
+										(Generalized Time Reversible) model allows a distinct mutation
+										rate between each different pair of nucleotides (64 in total) –
+										whilst potentially more accurate, it takes more data to infer
+										the values of all 64 parameters, making the model succeptible
+										to overfitting with smaller datasets like ours.
+									</p>
+									<p>
+									 	Select the HKY model and set Frequencies: Empirical.
+								 	</p>
+								</li>
+								<li>
+									Open the "Clock Model" tab.  We will use a Strict Clock
+									for our initial analysis. Leave the Mean clock rate at its
+									default setting (1).
+								</li>
+
+								<li>
 									Open the "Priors" tab and update the "Tree.t" prior from
 									"Yule Model" to "Calibrated Yule Model"
 								</li>
@@ -674,9 +705,15 @@
 									constrain.  Search the literature to justify your design
 									of priors.
 								</li>
-
-
-
+								<li>
+									To root the tree, add an MRCA prior including everything that's
+									not a monotreme. Label it appropriately
+									("Theria", or simply "ingroup").
+									Leave the prior type to "[none]" and select "monophyletic".
+									This will force the tree to be rooted on monotremes,
+									and produce a summary for the posterior estimate of the
+									date of the MRCA of placentals and marsupuals (the therians).
+								</li>
 
 							</ol>
 
