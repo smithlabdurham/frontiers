@@ -419,7 +419,7 @@ li.caution::marker {
   content: "\f12a";
 }
 
-li.bulb, li.caution {
+li.bulb, li.caution, li.answer  {
 	counter-increment: list-item 0;
 }
 

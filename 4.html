@@ -364,7 +364,7 @@
 								</li>
 								<li>
 									Open your cart (trolley icon, should read e.g. “12 items”).
-									<ul><li class="bulb">
+									<ul><li class="caution">
 										Note: Due to a bug with the website, if you close your cart window,
 										 you may not be able to open it again without refreshing the page and
 										 losing your progress (!)
@@ -395,7 +395,7 @@
 									This will take a few seconds as the algorithm tries to find
 									the best fit match of AA sequences.
 								</li>
-								<li class="question">
+								<li class="question" onclick="Reveal('gap-cost');">
 									Whilst the alignment runs, try to justify the default
 									gap opening/extension values.
 								</li>
@@ -404,14 +404,51 @@
 									was reduced / increased.
 									How would modifying the "Extension" cost change the alignment?
 								</li>
-								<li class="question">
+								<li class="hidden written answer" id="gap-cost">
+									<p>
+										Cheap gap opening penalties allow slightly different sequences
+										to be aligned with gaps rather than their homologous sequences,
+										so we miss out on the evolutionary information we would
+										obtain by comparing apples to apples.
+									</p>
+									<p>
+										Make opening a gap too expensive, however, and real
+										insertion/deletion events will not be reconstructed.
+									</p>
+									<p>
+										Cheap extension penalties mean that once a gap is open,
+										we may as well extend it indefinitely to swallow the
+										other sequence, and avoid comparing bases that are
+										different.
+									</p>
+									<p>
+										Overall, we are trying to strike a balance between these
+										factors, but once sequences start to diverge, and
+										particularly as they accumulate insertion/deletion
+										events, it's very unlikely that any alignment will be fully
+										accurate.
+									</p>
+								</li>
+								<li class="question" onclick="Reveal('aln-correct');">
 									Can we know whether an alignment is "correct"?
 									(What would this mean?)
 								</li>
+                <li class="hidden written answer" id="aln-correct">
+									The "correct" alignment matches the pattern of mutations that
+									historically occurred, and is impossible to know for sure
+									without travelling in time and watching evolution happen.
+									The best we can do is to find an "optimal" alignment, according
+									to whatever parameters we set.
 								</li>
-								<li class="question">
+								<li class="question" onclick="Reveal('bad-aln');">
 									If the alignment is "incorrect",
 									what will the consequences be for inference?
+								</li>
+								<li class="hidden written answer" id="bad-aln">
+									If two bases are different because they are misaligned,
+									we will be inferring changes where none occurred.
+									Our reconstruction of evolutionary relationships and rates
+									will be misled.
 								</li>
 								<li>
 									Observe the graphical overview of the alignment.
@@ -489,13 +526,24 @@
 									an <strong>unrooted</strong> phylogenetic tree as part of
 									finding the best alignment.
 								</li>
-								<li class="question">
+								<li class="question" onclick="Reveal('tree-root');">
 									How would the tree look different if a root was specified?
 								</li>
-								<li class="question">
+								<li class="hidden written answer" id="tree-root">
+									The relationships would remain the same, but the outgroup
+									would be at the bottom, making a different set of taxa
+									appear monophyletic.  This doesn't affect relationships or
+									sequence similarity; it does affect dates.
+								</li>
+								<li class="question" onclick="Reveal('rel-corr');">
 									How do the relationships in your tree compare to those in the
 									<a href="https://academic.oup.com/view-large/figure/362010550/syab072f1.tif"
 									target="_blank">well-corroborated trees</a>?
+								</li>
+								<li class="hidden written answer" id="rel-corr">
+									If they aren't similar, we might start to worry about the
+									quality of the alignment or the suitability of this gene
+									for analysis.
 								</li>
 								<li>
 									Download the results in FASTA format by heading to "Tool Output→Download".
@@ -895,9 +943,15 @@
 										Perhaps our assumption of a "strict" clock, in which
 										mutation rate is constant across every branch of the tree,
 										was too strong an assumption.
-										If mammals had an early burst of radiation, their rates
-										may have been higher earlier in their history,
-										which would make a clock predict an earlier origin.
+										<a href="https://doi.org/10.1038/d41586-022-00976-w"
+										title="Mutational clocks tick differently across species"
+										target="_blank">
+											Species-by-species differences
+										</a> might cancel each other out, simply introducing noise;
+										but if mammals had an early burst of radiation,
+										or radiated rapidly after the K-Pg extinction, their rates
+										may have been systematically higher for some of their history.
+										This would make a strict clock predict an earlier origin.
 								 </p>
 								 <li>
 									 Return to BEAUti and set the Clock Model to
@@ -932,9 +986,42 @@
 									 distributions.
 								 </li>
 								 <li>
-									 Load the results into tracer.  Compare the effective priors
+									 Load the results into Tracer.  Compare the effective priors
 									 with the posteriors you obtained when you ran the model using
-									 the data.  How much have the data influenced your results?
+									 the data.
+								 </li>
+								  <li class="question" onclick="Reveal('prior-comp');">
+										How much have the data influenced your results?
+									</li>
+									<li class="hidden written answer" id="prior-comp">
+										<p>
+											If the effective prior is similar to the posterior, then
+											our analysis is just spitting out what we put in;
+											the data have not informed our inferrence.
+										</p>
+										<p>
+											Be sure to compare the effective prior with the prior
+											you originally specified.
+											There's an interaction effect here: as marsupials are a
+											subgroup of all mammals, marsupials can't be older
+											than the MRCA of mammals.
+											As such, a very long-tailed prior on the date of the
+											marsupial MRCA might be curtailed by a narrow prior on the
+											mammal MRCA.
+										</p>
+								 </li>
+								 <li class="do">
+									 The influence of priors on molecular clock results
+									 is an important, but often overlooked, issue,
+									 as highlighted by
+									 <a href="https://dx.doi.org/10.1093/sysbio/syad057"
+									 title="Read the paper: Two Notorious Nodes: A Critical Examination of Relaxed Molecular Clock Age Estimates of the Bilaterian Animals and Placental Mammals"
+									 target="_blank">Budd and Mann (2023)</a>;
+									 a corresponding
+									 <a href="https://doi.org/10.1038/d41586-023-03487-4"
+									  title="News & Views: Genes are often uninformative for dating species’ origins"
+										target="_blank">commentary</a> provides an accessible
+										summary of the paper.
 								 </li>
 							</ol>
             </div>
