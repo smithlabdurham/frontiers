@@ -17,7 +17,7 @@
                             
         <sequence id="seq_Monodelphis_domestica" spec="Sequence" taxon="Monodelphis_domestica" totalcount="4" value="TTGCCCAATCCCGCCTCAGACTAAACTAGAAAGAGAATCCAACGTCCAATCGGAGAGCCGTAAGACGAAGGGCGGGCACCGATAGGCGGAGCTCAACGACGCCTTCTTCAGCTCCTGGCGGGGTTCGAGGTGTCTGTCAGGCTGTGAGACAGAAGAGAAGGCAGAGCGTCACTGCCCAGCTCGTAC--------CGTGCTCGCTTTCGTTGCCCGCTGAAC---------C------------AATTTCCACACCATGGCGAATAACCGAGACCAGGCCAGCAACCAGATGAGCCACTGGAAGGAGCAGCAGTGCACGCAGAAAACTGAGGCTCTTACCACCGGAGCTGGTATCCCTGTAGGAGACAAACTTAATGTTATAACTGCTGGATCGCGGGGGCCCCTTCTTGTTCAAGATGTGGTTTTCACTGATGAAATGGCTCACTTTGACCGGGAGAGAATTCCTGAGCGAGTTGTTCATGCTAAAGGAGCAGGAGCGTTTGGGTATTTTGAAGTCACTCATGACATCACCAAATATTCCAAGGCGAAGGTGTTTGAGTATGTGGGGAAAAGGACTCCAATTGCCGTTCGATTCTCTACCGTGGCTGGAGAGTCCGGATCAGCCGACACCGTGCGCGACCCTCGAGGCTTTGCCGTGAAATTCTACACTGAAGAGGGGAACTGGGATCTCACGGGAAATAACACCCCCATCTTCTTCATCAGGGACCCACTTCTGTTTCCGTCCTTTATCCATAGTCAGAAGAGGAACCCTCAAACCCACTTGAAAGATGCCAACATGGTTTGGGACTTCTGGAGTCTCCGCCCTGAATCTTTGCATCAGGTTACTTTCTTGTTCAGTGACCGAGGGATTCCGGATGGTCATCGTCATATGAATGGATACGGCTCTCATACCTTCAAACTGGTGAATACCAATGGAGAAGCAGTTTACTGCAAATTCCATTATAAGACGGACCAAGGAATCAAAAATCTTTCTGTTGAGGAGGCTGGAAGACTTGCTCAGGAAGATCCCGATTATGGTTTGCGGGACCTCTTCAATGCCATCGAGACAGAGAACTTCCCCTCCTGGACATTTTACATCCAGGTCATGACCTTCGAGCAAGCAGAGAAATTTCCATTCAATCCCTTTGACCTCACGAAGGTTTGGCCTCACGCAGACTATCCTCTTATGCCCGTTGGGAAGCTGGTCTTAAACAGGAACCCTCGCAACTATTTTGCAGAGGTGGAACAACTAGCCTTTGACCCAAGTAACATGCCGCCGGGCATCGAGCCAAGCCCCGATAAAATGCTGCAGGGTCGTCTTTTTGCATATCCTGATACTCACCGCCATCGTCTAGGACCCAACTATCTTCACTTACCTGTGAACTGCCCTTACCGAACTCGAGTGAACAACTACCAAAGAGATGGACCCATGTGCATGTATGACAACCAAGGCGGGGCTCCCAACTACTACCCGAACAGCTTCGGGGCTCCTGAGGATCAGTGCTGGGCCCTGGAGCACCGCTACCAAACCTCCGGGGATGTGCAGCGCTACAACAGCGCCGACGAGGACAACGTCACCCAGGTGAGAACATTCTATAGATCGGTGCTGACGGAGGAGGAGCGCCAGCGCCTGTGTGAGAACATCGCCCAGCACCTGAAGAACGCCCAGCTGTTCATCCAGAAGAAAGCGGTCAAAAACTTCAGCGAAGTGGACTGCAGCTACGGGCACCGGATCCAGGAGCTCCTGGATAAGTACAACGCGGAGGGGGACAGCCAGTGCATGGTTCATGGCTACAACCGGGCTGCATCTTGTTTGACTGCGAAGGAAAAAGCGCATCTCTGAGCTC--C--TCCGGCGTCTTCGCTGCTGCTAAAGGCTGATTT-TACAGATGAAGCTA--CAAGAGGTTCCTCCTTAGGGTCCGTCACTACCCCACA-CAG--------CCCGTGCTTGCCCCATACCCAGAGAAGGGCCTTGCTTGGTAGAAGTAGTCCCATTT------GCCACA----------------AATAACCATGATCGCCTCTCACGCTTTGGGCCCCAC--GTCGT--------GGCGCGGGGCCAATCATTTTTCATGTTTATGTTGGAAATGAAGGTTAATCCGGTGCCTTTAA--CCGCCTGTCTTTAGTGCTGACAGCTGATTTCAT----------GTGACATG----------ACAATTACTTAG-TGGAT---TTATCCATTTATCTGATA---------AAAATGATCTCCTGAAATGGAT---GTTTTCATCT-C-----ACCTCATTGCC-TCTTAGGCG-TGAAG----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------AAAAAAGAT-------------------------TTTCTGGATGGATC----------------------------------------------------------------------------------------------------AGTGTTTAAA----AAATCACTTTCCTTGTAGGGAAGA----CATTTTGTGGGGC--CCCTTTGCAGGAA-----TCTGCCTCCATCATGTAGGTCGAGGTCATTGTTTCTCCTGGGCAATGGTCGTCTTCCAGGTCTCTTTTTATCTTCAAATGATGTTTCTGTTG-----ATGCCATATTGATTTTT----ACAAATTGATTTGTAATCCTATTTGCATTTTACAGTAAAATAATCTCTAAGCAA------------------------------------------------------------------------------------------------------------------------"/>
                             
-        <sequence id="seq_Ornithorhynchus_anatinus_catalas" spec="Sequence" taxon="Ornithorhynchus_anatinus_catalas" totalcount="4" value="-----------------------------------------------------------------------------------------------------------------------------------------------------------CGGGGGAGGGGGGCT------------------------GGTCGGCGTCCCTTGCTCTTGCCACCCCTTCCACGGCGACGA-------CGAGCCGGAGCCATGTCGCACGAGCGGGACCGAGCCACCGACCAGATGCAGCTCTGGAAGGAGCAGCGGGGCTCGCAGACACCTGATGAGATCACCACCGGAGCTGGGATTCCAGTGGGAGATAAACTGAATGCTCTGACGGCAGGGTCGCGGGGGCCTCTGCTTGTTCAGGATGTGGTTTTCACTGATGAAATGGCTCACTTTGACCGAGAGAGAATTCCCGAGAGAGTTGTTCACGCAAAGGGAGCAGGAGCATTTGGATATTTTGAAGTCACTCATGATATTACCAAATACACTAAGGCAAAAGTGTTTGAGCATATTGGAAAAAGAACTCCAATTGCTGTTAGATTCTCCACTGTTGCTGGAGAATCTGGCTCAGCTGATACTGTTCGTGACCCTCGAGGGTTTGCCGTAAAATTCTATACCGACGATGGTAACTGGGATCTCACAGGAAACAACACCCCAATATTCTTTATTAGGGATCCACTGTTGTTTCCATCTTTTATTCATACTCAAAAAAGGAACCCTCAAACCCACCTGAAAGATCCTGACATGGTGTGGGATTTCTGGAGTCTCCGCCCCGAGTCTCTCCATCAGGTTTCTTTCTTGTTCAGTGATCGTGGAATTCCAGATGGCCACCGGCATATGAATGGATATGGATCTCACACTTTCAAATTTGTTAATGCTAATGGAAAGGCAGTTTACTGCAAATTTCATTATAAGACTGACCAAGGTATCAAAAATCTTACTGTTGAAGAGGCAGGAAGACTGTCTCGGGAAGATCCCGATTATGGCCTGCGAGACCTGTATAATGCCATTGACACAGGCAATTACCCATCTTGGACTCTCTATATTCAGGTCATGACTTTCGAGCAAGCAGAAACATTTCCATTTAATCCTTTTGACCTCACCAAGATTTGGCCTCATAAAGACTATCCTCTTATCCCTGTTGGTAAACTGATCCTAAACAGGAATCCTGTTAATTATTTTGCGGATGTGGAACAACTGGCTTTTGACCCAAGCAATATGCCACCAGGCATTGAACCGAGCCCTGATAAAATGCTGCAAGGTCGTCTCTTTTCCTATCCTGATACTCATCGCCACCGTCTAGGAGCCAACTACTTGCAAATACCTGTAAATTGCCCCTTCAGAGCACGAGTGGCCAACTATCAAAGAGATGGACCCATGTGTGTGTTTGACAACCAAGGTGGGGCACCGAATTATTTCCCAAATAGCTTTAGTGGCCCCGAAAATCAACCAAAAGCTTTGGAGCATCGCTATCACGTATCAGCCGACGTTCAACGCTTTAATAGTGCAGATGAAGATAATGTAACCCAGGTGCGGGACTTCTATACCCAAGTGCTGAATGAAGAAGAACGAAAACGCCTTTGTGAGAATATTGCGGGTCACCTTAAGGATGCTCAGCTTTTCATCCAGAAGAGAGCCGTGAAAAATTTCACTGATGTTCATCCTGACTATGGGTCAAGAATTCAGGCCCTTCTGGATAAATACAATGCTATGGAAAAAA---AGAATGTGATTAGAACCTTTACACGGCCTTCACATCATTTGGCTGCAAAAGAGAAAGCTAACCTGTGAACTC--AATGCCAAGGCCAGGTCCCATCCAAGAAGGAGGATT-----------ACTATGGAAGTCATAAACAAATGAAGCAGATTGCTGCATAGTATTAGGATT----AGTGTAGTCTGGCTACACAGATACAAATATATGCCTTTATATTGATAA--------------GTGATC----------------AGTAACCTTTA-TGCCTTCTAATACTGACGTTCTTC--TGTCCGTATTTAATGCATGTGGAAAATAAGTTTAT----------CAGAAATTAATGCTTAT------TTTTTAAAACAA---GTTTTTTATCTC--------CTTGGAATGATTATTCGATGAAATT-ACTGGAAGGAA-----CCTGATTGGAATCGTTATCAGTTTTTATGATAAG--------------TTTTTCAGAATCAGTGTCAGTTCTATTTGCAGGGCTCCTCTTACACCAATTACACCAAGAAGGAAA------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ATAAAACACAAATAATAAATA--------CATTATCCATAAAGAAAACGGATT-----------------------------------------------------------------------------------------------ATTTTTTAA-----TCATTTGTTTCATTACAGGGAAAAATATTACATGAAGGTATAATTACTCCTAGATAATAA--TTGCCACTATAAATGTTTTCTAATGT-TTATTTCTCTTGGGAAAAATTTGG---------TTTACTTTATGTTAGAATAAAAATTATACTA-----ATGCACAGTTAGTG-----AAAATGATTTATTTGTAATGCTTTAC---TTTCAAAATAAAGTAATCTCCACCCACA-----------------------------------------------------------------------------------------------------------------------"/>
+        <sequence id="seq_Ornithorhynchus_anatinus" spec="Sequence" taxon="Ornithorhynchus_anatinus" totalcount="4" value="-----------------------------------------------------------------------------------------------------------------------------------------------------------CGGGGGAGGGGGGCT------------------------GGTCGGCGTCCCTTGCTCTTGCCACCCCTTCCACGGCGACGA-------CGAGCCGGAGCCATGTCGCACGAGCGGGACCGAGCCACCGACCAGATGCAGCTCTGGAAGGAGCAGCGGGGCTCGCAGACACCTGATGAGATCACCACCGGAGCTGGGATTCCAGTGGGAGATAAACTGAATGCTCTGACGGCAGGGTCGCGGGGGCCTCTGCTTGTTCAGGATGTGGTTTTCACTGATGAAATGGCTCACTTTGACCGAGAGAGAATTCCCGAGAGAGTTGTTCACGCAAAGGGAGCAGGAGCATTTGGATATTTTGAAGTCACTCATGATATTACCAAATACACTAAGGCAAAAGTGTTTGAGCATATTGGAAAAAGAACTCCAATTGCTGTTAGATTCTCCACTGTTGCTGGAGAATCTGGCTCAGCTGATACTGTTCGTGACCCTCGAGGGTTTGCCGTAAAATTCTATACCGACGATGGTAACTGGGATCTCACAGGAAACAACACCCCAATATTCTTTATTAGGGATCCACTGTTGTTTCCATCTTTTATTCATACTCAAAAAAGGAACCCTCAAACCCACCTGAAAGATCCTGACATGGTGTGGGATTTCTGGAGTCTCCGCCCCGAGTCTCTCCATCAGGTTTCTTTCTTGTTCAGTGATCGTGGAATTCCAGATGGCCACCGGCATATGAATGGATATGGATCTCACACTTTCAAATTTGTTAATGCTAATGGAAAGGCAGTTTACTGCAAATTTCATTATAAGACTGACCAAGGTATCAAAAATCTTACTGTTGAAGAGGCAGGAAGACTGTCTCGGGAAGATCCCGATTATGGCCTGCGAGACCTGTATAATGCCATTGACACAGGCAATTACCCATCTTGGACTCTCTATATTCAGGTCATGACTTTCGAGCAAGCAGAAACATTTCCATTTAATCCTTTTGACCTCACCAAGATTTGGCCTCATAAAGACTATCCTCTTATCCCTGTTGGTAAACTGATCCTAAACAGGAATCCTGTTAATTATTTTGCGGATGTGGAACAACTGGCTTTTGACCCAAGCAATATGCCACCAGGCATTGAACCGAGCCCTGATAAAATGCTGCAAGGTCGTCTCTTTTCCTATCCTGATACTCATCGCCACCGTCTAGGAGCCAACTACTTGCAAATACCTGTAAATTGCCCCTTCAGAGCACGAGTGGCCAACTATCAAAGAGATGGACCCATGTGTGTGTTTGACAACCAAGGTGGGGCACCGAATTATTTCCCAAATAGCTTTAGTGGCCCCGAAAATCAACCAAAAGCTTTGGAGCATCGCTATCACGTATCAGCCGACGTTCAACGCTTTAATAGTGCAGATGAAGATAATGTAACCCAGGTGCGGGACTTCTATACCCAAGTGCTGAATGAAGAAGAACGAAAACGCCTTTGTGAGAATATTGCGGGTCACCTTAAGGATGCTCAGCTTTTCATCCAGAAGAGAGCCGTGAAAAATTTCACTGATGTTCATCCTGACTATGGGTCAAGAATTCAGGCCCTTCTGGATAAATACAATGCTATGGAAAAAA---AGAATGTGATTAGAACCTTTACACGGCCTTCACATCATTTGGCTGCAAAAGAGAAAGCTAACCTGTGAACTC--AATGCCAAGGCCAGGTCCCATCCAAGAAGGAGGATT-----------ACTATGGAAGTCATAAACAAATGAAGCAGATTGCTGCATAGTATTAGGATT----AGTGTAGTCTGGCTACACAGATACAAATATATGCCTTTATATTGATAA--------------GTGATC----------------AGTAACCTTTA-TGCCTTCTAATACTGACGTTCTTC--TGTCCGTATTTAATGCATGTGGAAAATAAGTTTAT----------CAGAAATTAATGCTTAT------TTTTTAAAACAA---GTTTTTTATCTC--------CTTGGAATGATTATTCGATGAAATT-ACTGGAAGGAA-----CCTGATTGGAATCGTTATCAGTTTTTATGATAAG--------------TTTTTCAGAATCAGTGTCAGTTCTATTTGCAGGGCTCCTCTTACACCAATTACACCAAGAAGGAAA------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ATAAAACACAAATAATAAATA--------CATTATCCATAAAGAAAACGGATT-----------------------------------------------------------------------------------------------ATTTTTTAA-----TCATTTGTTTCATTACAGGGAAAAATATTACATGAAGGTATAATTACTCCTAGATAATAA--TTGCCACTATAAATGTTTTCTAATGT-TTATTTCTCTTGGGAAAAATTTGG---------TTTACTTTATGTTAGAATAAAAATTATACTA-----ATGCACAGTTAGTG-----AAAATGATTTATTTGTAATGCTTTAC---TTTCAAAATAAAGTAATCTCCACCCACA-----------------------------------------------------------------------------------------------------------------------"/>
                             
         <sequence id="seq_Phascolarctos_cinereus" spec="Sequence" taxon="Phascolarctos_cinereus" totalcount="4" value="-------------------------------GAGAGCCCGCCGTCCAATCCGAGGGCCGCACGGCCGAGGGGCGGGCGCTGATTGGTGGAGCGTGACGACGCCTCCTCCAG--CTGCGGGTGAGTATGGGGGCCAGCCAGG-----CTGCGAGGCAGAGCGCCCAGTACCGCCGCCCAGCTCGCACCGTCTTTGCGTCTTTGCCTTTGCTGCCCGCTGCAC---------C------------GGCTCCCTCACCATGGCGGACGACCGAGACAAAGCCAGCGACCAGATGAAGTACTGGAAGGAGCAGCGGGGCTCGCAGAAACCTGATTCTCTTACCACGGGAGCTGGTGTCCCTGTAGGAGATAAACTTAATATTATAACTGCTGGACCTCGGGGACCCCTTCTTGTTCAAGATGTGGTTTTCACTGATGAAATGGCTCACTTTGACCGGGAGAGAATTCCTGAGAGAGTTGTTCATGCCAAAGGAGCAGGAGCATTCGGGTATTTTGAAGTCACTCATGACATTACCAAATATTCCAAGGCAAAGGTCTTTGAGCATATTGGGAAAAAGACTCCGATTGCCGTTAGATTCTCTACAGTTGCCGGAGAAGCCGGATCAGCAGACACTGTTCGTGACCCTCGAGGCTTTGCTGTGAAATTCTACACCGAAGACGGCAACTGGGATCTCACAGGAAATAACACGCCCATCTTCTTTATCAGAGACCCACTTCTGTTTCCATCCTTTATTCATAGTCAGAAGAGGAACCCTCAGACCCACCTTAAAGATCCTGACATGGTTTGGGACTTCTGGAGTCTTCGCCCTGAATCTTTGCATCAGGTTAGTTTCTTGTTCAGTGATCGTGGAATTCCAGATGGCCATCGTCACATGAATGGATACGGATCTCACACCTTCAAACTGGTTAATGCTGAAGGGAAAGCAGTTTACTGCAAATTCCATTACAAGACTGACCAAGGAATCAAAAATCTTTCTGTCGAAGAGGCTGGAAGACTTGCTAAGGAAGATCCTGATTACGGCATTCGGGATCTCTATAACGCCATTTCTTCAGGCAACTACCCATCGTGGACATTTTACATCCAGGTCATGACCTTCGAGCAAGCAGAAGCATTTCCATTTAATCCATTTGACCTCACTAAGGTTTGGTCTCACAAAGACTATCCTCTTATCCCAGTTGGTAAACTGGTCTTAAATAGGAACCCTGGGAATTATTTCGCAGAGGTGGAACAGATAGCCTTTGACCCAAGTAACATGCCACCAGGCATTGAGGCAAGCCCTGATAAAATGCTGCAGGGCCGTCTTTTCGCATATCCTGATACCCACCGCCACCGTCTAGGACCCAACTATCTTCACATCCCTGTGAACTGTCCTTACCGAGCTCGAGTGTCCAACTACCAAAGAGATGGACCCATGTGCATGTCTGACAACCAAGGTGGGGCTCCCAATTACTACCCTAACAGCTTTGGGGCTCCTGAGGATCATTCCGCCGTTCTGGAGCACTGCTATCAGATCTCAGGGGATGTGCAGCGCTACAACAGCCTCGATGAAGATAACGTCACCCAGGTGAGAACGTTCTACAACACGGTGCTGAATGAGGCGCAGCGCCAGCGCCTATGTGAGAACATTGCCGGACACCTGAAGGATGCCCAGCTTTTCATCCAGAAGAAAGCTGTGAAAAACTTCAGTGATGTTGATAGTGACTATGGGTCCCGGGTCCAGGCGCTCCTGGACAAATACAATGCTCAGGGACAAA---AGAATGTGATTCGAACCTATGCTCAGTCTGCATCCCAGTTGTCTGCTAAGGAAAAAGCGAATCTCTGAACTC--AGCGGGAGGATTTCTTCT-CAGCTAAAAGATTCTAT-GACAGATGAAGCTA--CAGGAAGCTAATACTTATGATCAGTTGCCACACAATA-TAACACAACTGTCTGTATGCTAAATGCTCCCATCTGAAGGCCTGGTTTTATAAAAACATTCACATTTT-----GCAACC----------------AGTAATGCTTCTTGTCCATTAATACTTTGGACCCAG--GTTTAGTAG----TACTTGGGGAAAATAATTTTTCATGTTTATGTTGGAAGTGAAGGTTAATACAGTGCCTTTTAAAAAG--TGTGTTTGGTATTGACAGTTGATTTCAT----------------------GTGAGAAAAGTTATTTAG-TGGAA---TTATCAATTTAGCTGATA---------AAAATTATCTCATGAAATTAAT---GTTCTTATCT-C-----ACCTCACTGCC-TCTTAGAT-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------AGAAAATAGAAT-----------------CAT--TTTTTGGATGGATC----------------------------------------------------------------------------------------------------ATTTAAAAAA----AAATCAATTTCCTTATGGGGAAAA----CATTTTCTGGAGTA-CCCTTTTCAGAAAATTATTCTGCCACCATCA----TGTGTGGTTCATTGTTTCTGCTTGGAAATTGTCACCTTCCA--TTCTTTTTTACCTTGAAATTATGTTTATATTA-----ATGCAGTATTGATTTTTAAAAACAGATTGATTTGTAGTCATATTTGCATTTTACAGTAAAATAATCT------AAGAAAGCAAA---------------------------------------------------------------------------------------------------------------"/>
                             
@@ -100,11 +100,11 @@
                         
             </tree>
                     
+            <parameter id="kappa.s:cat_aligned" spec="parameter.RealParameter" lower="0.0" name="stateNode">2.0</parameter>
+                    
             <parameter id="birthRateY.t:cat_aligned" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
                     
             <parameter id="clockRate.c:cat_aligned" spec="parameter.RealParameter" lower="0.0" name="stateNode">1.0</parameter>
-                    
-            <parameter id="kappa.s:cat_aligned" spec="parameter.RealParameter" lower="0.0" name="stateNode">2.0</parameter>
                 
         </state>
             
@@ -140,41 +140,19 @@
                                     
                     <LogNormal id="LogNormalDistributionModel.0" name="distr">
                                             
-                        <parameter id="RealParameter.0" spec="parameter.RealParameter" estimate="false" name="M">1.0</parameter>
+                        <parameter id="RealParameter.1" spec="parameter.RealParameter" estimate="false" name="M">1.0</parameter>
                                             
-                        <parameter id="RealParameter.1" spec="parameter.RealParameter" estimate="false" name="S">1.25</parameter>
+                        <parameter id="RealParameter.2" spec="parameter.RealParameter" estimate="false" name="S">1.25</parameter>
                                         
                     </LogNormal>
                                 
                 </prior>
                             
-                <distribution id="Eutheria.prior" spec="beast.base.evolution.tree.MRCAPrior" monophyletic="true" tree="@Tree.t:cat_aligned">
-                                    
-                    <taxonset id="Eutheria" spec="TaxonSet">
-                                            
-                        <taxon id="Canis_lupus_familiaris" spec="Taxon"/>
-                                            
-                        <taxon id="Felis_catus" spec="Taxon"/>
-                                            
-                        <taxon id="Heterocephalus_glaber" spec="Taxon"/>
-                                            
-                        <taxon id="Lutra_lutra" spec="Taxon"/>
-                                            
-                        <taxon id="Manis_pentadactyla" spec="Taxon"/>
-                                            
-                        <taxon id="Phascolarctos_cinereus" spec="Taxon"/>
-                                            
-                        <taxon id="Rattus_norvegicus" spec="Taxon"/>
-                                        
-                    </taxonset>
-                                
-                </distribution>
-                            
                 <distribution id="Monotremes.prior" spec="beast.base.evolution.tree.MRCAPrior" monophyletic="true" tree="@Tree.t:cat_aligned">
                                     
                     <taxonset id="Monotremes" spec="TaxonSet">
                                             
-                        <taxon id="Ornithorhynchus_anatinus_catalas" spec="Taxon"/>
+                        <taxon id="Ornithorhynchus_anatinus" spec="Taxon"/>
                                             
                         <taxon id="Tachyglossus_aculeatus" spec="Taxon"/>
                                         
@@ -194,9 +172,9 @@
                                     
                     <taxonset id="Rodentia" spec="TaxonSet">
                                             
-                        <taxon idref="Heterocephalus_glaber"/>
+                        <taxon id="Heterocephalus_glaber" spec="Taxon"/>
                                             
-                        <taxon idref="Rattus_norvegicus"/>
+                        <taxon id="Rattus_norvegicus" spec="Taxon"/>
                                         
                     </taxonset>
                                     
@@ -210,25 +188,25 @@
                                 
                 </distribution>
                             
-                <distribution id="ingroup.prior" spec="beast.base.evolution.tree.MRCAPrior" monophyletic="true" tree="@Tree.t:cat_aligned">
+                <distribution id="Theria (ingroup).prior" spec="beast.base.evolution.tree.MRCAPrior" monophyletic="true" tree="@Tree.t:cat_aligned">
                                     
-                    <taxonset id="ingroup" spec="TaxonSet">
+                    <taxonset id="Theria (ingroup)" spec="TaxonSet">
                                             
-                        <taxon idref="Canis_lupus_familiaris"/>
+                        <taxon id="Canis_lupus_familiaris" spec="Taxon"/>
                                             
                         <taxon id="Dromiciops_gliroides" spec="Taxon"/>
                                             
-                        <taxon idref="Felis_catus"/>
+                        <taxon id="Felis_catus" spec="Taxon"/>
                                             
                         <taxon idref="Heterocephalus_glaber"/>
                                             
-                        <taxon idref="Lutra_lutra"/>
+                        <taxon id="Lutra_lutra" spec="Taxon"/>
                                             
-                        <taxon idref="Manis_pentadactyla"/>
+                        <taxon id="Manis_pentadactyla" spec="Taxon"/>
                                             
                         <taxon id="Monodelphis_domestica" spec="Taxon"/>
                                             
-                        <taxon idref="Phascolarctos_cinereus"/>
+                        <taxon id="Phascolarctos_cinereus" spec="Taxon"/>
                                             
                         <taxon idref="Rattus_norvegicus"/>
                                             
@@ -241,8 +219,62 @@
                 </distribution>
                         
             </distribution>
+                    
+            <distribution id="likelihood" spec="CompoundDistribution" useThreads="true">
+                            
+                <distribution id="treeLikelihood.cat_aligned" spec="ThreadedTreeLikelihood" data="@cat_aligned" tree="@Tree.t:cat_aligned">
+                                    
+                    <siteModel id="SiteModel.s:cat_aligned" spec="SiteModel">
+                                            
+                        <parameter id="mutationRate.s:cat_aligned" spec="parameter.RealParameter" estimate="false" lower="0.0" name="mutationRate">1.0</parameter>
+                                            
+                        <parameter id="gammaShape.s:cat_aligned" spec="parameter.RealParameter" estimate="false" lower="0.1" name="shape">1.0</parameter>
+                                            
+                        <parameter id="proportionInvariant.s:cat_aligned" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
+                                            
+                        <substModel id="hky.s:cat_aligned" spec="HKY" kappa="@kappa.s:cat_aligned">
+                                                    
+                            <frequencies id="empiricalFreqs.s:cat_aligned" spec="Frequencies" data="@cat_aligned"/>
+                                                
+                        </substModel>
+                                        
+                    </siteModel>
+                                    
+                    <branchRateModel id="StrictClock.c:cat_aligned" spec="beast.base.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate.c:cat_aligned"/>
+                                
+                </distribution>
+                        
+            </distribution>
                 
         </distribution>
+            
+        <operator id="KappaScaler.s:cat_aligned" spec="AdaptableOperatorSampler" weight="0.05">
+                    
+            <parameter idref="kappa.s:cat_aligned"/>
+                    
+            <operator id="AVMNOperator.cat_aligned" spec="kernel.AdaptableVarianceMultivariateNormalOperator" allowNonsense="true" beta="0.05" burnin="400" initial="800" weight="0.1">
+                            
+                <transformations id="AVMNSumTransform.cat_aligned" spec="operator.kernel.Transform$LogConstrainedSumTransform"/>
+                            
+                <transformations id="AVMNLogTransform.cat_aligned" spec="operator.kernel.Transform$LogTransform">
+                                    
+                    <f idref="kappa.s:cat_aligned"/>
+                                    
+                    <f idref="clockRate.c:cat_aligned"/>
+                                
+                </transformations>
+                            
+                <transformations id="AVMNNoTransform.cat_aligned" spec="operator.kernel.Transform$NoTransform">
+                                    
+                    <f idref="Tree.t:cat_aligned"/>
+                                
+                </transformations>
+                        
+            </operator>
+                    
+            <operator id="KappaScalerX.s:cat_aligned" spec="kernel.BactrianScaleOperator" parameter="@kappa.s:cat_aligned" scaleFactor="0.1" upper="10.0" weight="0.1"/>
+                
+        </operator>
             
         <operator id="CalibratedYuleModelBICEPSEpochTop.t:cat_aligned" spec="EpochFlexOperator" scaleFactor="0.1" tree="@Tree.t:cat_aligned" weight="2.0"/>
             
@@ -268,25 +300,7 @@
                     
             <parameter idref="clockRate.c:cat_aligned"/>
                     
-            <operator id="AVMNOperator.cat_aligned" spec="kernel.AdaptableVarianceMultivariateNormalOperator" allowNonsense="true" beta="0.05" burnin="400" initial="800" weight="0.1">
-                            
-                <transformations id="AVMNSumTransform.cat_aligned" spec="operator.kernel.Transform$LogConstrainedSumTransform"/>
-                            
-                <transformations id="AVMNLogTransform.cat_aligned" spec="operator.kernel.Transform$LogTransform">
-                                    
-                    <f idref="clockRate.c:cat_aligned"/>
-                                    
-                    <f idref="kappa.s:cat_aligned"/>
-                                
-                </transformations>
-                            
-                <transformations id="AVMNNoTransform.cat_aligned" spec="operator.kernel.Transform$NoTransform">
-                                    
-                    <f idref="Tree.t:cat_aligned"/>
-                                
-                </transformations>
-                        
-            </operator>
+            <operator idref="AVMNOperator.cat_aligned"/>
                     
             <operator id="StrictClockRateScalerX.c:cat_aligned" spec="kernel.BactrianScaleOperator" parameter="@clockRate.c:cat_aligned" upper="10.0" weight="3.0"/>
                 
@@ -310,45 +324,11 @@
                 
         </operator>
             
-        <operator id="KappaScaler.s:cat_aligned" spec="AdaptableOperatorSampler" weight="0.05">
-                    
-            <parameter idref="kappa.s:cat_aligned"/>
-                    
-            <operator idref="AVMNOperator.cat_aligned"/>
-                    
-            <operator id="KappaScalerX.s:cat_aligned" spec="kernel.BactrianScaleOperator" parameter="@kappa.s:cat_aligned" scaleFactor="0.1" upper="10.0" weight="0.1"/>
-                
-        </operator>
-            
         <logger id="tracelog" spec="Logger" fileName="$(filebase).log" logEvery="1000" model="@posterior" sanitiseHeaders="true" sort="smart">
                     
             <log idref="posterior"/>
                     
-            <log id="likelihood" spec="CompoundDistribution" useThreads="true">
-                            
-                <distribution id="treeLikelihood.cat_aligned" spec="ThreadedTreeLikelihood" data="@cat_aligned" tree="@Tree.t:cat_aligned">
-                                    
-                    <siteModel id="SiteModel.s:cat_aligned" spec="SiteModel">
-                                            
-                        <parameter id="mutationRate.s:cat_aligned" spec="parameter.RealParameter" estimate="false" lower="0.0" name="mutationRate">1.0</parameter>
-                                            
-                        <parameter id="gammaShape.s:cat_aligned" spec="parameter.RealParameter" estimate="false" lower="0.1" name="shape">1.0</parameter>
-                                            
-                        <parameter id="proportionInvariant.s:cat_aligned" spec="parameter.RealParameter" estimate="false" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
-                                            
-                        <substModel id="hky.s:cat_aligned" spec="HKY" kappa="@kappa.s:cat_aligned">
-                                                    
-                            <frequencies id="empiricalFreqs.s:cat_aligned" spec="Frequencies" data="@cat_aligned"/>
-                                                
-                        </substModel>
-                                        
-                    </siteModel>
-                                    
-                    <branchRateModel id="StrictClock.c:cat_aligned" spec="beast.base.evolution.branchratemodel.StrictClockModel" clock.rate="@clockRate.c:cat_aligned"/>
-                                
-                </distribution>
-                        
-            </log>
+            <log idref="likelihood"/>
                     
             <log idref="prior"/>
                     
@@ -356,21 +336,19 @@
                     
             <log id="TreeHeight.t:cat_aligned" spec="beast.base.evolution.tree.TreeStatLogger" tree="@Tree.t:cat_aligned"/>
                     
+            <log idref="kappa.s:cat_aligned"/>
+                    
             <log idref="CalibratedYuleModel.t:cat_aligned"/>
                     
             <log idref="birthRateY.t:cat_aligned"/>
                     
             <log idref="Monotremes.prior"/>
                     
-            <log idref="ingroup.prior"/>
+            <log idref="clockRate.c:cat_aligned"/>
                     
             <log idref="Rodentia.prior"/>
                     
-            <log idref="Eutheria.prior"/>
-                    
-            <log idref="clockRate.c:cat_aligned"/>
-                    
-            <log idref="kappa.s:cat_aligned"/>
+            <log idref="Theria (ingroup).prior"/>
                 
         </logger>
             
