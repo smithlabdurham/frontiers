@@ -857,23 +857,61 @@
 									 distinguish your results.
 								 </li>
 								 <img src="images/clock/densitree-strict.png" />
-
-
-
-
-
-
+								 <li>
+									 Compare the estimates of the divergence times to your priors.
+									  Have your data been informative?
+									</li>
+									<li>
+										Now look at the absolute values of your divergence time
+										estimates, especially at the base of the ingroup.
+										Do these look realistic?
+									</li>
+									<p>
+										Perhaps our assumption of a "strict" clock, in which
+										mutation rate is constant across every branch of the tree,
+										was too strong an assumption.
+										If mammals had an early burst of radiation, their rates
+										may have been higher earlier in their history,
+										which would make a clock predict an earlier origin.
+								 </p>
+								 <li>
+									 Return to BEAUti and set the Clock Model to
+									 "Optimized Relaxed Clock".
+								 </li>
+								 <li>
+									 Save the settings with a different filename.
+								 </li>
+								 <li>
+									 Run a BEAST analysis using this settings file.
+								 </li>
+								 <li>
+									 Use Tracer to verify that your run has converged, and has
+									 obtained a sufficient sample size (ESS > 100 for
+									 relevant parameters).
+									 As the relaxed clock has a larger parameter space (why?),
+									 you may need to extend the run, perhaps up to 5M generations?
+								 </li>
+								 <li>
+									 Compare the age of key clades to the priors you specified.
+									 Are the data informative?
+								 </li>
+								 <h3>Evaluate influence of priors</h3>
+								 <li>
+									 Select the "Sample From Prior" box on BEAUti's MCMC
+									 tab, and save the settings to a new file.
+								 </li>
+								 <li>
+									 Run this analysis in BEAST. This runs the analysis without
+									 any data, to explore the <strong>effective</strong> priors.
+									 This captures any interactions between your initial prior
+									 distributions.
+								 </li>
+								 <li>
+									 Load the results into tracer.  Compare the effective priors
+									 with the posteriors you obtained when you ran the model using
+									 the data.  How much have the data influenced your results?
+								 </li>
 							</ol>
-
-
-
-              <h3>Under construction</h3>
-              <p>The rest of this content is on its way.</p>
-
-              <p>Meanwhile, you might find a primer on
-              <a href="https://www.nature.com/scitable/topicpage/the-molecular-clock-and-estimating-species-divergence-41971/" target="_blank">molecular clocks</a>
-              useful.
-              </p>
             </div>
           </div>
         </div>
