@@ -823,8 +823,39 @@
 								 </p>
 								 <img src="images/clock/tracer-monotremes.png" />
 								 <li>
-									 Return to the BEAST folder and launch DensiTree
+									 Return to the BEAST folder and launch DensiTree.
 								 </li>
+								 <li>
+									 Open the .trees file corresponding to your analysis.
+									 The file name will be
+									 <code>{BEAUti-filename}-{alignment-filename}.trees</code>;
+									 see <a href="assets/clock/cat_initial-cat_aligned.trees">example</a>.
+								 </li>
+								 <p>
+									 DensiTree overlays each sampled trees.  As trees are
+									 sampled according to their probability, the more densely
+									 shaded results are more likely.
+								 </p>
+								 <li>
+									 Use Style:Triangle to view relationships. It may help to
+									 also Show→Consensus Trees or Show→Root Canal.
+									 If the relationships recovered do not match those of the
+									 well-constrained tree, you may need to add more constraints
+									 by repeating the analysis after adding "monophyletic" MRCA
+									 priors in BEAUti.  Try constraining Eutheria and Metatheria
+									 to be monophyletic.
+								 </li>
+								 <img src="images/clock/densitree-triangle.png" />
+								 <li>
+									 Use Style:Block and Grid: Full grid to view the date
+									 estimates of key nodes.  This is an indirect way of viewing
+									 the information available in Tracer – but Tracer can only
+									 produce these histograms for constrained nodes.
+								 </li>
+								 <img src="images/clock/densitree-block.png" />
+
+
+
 
 
 							</ol>
