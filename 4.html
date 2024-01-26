@@ -232,7 +232,7 @@
 
                 <li class="question" onclick="Reveal('mol-const');">
                   How confident do you feel that we can assume a single, constant
-                  mutation rate across all taxa?
+                  mutation rate across all taxa? (Why?)
                 </li>
                 <li class="hidden written answer" id="mol-const">
                   Many factors might work against this – population size;
@@ -359,21 +359,36 @@
 									placentals (Eutheria)
 								</li>
 								<li>
-									Now add both the avaialble species of monotreme to your cart.
+									Now add both the available species of monotreme to your cart.
 									The platypus and echidna will together form our outgroup.
 								</li>
 								<li>
 									Open your cart (trolley icon, should read e.g. “12 items”).
+									<ul><li class="bulb">
+										Note: Due to a bug with the website, if you close your cart window,
+										 you may not be able to open it again without refreshing the page and
+										 losing your progress (!)
+									 </li></ul>
 								</li>
 								<li>
-									Select “Protein alignment → one sequence per gene”.
+									Within the Cart window, Select “Protein alignment → one sequence per gene”.
 								</li>
 								<li>
-									Click “Advanced parameters” (under the "Align" button").
-								</li>
-								<li class="question">Notice the gap opening penalties.
-									What do these mean?
-									Are the default values sensible?
+									<p>
+										Click “Advanced parameters” (under the "Align" button")
+										to view the gap opening penalties.
+									</p>
+									<p>
+										If a mismatched amino acid pair is penalized with one penalty
+										point, this penalty could be avoided by adding a gap:
+										<code>AAC</code> and <code>ACC</code> could be aligned
+										with no penalty by inserting gaps to produce an aligned
+										pair
+										<code>AA-C</code> and <code>A-CC</code>, and making this
+										gap really long could allow alignments to open long gaps
+										instead of aligning stretches of a sequence that are mostly
+										similar but differ in a number of places.
+									</p>
 								</li>
 								<li>
 									Click "Align" to start computing an alignment.
@@ -381,7 +396,20 @@
 									the best fit match of AA sequences.
 								</li>
 								<li class="question">
-									If the alignment is incorrect,
+									Whilst the alignment runs, try to justify the default
+									gap opening/extension values.
+								</li>
+								<li class="bulb">
+									Consider what an alignment might look like if the "Opening" cost
+									was reduced / increased?  What about the "Extension" cost?
+								</li>
+								<li class="question">
+									Can we know whether an alignment is "correct"?
+									(What would this mean?)
+								</li>
+								</li>
+								<li class="question">
+									If the alignment is "incorrect",
 									what will the consequences be for inference?
 								</li>
 								<li>
