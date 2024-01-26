@@ -286,7 +286,7 @@
 						</div>
             <div class="col-10 col-12-narrow">
 
-              <h3>Obtaining DNA sequences</h3>
+              <h3>Obtain DNA sequences</h3>
               <p>
                 We will download sequences of the catalase gene from the
                 <acronym title="National Center for Biotechnology information">NCBI</acronym>,
@@ -430,7 +430,7 @@
 										</li>
 									</ul>
 								</li>
-							<h3>Aligning DNA sequences</h3>
+							<h3>Align DNA sequences</h3>
 							<p>Now we are ready to align our nucleotide sequences.</p>
 
 								<li>
@@ -503,7 +503,7 @@
 										 </li>
 									 </ul>
 								</li>
-								<h3>Designing a molecular clock analysis</h3>
+								<h3>Design a molecular clock analysis</h3>
 								<li>
 									If you haven't already done so,
 									download BEAST2 and unzip the contents to a folder on your computer.
@@ -714,6 +714,36 @@
 									and produce a summary for the posterior estimate of the
 									date of the MRCA of placentals and marsupuals (the therians).
 								</li>
+								<li>
+									Finally, configure the
+									<acronym title="Monte Carlo Markov Chain">MCMC</acronym>
+									analysis.  Set the Chain Length to 100&nbsp;000.
+									Simply put, this will try 100k different parameter variations
+									(e.g. mutation rate, tree topology, branch lengths),
+									sampling more plausible values of the parameters with higher
+									frequencies.
+								</li>
+								<li>
+									Safe your settings (File→Save).
+								</li>
+								<h3>Conduct the analysis</h3>
+								<li>Return to your BEAST folder and run BEAST</li>
+								<li>
+									Select the "Input file" you just created in BEAUti.
+									<ul><li class="bulb">
+										Work from a <a href="assets/clock.cat_initial.xml">template</a>
+										if necessary
+									</li></ul>
+								</li>
+								<li>Notice the box reading "default: only write new log files".
+									<ul><li class="bulb">
+										Log files will be named based on the input file;
+										if you wish to overwrite or add to a previous run, select
+										the relevant option, otherwise the presence of previous log
+										files will cause the run to abort with an error.
+									</li></ul>
+								</li>
+								<li>Press "Run" to begin the analysis.</li>
 
 							</ol>
 
