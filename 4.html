@@ -416,12 +416,19 @@
 								</li>
 								<li>
 									Perform a search & replace to replace spaces (<code> </code>)
-									with underscores (<code>_</code>).  Optionally,
-									also remove the sequence identifiers that prefix the
-									species names, but be sure to retain the initial <code>&gt;</code>
-									(e.g.
-									<code>&gt;NM_001035386.2 Bos taurus catalase (CAT), mRNA</code>
-									becomes <code>&gt;Bos taurus catalase (CAT), mRNA</code>
+									with underscores (<code>_</code>).
+									<ul>
+										<li>
+											Optionally, remove other information, to leave only
+											the species names – this doesn't affect the analysis,
+											but may make your results easier to read.
+										</li>
+										<li>
+											Be sure to retain the initial &ldquo;<code>&gt;</code>&rdquo;,
+											such that <code>&gt;NM_001035386.2_Bos_taurus_catalase_(CAT),_mRNA</code>
+											becomes <code>&gt;Bos_taurus</code>
+										</li>
+									</ul>
 
 								</li>
 							</ol>
