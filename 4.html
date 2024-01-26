@@ -770,7 +770,7 @@
 									Select the "Trace" tab and untick "Draw line plot"
 									to view the likelihood of successive samples.
 								</li>
-								<img src="assets/clock/tracer-likelihood.png" />
+								<img src="images/clock/tracer-likelihood.png" />
 								<p>
 									When a run has converged on the posterior distribution,
 									the samples should plateau to form a cloud about a steady
@@ -795,6 +795,35 @@
 								<li>
 									Launch BEAST, select your file, and change from "default" to
 									 "resume" to append the new steps to your previous chain.
+								 </li>
+								 <li>
+									 Whilst the analysis is running, return to Tracer and "Reload"
+									 the results.
+								 </li>
+								 <p>
+									 Notice that the results have now formed a plateau, with the
+									 initial low values in the greyed-out "burn-in" stage.
+								 </p>
+								 <p>
+									 Notice also that the <acronym title="Estimated Sample Size">
+										 ESS</acronym> values are now mostly above 200.
+										 Our results may now be meaningful.
+								 </p>
+								 <img src="images/clock/tracer-likelihood-2M.png" />
+								 <h3>Interpret results</h3>
+								 <li>
+									 Switch to the "Estimates" tab and select the
+									 mrca.age(Monotremes) Statistic from the Traces: list.
+								 </li>
+								 <p>
+									 This displays the <strong>posterior</strong> probability of
+									 the age of the MRCA of platypus and echidna.
+									 Notice that this rather resembles our prior distribution:
+									 were the data uninformative here?
+								 </p>
+								 <img src="images/clock/tracer-monotremes.png" />
+								 <li>
+									 Return to the BEAST folder and launch DensiTree
 								 </li>
 
 
