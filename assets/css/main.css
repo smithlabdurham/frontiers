@@ -61,6 +61,7 @@ img.right {
 	clear: both;
 	border: 1px solid black;
 	margin-bottom: 1em;
+	margin-left: 1em;
 }
 
 blockquote, q {
@@ -356,12 +357,12 @@ section {
 }
 
 li.question::before, li.flush-question::before {
-  counter-increment: question-number;
   content: "[" counter(section-number) "." counter(question-number) "] ";
 }
 
 li.question, li.discuss {
   margin-top: 1.6em;
+	counter-increment: question-number list-item 0;
 }
 
 li.discuss {
@@ -417,6 +418,10 @@ li.caution::marker {
   font-weight: 900;
 	font-family: "Font Awesome 5 Free";
   content: "\f12a";
+}
+
+li.bulb, li.caution, li.answer  {
+	counter-increment: list-item 0;
 }
 
 li.bulb::marker {

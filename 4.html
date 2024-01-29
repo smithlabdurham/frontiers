@@ -232,7 +232,7 @@
 
                 <li class="question" onclick="Reveal('mol-const');">
                   How confident do you feel that we can assume a single, constant
-                  mutation rate across all taxa?
+                  mutation rate across all taxa? (Why?)
                 </li>
                 <li class="hidden written answer" id="mol-const">
                   Many factors might work against this – population size;
@@ -269,8 +269,21 @@
                 of mammal origins, using sequences of the gene catalase –
                 a core cellular enzyme responsible for breaking down the
                 "free radical" (oxidative stressor) hydrogen peroxide
-                (H<sub>2</sub>O<sub>2</sub>) to water and oxygen.
+                (H&#x2082;O&#x2082;) to
+								water (H&#x2082;O) and
+								oxygen (O&#x2082;) .
               </p>
+							<p>
+								Given its central role in cell processes, catalase is
+								taxonomimcally widespread.
+								Because it is under strong selective pressure,
+								it has a low overall mutation rate –
+								making it well suited to tracking deep divergences
+								(e.g.
+								<a href="https://dx.doi.org/10.1073/pnas.0401670101"
+								title="PNAS: Estimating metazoan divergence times with a molecular clock"
+								target="_blank">Petersen <i>et al.</i> 2004</a>).
+							</p>
               <p>
                 We will collect gene sequences from some representative mammals,
                 consider appropriate callibration points, and explore the
@@ -279,7 +292,7 @@
 						</div>
             <div class="col-10 col-12-narrow">
 
-              <h3>Obtaining DNA sequences</h3>
+              <h3>Obtain DNA sequences</h3>
               <p>
                 We will download sequences of the catalase gene from the
                 <acronym title="National Center for Biotechnology information">NCBI</acronym>,
@@ -330,17 +343,711 @@
 										</li>
 									</ul>
 								</li>
-              </ol>
+								<p>
+									Not all similar DNA sequences are necessarily homologous –
+									for instance, sometimes a gene is duplicated, and two copies
+									evolve independently in the same lineage.
+									As mammals are well understood, we can rely on existing
+									work to identify sequences of equivalent genes.
+								</p>
+								<li>
+									Scroll down to § "General gene information" and click the link
+									"Homology → NCBI Orthologs"
+									<a href="https://www.ncbi.nlm.nih.gov/gene/847/ortholog/"
+									title="Cut direct to page">[shortcut]</a>.
+									This detailed information is only available for vertebrates.
+								</li>
+								<p>Now let's choose some taxa to study.</p>
+								<li>
+									Type Marsupials into the "Enter taxonomic name" box and select
+									<em>Marsupials (Metatheria)</em> from the dropdown to filter results.
+								</li>
+								<li>
+									You should see half a dozen available sequences.
+									Note the taxa for which data are available (the common name
+									is given after the binomial epithet), and the length
+									of the gene sequences (in amino acids, aa);
+									some genes are different lengths.
+								</li>
+								<li>
+									Select four or five taxa and click “Add to cart”.
+									Prefer taxa that are included in one of the
+									"well-corroborated trees" figured by
+									<a href="https://academic.oup.com/view-large/figure/362010550/syab072f1.tif"
+									target="_blank">Asher &amp; Smith (2023)</a> –
+									it will help to know something about the relationships
+									between your chosen taxa.
+								</li>
+								<li>
+									Clear the taxonomic name box and repeat for
+									placentals (Eutheria).
+								</li>
+								<li>
+									Now add both the available species of monotreme to your cart.
+									The platypus and echidna will together form our outgroup.
+								</li>
+								<li>
+									Open your cart (trolley icon, should read e.g. “12 items”).
+									<ul><li class="caution">
+										Note: Due to a bug with the website, if you close your cart window,
+										 you may not be able to open it again without refreshing the page and
+										 losing your progress.
+									 </li></ul>
+								</li>
+								<li>
+									Within the Cart window, Select “Protein alignment → one sequence per gene”.
+								</li>
+								<li>
+									<p>
+										Click “Advanced parameters” (under the "Align" button")
+										to view the gap opening penalties.
+									</p>
+									<p>
+										If a mismatched amino acid pair is penalized with one penalty
+										point, this penalty could be avoided by adding a gap:
+										<code>AAC</code> and <code>ACC</code> could be aligned
+										with no penalty by inserting gaps to produce an aligned
+										pair
+										<code>AA-C</code> and <code>A-CC</code>, and making this
+										gap really long could allow alignments to open long gaps
+										instead of aligning stretches of a sequence that are mostly
+										similar but differ in a number of places.
+									</p>
+								</li>
+								<li>
+									Click "Align" to start computing an alignment.
+									This will take a few seconds as the algorithm tries to find
+									the best fit match of AA sequences.
+								</li>
+								<li class="question" onclick="Reveal('gap-cost');">
+									Whilst the alignment runs, try to justify the default
+									gap opening/extension values.
+								</li>
+								<li class="bulb">
+									Consider what an alignment might look like if the "Opening" cost
+									was reduced / increased.
+									How would modifying the "Extension" cost change the alignment?
+								</li>
+								<li class="hidden written answer" id="gap-cost">
+									<p>
+										Cheap gap opening penalties allow slightly different sequences
+										to be aligned with gaps rather than their homologous sequences,
+										so we miss out on the evolutionary information we would
+										obtain by comparing apples to apples.
+									</p>
+									<p>
+										Make opening a gap too expensive, however, and real
+										insertion/deletion events will not be reconstructed.
+									</p>
+									<p>
+										Cheap extension penalties mean that once a gap is open,
+										we may as well extend it indefinitely to swallow the
+										other sequence, and avoid comparing bases that are
+										different.
+									</p>
+									<p>
+										Overall, we are trying to strike a balance between these
+										factors, but once sequences start to diverge, and
+										particularly as they accumulate insertion/deletion
+										events, it's very unlikely that any alignment will be fully
+										accurate.
+									</p>
+								</li>
+								<li class="question" onclick="Reveal('aln-correct');">
+									Can we know whether an alignment is "correct"?
+									(What would this mean?)
+								</li>
+                <li class="hidden written answer" id="aln-correct">
+									The "correct" alignment matches the pattern of mutations that
+									historically occurred, and is impossible to know for sure
+									without travelling in time and watching evolution happen.
+									The best we can do is to find an "optimal" alignment, according
+									to whatever parameters we set.
+								</li>
+								<li class="question" onclick="Reveal('bad-aln');">
+									If the alignment is "incorrect",
+									what will the consequences be for inference?
+								</li>
+								<li class="hidden written answer" id="bad-aln">
+									If two bases are different because they are misaligned,
+									we will be inferring changes where none occurred.
+									Our reconstruction of evolutionary relationships and rates
+									will be misled.
+								</li>
+								<li>
+									Observe the graphical overview of the alignment.
+									Note the highly conserved nature of the amino acid sequences.
+									Scroll down to see the aligned sequences themselves.
+								</li>
+								<p>
+									So far we've been aligning the amino acid sequences.
+									We could work backwards from this alignment to produce a
+									DNA alignment.  But we're instead going to use the mRNA
+									nucleotide sequences directly.
+								</p>
+								<li>
+									Close the COBALT alignment tool and return to your Cart.
+								</li>
+								<li>
+									Click "Download" → "RefSeq transcripts (FASTA)"
+									(one sequence per gene). This will download the mRNA
+									sequences.
+								</li>
+								<li>
+									Open the file in a text editor (I recommend
+									<a href="https://notepad-plus-plus.org/downloads/" title="Download Notepad++"
+									target="_blank">Notepad++</a>;
+									Apple users might prefer
+									<a href="https://zed.dev/" target="_blank" title="Zed editor">Zed</a>)
+								</li>
+								<li>
+									Perform a search & replace to replace spaces (<code> </code>)
+									with underscores (<code>_</code>).
+									<ul>
+										<li>
+											Optionally, remove other information, to leave only
+											the species names – this doesn't affect the analysis,
+											but may make your results easier to read.
+										</li>
+										<li>
+											Be sure to retain the initial &ldquo;<code>&gt;</code>&rdquo;,
+											such that <code>&gt;NM_001035386.2_Bos_taurus_catalase_(CAT),_mRNA</code>
+											becomes <code>&gt;Bos_taurus</code>
+										</li>
+									</ul>
+								</li>
+							<h3>Align DNA sequences</h3>
+							<p>Now we are ready to align our nucleotide sequences.</p>
 
+								<li>
+									Open the <a href="https://www.ebi.ac.uk/jdispatcher/msa/muscle"
+									title="MUSCLE multiple sequence alignment" target="_blank">
+									MUSCLE web tool</a>
+								</li>
+								<li>
+									Under "Input sequence", select "Choose file" to upload your
+									edited FASTA file.
+									<ul>
+										<li>
+											Not working? Try my
+											<a href="assets/clock/cat_refseq_transcript.fasta">sample file</a>.
+										</li>
+									</ul>
+								</li>
+								<li>
+									Under "Parameters", select "Output Format: Pearson/FASTA".
+								</li>
+								<li>
+									Click "Submit" and wait for your results to be ready.
+								</li>
+								<li>
+									Explore your alignment; zoom and drag using the axis.
+								</li>
+								<img src="images/clock/muscle-alignment.png" />
+								<li>
+									Notice that the MUSCLE algorithm aligns the sequences assuming
+									a phylogenetic explanation for differences; it thus generates
+									an <strong>unrooted</strong> phylogenetic tree as part of
+									finding the best alignment.
+								</li>
+								<li class="question" onclick="Reveal('tree-root');">
+									How would the tree look different if a root was specified?
+								</li>
+								<li class="hidden written answer" id="tree-root">
+									The relationships would remain the same, but the outgroup
+									would be at the bottom, making a different set of taxa
+									appear monophyletic.  This doesn't affect relationships or
+									sequence similarity; it does affect dates.
+								</li>
+								<li class="question" onclick="Reveal('rel-corr');">
+									How do the relationships in your tree compare to those in the
+									<a href="https://academic.oup.com/view-large/figure/362010550/syab072f1.tif"
+									target="_blank">well-corroborated trees</a>?
+								</li>
+								<li class="hidden written answer" id="rel-corr">
+									If they aren't similar, we might start to worry about the
+									quality of the alignment or the suitability of this gene
+									for analysis.
+								</li>
+								<li>
+									Download the results in FASTA format by heading to "Tool Output→Download".
+									<ul>
+										<li>
+											If that doesn't work, try "Result Files→Alignment in FASTA format"
+										</li>
+										<li>
+											If necessary, use my
+											<a href="assets/clock/cat_aligned.fasta">sample output file</a>.
+										</li>
+									</ul>
+								</li>
+								<li>
+									Rename the file so it has a <code>.fasta</code> extension
+									(replacing the default <code>.txt</code>).
+									<ul>
+										<li class="bulb">
+											Stuck?
+											Try asking e.g.
+											 <a href="https://bard.google.com/" target="_blank">Bard</a>,
+											<a href="https://chat.openai.com/" target="_blank">ChatGPT</a>
+											 "How do I change a file extension in Windows 10?"
 
+											 Generative AI often gets to the point faster than top-ranked
+											 <a href="https://www.indeed.com/career-advice/career-development/how-to-change-file-type" target="_blank" rel="nofollow">search results</a>,
+											 which are often bloated with
+											 <acronym title="Search Engine Optimization">SEO</acronym>
+											 blather.
+										 </li>
+									 </ul>
+								</li>
+								<h3>Design a molecular clock analysis</h3>
+								<li>
+									If you haven't already done so,
+									download BEAST2 and unzip the contents to a folder on your computer.
+								</li>
+								<li>
+									Navigate to this folder and run "BEAUti".
+									You may need to approve a security prompt.
+								</li>
+								<li>
+									Import your alignment file using "File→Import alignment"
+									<ul>
+										<li class="bulb">
+											If you see "Unsupported alignment",
+										  check that you changed the file extension to <code>.fasta</code>
+										</li>
+								  </ul>
+								</li>
+								<img src="images/clock/beauti-import.png" />
+								<li>Confirm that the data type is "nucleotide"</li>
+								<li>
+									<p>
+										Open the "Site Model" tab and select a Substitution Model.
+									</p>
+									<p>
+										The default, JC69, assumes a constant mutation rate between
+										any of the four nucleotide bases.
+									</p>
+									<p>
+										The HKY model incorporates the fact that chemically similar
+										bases are easier to substitute – and tend to encode chemically
+										similar amino acids, so mutations are less likely to be
+										deleterious.
+										The TN93 model fine-tunes this further by adding further
+										parameters, whereas the fully generalized GTR
+										(Generalized Time Reversible) model allows a distinct mutation
+										rate between each different pair of nucleotides (64 in total) –
+										whilst potentially more accurate, it takes more data to infer
+										the values of all 64 parameters, making the model succeptible
+										to overfitting with smaller datasets like ours.
+									</p>
+									<p>
+									 	Select the HKY model and set Frequencies: Empirical.
+								 	</p>
+								</li>
+								<li>
+									Open the "Clock Model" tab.  We will use a Strict Clock
+									for our initial analysis. Leave the Mean clock rate at its
+									default setting (1).
+								</li>
 
-              <h3>Under construction</h3>
-              <p>The rest of this content is on its way.</p>
-
-              <p>Meanwhile, you might find a primer on
-              <a href="https://www.nature.com/scitable/topicpage/the-molecular-clock-and-estimating-species-divergence-41971/" target="_blank">molecular clocks</a>
-              useful.
-              </p>
+								<li>
+									Open the "Priors" tab and update the "Tree.t" prior from
+									"Yule Model" to "Calibrated Yule Model"
+								</li>
+								<li>
+									Save your progress (File → Save)
+								</li>
+								<li>
+									At the bottom of the "Priors" tab, click "+ Add Prior".
+								</li>
+								<p>We are going to constrain the age of the common ancestor of a clade.
+									Our prior allows us to set a probability distribution on the
+									date of the most recent common ancestor
+									(<acronym title="most recent common ancestor">MRCA</acronym>)
+									of a set of taxa.
+								<li>
+									Select "MRCA Prior".
+									<ul><li class="bulb"><strong>Be careful!</strong>
+									Priors cannot be deleted – if you select the wrong one,
+									you'll have to start again from your last save file (!)
+								</li></ul>
+								</li>
+								<li>
+									Select the taxa in the group you wish to constrain.
+									We'll start with the monotremes, <i>Ornithorhynchus</i> and
+									<i>Tachyglossus</i>.  Move these taxa to the right-hand
+									list (by pressing "&gt;&gt;").
+								</li>
+								<li>
+									Enter "Monotremes" as a taxon set label
+								</li>
+								<li>
+									Click "OK".
+								</li>
+								<p>
+									The prior should now appear on your "Priors" tab.
+									At the moment it is an "empty" prior and will not affect
+									the analysis.
+								</p>
+								<li>
+									Tick the "Monophyletic" checkbox. This forces these taxa
+									to form a clade – and allows us to constrain the date of
+									the clade's MRCA.
+								</li>
+								<li>
+									Choose a prior from the the "[none]" drop-down box.
+									A "Gamma" prior is probably appropriate here.
+								</li>
+								<li>
+									Select the &#x25B6; button to expand the prior.
+									Specify appropriate values for the "Alpha", "Beta" and
+									"Offset" parameters.
+								</li>
+								<img src="images/clock/monotreme-prior.png" />
+								<h4>Specifying a prior</h4>
+								<p>
+									This is a good point to ask what an appropriate prior
+									distribution might look like.
+									Bayesian priors attempt to encapuslate our prior beliefs,
+									i.e. what we think we know before we run the analysis.
+								</p>
+								<p>
+									At this point you probably don't have much prior
+									knowledge about monotreme origination.  But such information
+									is seldom far away; a Google Scholar search for
+									“<a href="https://scholar.google.co.uk/scholar?q=Oldest+monotreme" target="_blank">
+									Oldest monotreme</a>” throws up a 2008 PNAS article
+									(fourth result for me)
+									“<a href="https://dx.doi.org/10.1073/pnas.0706385105" title="The oldest platypus and its bearing on divergence timing
+									of the platypus and echidna clades" target="_blanks">
+									The oldest platypus and its bearing on divergence timing
+									of the platypus and echidna clades</a>”.
+								</p>
+								<p>
+									This study is perfect for our needs:
+									it reports a total-group platypus, which is by definition a
+									crown-group member of the clade we have constrained
+									(strictly, Platypus + Echidna – there may be other crown-group
+									monotremes not included in our analysis).
+									This fossil is dated to 121–112.5&nbsp;Ma, so the MRCA of
+									platypus and echidna <strong>must</strong> be older than 112.5&nbsp;Ma;
+									this gives us a value for our "Offset" parameter.
+								</p>
+								<p>
+									The other parameters are more subjective.
+									This this is a rather derived fossil and
+									(based on the PNAS abstract and the snippets in the other Google Scholar results)
+									the fossil record of monotremes seems to be quite sparse,
+									so I think it’s quite likely that there are older fossils
+									remaining to be discovered – it would be surprising if the
+									only relevant fossil we'd found was so close in time to the MRCA.
+								</p>
+								<p>
+									The Beta parameter allows us to scale ("stretch") the distribution.
+									The default value of 2 seems too small for me;
+									our default priors assign a 95% probability to the MRCA
+									being younger than 122&nbsp;Ma (see the Quantile report under
+									the curve visualization), but our dating uncertainty on the
+									fossil itself spreads back to 121&nbsp;Ma.
+									Let's try a larger value: perhaps 200?
+								</p>
+								<p>
+									Does this prior look reasonable?  Check the shape of the
+									curve and its summary statistics.
+									The very earliest stem-group mammal fossils are ~320&nbsp;Ma,
+									so it's highly unlikely that the
+									platupus-echidna MRCA dates back that far –
+									The mammal crown group is probably not older than
+									Morganucodonts, late Triassic (205&nbsp;Ma) upper-stem Mammals,
+									so we probably don’t want a prior that assigns much probability
+									to ages older than 205&nbsp;Ma for our monotreme divergence node.
+									Perhaps a Beta value of 20 looks more reasonable?
+								</p>
+								<p>
+									We should also consider that the fossil is quite derived,
+									and that the ~30&nbsp;Ma gap to the second-oldest platypus
+									fossil suggests that the monotreme fossil record is rather
+									incomplete.
+									These considerations can be reflected in our Alpha parameter.
+									Compare values of 1 and 10 to get a feeling for how
+									this parameter changes the shape of the probability
+									distribution.
+									If we felt it was likely that our constraining fossil was
+									very close to the date of the MRCA, we might pick a small
+									value of alpha; in this case, I am inclined to opt for a
+									larger value of Alpha, which increases the mean of the
+									distribution – simply put, it moves the "hump" of the
+									distribution further back in time.
+								</p>
+								<p>
+									Increasing Alpha also extends the tail of the distribution,
+									so Beta will need adjusting accordingly: I'm happy with values
+									of Alpha = 3; Beta = 10; Offset = 112.5.
+								</p>
+								<p>
+									A vertebrate palaeontologist with a better understanding
+									of platypus morphology and mammal taphonomy would no doubt
+									come up with a different set of values.
+									If we have lots of informative data, we hope that the signal
+									will outweigh the prior: we update our beliefs in light
+									of new evidence.
+								  But if our data are not particularly informative, we might
+									find that our results simply echo our priors back to us:
+									in which case, justifying the precise shape of our prior
+									distribution becomes even more important.
+								</p>
+								<li>
+									Select at least one, ideally two or three, further clades to
+									constrain.  Search the literature to justify your design
+									of priors.
+								</li>
+								<li>
+									To root the tree, add an MRCA prior including everything that's
+									not a monotreme. Label it appropriately
+									("Theria", or simply "ingroup").
+									Leave the prior type to "[none]" and select "monophyletic".
+									This will force the tree to be rooted on monotremes,
+									and produce a summary for the posterior estimate of the
+									date of the MRCA of placentals and marsupuals (the therians).
+								</li>
+								<li>
+									Finally, configure the
+									<acronym title="Monte Carlo Markov Chain">MCMC</acronym>
+									analysis.  Set the Chain Length to 100&nbsp;000.
+									Simply put, this will try 100k different parameter variations
+									(e.g. mutation rate, tree topology, branch lengths),
+									sampling more plausible values of the parameters with higher
+									frequencies.
+								</li>
+								<li>
+									Safe your settings (File→Save).
+								</li>
+								<h3>Conduct the analysis</h3>
+								<li>Return to your BEAST folder and run BEAST</li>
+								<li>
+									Select the "Input file" you just created in BEAUti.
+									<ul><li class="bulb">
+										Work from a <a href="assets/clock.cat_initial.xml">template</a>
+										if necessary
+									</li></ul>
+								</li>
+								<li>Notice the box reading "default: only write new log files".
+									<ul><li class="bulb">
+										Log files will be named based on the input file;
+										if you wish to overwrite or add to a previous run, select
+										the relevant option, otherwise the presence of previous log
+										files will cause the run to abort with an error.
+									</li></ul>
+								</li>
+								<li>Press "Run" to begin the analysis.</li>
+								<li>
+									Open Tracer
+								</li>
+								<li>
+									Under "Trace Files:", press "+" to load your BEAST log.
+									<ul><li class="bulb">
+										If the run's not finished,
+										Tracer will display the current results; press the "Reload"
+										button to update.
+									</li>
+									<li>
+										Use a <a href="assets/clock/cat_initial.log">template file</a>
+										if needed.
+									</li></ul>
+								</li>
+								<li>
+									Note the Estimated Sample Size for each parameter.
+									This is an indication of how well the range of possible values
+									has been explored; values &lt; 200 indicate that reconstructed
+									values are unlikely to be statistically robust.
+								</li>
+								<li>
+									Click on the "likelihood" Statistic in the Traces: list.
+									Select the "Trace" tab and untick "Draw line plot"
+									to view the likelihood of successive samples.
+								</li>
+								<img src="images/clock/tracer-likelihood.png" />
+								<p>
+									When a run has converged on the posterior distribution,
+									the samples should plateau to form a cloud about a steady
+									likelihood value – they are often sampling likely parameter
+									values, and sampling unlikely values in proportion to their
+									probability.
+								</p><p>
+									The low values early in this run suggest that it took a
+									while for the run to converge on a sensible set of parameters.
+									These early results should be "burned off" and ignored,
+									or they will skew the sample; the simplest solution
+									is to run the chain for longer, which will also increase our
+									sample size.
+								</p>
+								<li>
+									Return to BEAUti and increase the MCMC Chain Length.
+									2&nbsp;000&nbsp;000 should be enough.
+								</li>
+								<li>
+									Save the BEAUti configuration. Use the same filename.
+								</li>
+								<li>
+									Launch BEAST, select your file, and change from "default" to
+									 "resume" to append the new steps to your previous chain.
+								 </li>
+								 <li>
+									 Whilst the analysis is running, return to Tracer and "Reload"
+									 the results.
+								 </li>
+								 <p>
+									 Notice that the results have now formed a plateau, with the
+									 initial low values in the greyed-out "burn-in" stage.
+								 </p>
+								 <p>
+									 Notice also that the <acronym title="Estimated Sample Size">
+										 ESS</acronym> values are now mostly above 200.
+										 Our results may now be meaningful.
+								 </p>
+								 <img src="images/clock/tracer-likelihood-2M.png" />
+								 <h3>Interpret results</h3>
+								 <li>
+									 Switch to the "Estimates" tab and select the
+									 mrca.age(Monotremes) Statistic from the Traces: list.
+								 </li>
+								 <p>
+									 This displays the <strong>posterior</strong> probability of
+									 the age of the MRCA of platypus and echidna.
+									 Notice that this rather resembles our prior distribution:
+									 were the data uninformative here?
+								 </p>
+								 <img src="images/clock/tracer-monotremes.png" />
+								 <li>
+									 Return to the BEAST folder and launch DensiTree.
+								 </li>
+								 <li>
+									 Open the .trees file corresponding to your analysis.
+									 The file name will be
+									 <code>{BEAUti-filename}-{alignment-filename}.trees</code>;
+									 see <a href="assets/clock/cat_initial-cat_aligned.trees">example</a>.
+								 </li>
+								 <p>
+									 DensiTree overlays each sampled trees.  As trees are
+									 sampled according to their probability, the more densely
+									 shaded results are more likely.
+								 </p>
+								 <li>
+									 Use Style:Triangle to view relationships. It may help to
+									 also Show→Consensus Trees or Show→Root Canal.
+								 </li>
+								 <img src="images/clock/densitree-triangle.png" />
+								 <li>
+									 Use Style:Block and Grid: Full grid to view the date
+									 estimates of key nodes.  This is an indirect way of viewing
+									 the information available in Tracer – but Tracer can only
+									 produce these histograms for constrained nodes.
+								 </li>
+								 <img src="images/clock/densitree-block.png" />
+								 <li>
+									 If the relationships recovered do not match those of the
+									 well-constrained tree, you may need to add more constraints
+									 by repeating the analysis after adding "monophyletic" MRCA
+									 priors in BEAUti.  Try constraining Eutheria and Metatheria
+									 to be monophyletic; use a different file name so you can
+									 distinguish your results.
+								 </li>
+								 <img src="images/clock/densitree-strict.png" />
+								 <li>
+									 Compare the estimates of the divergence times to your priors.
+									  Have your data been informative?
+									</li>
+									<li>
+										Now look at the absolute values of your divergence time
+										estimates, especially at the base of the ingroup.
+										Do these look realistic?
+									</li>
+									<p>
+										Perhaps our assumption of a "strict" clock, in which
+										mutation rate is constant across every branch of the tree,
+										was too strong an assumption.
+										<a href="https://doi.org/10.1038/d41586-022-00976-w"
+										title="Nature News & Views: Mutational clocks tick differently across species"
+										target="_blank">
+											Species-by-species differences
+										</a> might cancel each other out, simply introducing noise;
+										but if mammals had an early burst of radiation,
+										or radiated rapidly after the K-Pg extinction, their rates
+										may have been systematically higher for some of their history.
+										This would make a strict clock predict an earlier origin.
+								 </p>
+								 <li>
+									 Return to BEAUti and set the Clock Model to
+									 "Optimized Relaxed Clock".
+								 </li>
+								 <li>
+									 Save the settings with a different filename.
+								 </li>
+								 <li>
+									 Run a BEAST analysis using this settings file.
+								 </li>
+								 <li>
+									 Use Tracer to verify that your run has converged, and has
+									 obtained a sufficient sample size (ESS > 100 for
+									 relevant parameters).
+									 As the relaxed clock has a larger parameter space (why?),
+									 you may need to extend the run, perhaps up to 5M generations?
+								 </li>
+								 <li>
+									 Compare the age of key clades to the priors you specified.
+									 Are the data informative?
+								 </li>
+								 <h3>Evaluate influence of priors</h3>
+								 <li>
+									 Select the "Sample From Prior" box on BEAUti's MCMC
+									 tab, and save the settings to a new file.
+								 </li>
+								 <li>
+									 Run this analysis in BEAST. This runs the analysis without
+									 any data, to explore the <strong>effective</strong> priors.
+									 This captures any interactions between your initial prior
+									 distributions.
+								 </li>
+								 <li>
+									 Load the results into Tracer.  Compare the effective priors
+									 with the posteriors you obtained when you ran the model using
+									 the data.
+								 </li>
+								  <li class="question" onclick="Reveal('prior-comp');">
+										How much have the data influenced your results?
+									</li>
+									<li class="hidden written answer" id="prior-comp">
+										<p>
+											If the effective prior is similar to the posterior, then
+											our analysis is just spitting out what we put in;
+											the data have not informed our inferrence.
+										</p>
+										<p>
+											Be sure to compare the effective prior with the prior
+											you originally specified.
+											There's an interaction effect here: as marsupials are a
+											subgroup of all mammals, marsupials can't be older
+											than the MRCA of mammals.
+											As such, a very long-tailed prior on the date of the
+											marsupial MRCA might be curtailed by a narrow prior on the
+											mammal MRCA.
+										</p>
+								 </li>
+								 <li class="do">
+									 The influence of priors on molecular clock results
+									 is an important, but often overlooked, issue,
+									 as highlighted by
+									 <a href="https://dx.doi.org/10.1093/sysbio/syad057"
+									 title="Systematic Biology: Two Notorious Nodes: A Critical Examination of Relaxed Molecular Clock Age Estimates of the Bilaterian Animals and Placental Mammals"
+									 target="_blank">Budd and Mann (2023)</a>.
+									 You should read the accessible
+									 <a href="https://doi.org/10.1038/d41586-023-03487-4"
+									  title="Nature News & Views: Genes are often uninformative for dating species’ origins"
+										target="_blank">commentary</a> on this paper published
+										in <i>Nature</i> News &amp; Views.
+								 </li>
+							</ol>
             </div>
           </div>
         </div>
