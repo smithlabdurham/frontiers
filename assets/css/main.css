@@ -56,6 +56,10 @@ img.li-ad {
   border: 1px solid black;
 }
 
+table.middle td {
+	vertical-align: middle;
+}
+
 img.right {
 	float: right;
 	clear: both;
