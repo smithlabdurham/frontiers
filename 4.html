@@ -249,8 +249,207 @@
       </div>
     </section>
 
-    <!-- Third -->
-    <section id="third" class="main">
+		  <!-- Second -->
+		    <section id="second" class="main">
+		      <header>
+		        <div class="container">
+		          <h2>Probabilistic thinking</h2>
+		          <p>
+		            Key concepts in Bayesian statistics
+		          </p>
+		        </div>
+		      </header>
+		      <div class="content dark style1">
+		        <div class="container">
+		          <div class="row">
+		            <div class="col-8 col-12-narrow">
+		              <h3>Priors and posteriors</h3>
+									<p>
+										<em>Frequentist</em> statistics underpin familiar tests, such
+										as T-tests or tests for statistical significance.
+										Frequentist statistics seeks to estimate the likelihood
+										of the <em>data</em> on the assumption that a specified
+										hypothesis (or model) is true.
+									</p>
+									<p>
+										Ultimately, we can only draw conclusions indirectly from this
+										approach – we're not really interested in the probability of
+										the data, because once we have observed the data, we know what
+										the data are!
+									</p>
+									<p>
+										<em>Bayesian</em> probability is a statistical paradigm that
+										aims to
+										estimate the probability of a hypothesis (or model) based on
+										available data – which is a much more useful thing to know.
+									</p>
+									<p>
+										The drawback here is that whilst data can make a particular
+										hypothesis more or less likely, data alone cannot provide
+										an <em>absolute</em> value of the probability of a hypothesis;
+										they can only <em>update</em> probabilities.
+										Without getting into the maths, the workflow goes like this:
+									</p>
+									<blockquote>
+										Initial probability + data → Improved estimate of probability
+									</blockquote>
+									<p>
+										This initial probability estimate is termed a "prior"
+										probability: it sums up our beliefs before we had observed any
+										data.
+										Critics of a Bayesian approach contend that this is a subjective
+										step; the counterargument is that with enough data, the choice
+										of prior should have very little influcence on the final
+										estimate of probability.
+									</p>
+								</div>
+							</div>
+		          <div class="row">
+		            <div class="col-8 col-12-narrow">
+									<h4>Bent coin example</h4>
+									<p>
+										Let's take an example to see how this works in practice.
+									</p>
+									<p>
+										I'm going to toss a coin a few times, then offer a generous
+										wager: you give me a pound if the coin lands on heads; I give
+										you two pounds if it lands on tails.
+									</p>
+									<p>
+										We'll consider two students.
+									</p>
+									<ul>
+										<li>
+											Cynical Cyril smells a rat, and is 99% sure that I'm using a
+											bent coin that's biased to come down heads.
+											Based on his knowledge of coin-bending, a bent coin would land
+											"heads" in 90% of tosses.
+										</li>
+										<li>
+											Naïve Niamh trustingly assumes that I will use a fair coin,
+											whilst acknowledging that there's a 1% chance that I'm
+											cheating with a bent coin.
+										</li>
+									</ul>
+									<p>
+										The students are thus evaluating the probability of two
+										hypotheses: (i), a fair coin that shows heads 50% of the time;
+										and (ii), a bent coin that shows heads 90% of the time.
+										They'll only accept my wager if there's a good chance that
+										hypothesis (i) is true.
+									</p>
+									<p>
+										Let's see what happens when we toss the coin.
+										The first toss comes down "heads". What have we learned?
+										Well, a single toss does not give us much data at all,
+										and our "posterior" odds – the probabilities of the
+										two hypotheses <em>after</em> having seen the data – are
+										probably very similar to the prior odds.
+									</p>
+									<p>
+										Now, the next three tosses come up heads too; we have
+										four heads in total.  This outcome is quite unlikely under
+										hypothesis (i) – only one run of tosses in 16 would give four
+										heads.  It's much more in line with what we'd suspect under
+										hypothesis (ii).  As such, Bayesian analysis would update the
+										priors to give more weight to the bent coin hypothesis;
+										after seeing the data, Cyril's hunch that I'm using a bent coin
+										will be reinforced, whilst Niamh will start pondering whether
+										her initial judgement was too trusting.
+										Nonetheless, after just four tosses, Naimh will still
+										place a much higher probability on the "fair coin" hypothesis
+										than Cyril would.
+									</p>
+									<p>
+										Eventually, after enough tosses, we have so much data that the
+										choice of priors becomes irrelevant: if 2&nbsp;000 tosses reveal
+										a thousand heads and a thousand tails, the "fair coin"
+										hypothesis would receive a posterior probability close to one
+										under all but the most extreme priors.
+									</p>
+								</div>
+									<div class="col-4 col-12-narrow">
+										<span class="image whitepad">
+			              	<img src="images/clock/heads.webp" alt="Credit: Royal Mint">
+				            </span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-8 col-12-narrow">
+									<h4>Reflecting on the model</h4>
+									<p>
+										It might be reasonable here to question our underlying model:
+										it is probably a simplification to contend that a coin can
+										shows heads either 50% or 90% of the time (but nothing in
+										between).
+									</p>
+									<p>
+										Probably it is more reasonable to image that a coin, when
+										tossed, lands "heads" with a probability
+										<acronym title="probability">P</acronym>(<acronym title="Heads">H</acronym>).
+										P(H) is a <em>parameter</em> of the model, whose value we are
+										interested in estimating. Cyril's prior places zero probability
+										on values of P(H) other than 50% and 90%.
+										But what if the bias was more subtle, and the coin really landed
+										heads just 60% of the time? Cyril would reach the wrong
+										conclusion; because probabilities are multiplicative,
+										no amount of data can overcome his implicit 0% prior on
+										P(H) = 60%.
+									</p>
+									<p>
+										We may thus wish to imagine more flexible priors.
+										We could manually assign some prior probability to a range of
+										outcomes: perhaps we belive there's a 50% chance that the coin
+										is basically fair, landing heads 50–60% of the time;
+										a 20% chance it's slightly bent (60–75% heads);
+										a 20% chance it's strongly bent (75%–90%),
+										and a 10% chance it's extremely bent (90–100% heads).
+									</p>
+									<p>
+										We could go further still and use a continuous distribution
+										to divide probability: we could use
+										a uniform prior that assigns equal prior probability to all
+										values of P(H) between 0% and 100%;
+										or some bell-shaped probability distribution curve centred on 50%.
+									</p>
+									<p>
+										With no data, our posterior estimate of the probability of
+										"heads" will be will be identical to our prior; but as data
+										comes in, our posterior estimate will gradually morph from
+										the shape of the prior towards a tight peak centred on the
+										true value of P(H).
+									</p>
+									<p>
+										In summary, to conduct a Bayesian analysis, we need:
+										<ul>
+											<li>
+												A model that accounts for our data – here, this encapsulates
+												things like the the possible outcomes
+												(a coin can be heads or tails but nothing else)
+												and the assumption that successive outcomes are independent;
+											</li>
+											<li>
+												Priors: an initial estimate of the probability distribution
+												associated with each parameter of the model, whose impact
+												diminishes as data accumulate.
+											</li>
+										</ul>
+									</p>
+								</div>
+								<div class="col-4 col-12-narrow">
+									<span class="image whitepad">
+										<img src="images/clock/Bent_coin.jpg"
+										 alt="Credit: Kate Sumnall, Museum of London"
+										origin="https://commons.wikimedia.org/wiki/File:A_post_medieval_silver_sixpence_of_Elizabeth_I_%28AD1558-1603%29_dated_AD1571_bent,_probably_to_form_a_love_token._%28FindID_600511%29.jpg">
+			            </span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+    <!-- Fourth -->
+    <section id="fourth" class="main">
       <header>
         <div class="container">
           <h2>A first molecular clock analysis</h2>
