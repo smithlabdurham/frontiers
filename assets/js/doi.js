@@ -1,4 +1,6 @@
 UpdateDoi = async function (ref) {
+  // Uses a local copy of the citation-js package,
+  // https://github.com/citation-js/citation-js
   const Cite = require('citation-js');
   const doi = ref.getAttribute('doi');
   const data = await Cite.async(doi);
@@ -10,7 +12,7 @@ UpdateDoi = async function (ref) {
 $(document).ready(async function() {
   // Display info
   const dois = document.getElementsByTagName('doi');
-  dois.forEach(function (ref) {
+  Array.from(dois).forEach(function (ref) {
     let doi = ref.getAttribute('doi');
     let bib = document.createElement('a');
     bib.href = "https://dx.doi.org/" + doi;
@@ -18,7 +20,7 @@ $(document).ready(async function() {
     bib.innerHTML = doi;
     ref.appendChild(bib);
   })
-  
+
   await Promise.all(Object.keys(dois).map(async (ref) => {
     UpdateDoi(dois[ref]);
   }));
