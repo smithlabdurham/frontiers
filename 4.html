@@ -312,8 +312,8 @@
 									</p>
 									<p>
 										I'm going to toss a coin a few times, then offer a generous
-										wager: you give me a pound if the coin lands on heads; I give
-										you two pounds if it lands on tails.
+										wager: you give me a pound if the next toss shows heads;
+										I give you two pounds if it's tails.
 									</p>
 									<p>
 										We'll consider two students.
@@ -506,7 +506,7 @@
                 <li>
                   Type <code>catalase</code> into the search (<code>Gene</code>) box
                 </li>
-                <li>Click "Search" <a href="https://www.ncbi.nlm.nih.gov/gene/?term=catalase" title="Cut straight to this step">[→]</a></li>
+                <li>Click "Search" <a href="https://www.ncbi.nlm.nih.gov/gene/?term=catalase" title="Cut straight to this step">[shortcut]</a></li>
 								<img class="right" src="images/clock/results-by-taxon.png" />
                 <li>
                   Under "Results by Taxon",
@@ -516,21 +516,21 @@
 								<li>
 									Expand animals → chordates → vertebrates → mammals to view
 									all available gene sequences
-									 <a href="https://www.ncbi.nlm.nih.gov/gene?term=((catalase))%20AND%20%22mammals%22%5Bporgn%3A__txid40674%5D" title="Cut straight to this step">[→]</a>.
+									 <a href="https://www.ncbi.nlm.nih.gov/gene?term=((catalase))%20AND%20%22mammals%22%5Bporgn%3A__txid40674%5D" title="Cut straight to this step">[shortcut]</a>.
 									 Notice the taxa for which data is available.
 								</li>
 								<img class="right" src="images/clock/gene-id-cat.png" />
 								<li class="clear">
 									Find a taxon of your choice with the gene ID "CAT" and
 									click the gene ID.
-									<ul>
+									<!--ul>
 										<li>
 											Try this: Scroll down to the section "NCBI Reference Sequences" and
 											notice the related mRNA sequence (beginning with code <code>NM_</code>)
 											and the corresponding protein sequence of amino acids (code beginning <code>NP_</code>).
 											(Each amino acid has a single-letter abbreviation, just as ACGT correspond to the nucleotide bases.)
 										</li>
-										<li>Try this: From the Nucleotide page, select
+										<li>Try this: From the Nucleotide (<code>NM_</code>) page, select
 											"BLAST search".  This will search all known DNA sequences
 											for sequences similar to this enzyme.
 											Some may be annotated as Catalase – others may
@@ -540,7 +540,7 @@
 											"Distance tree of results" shows the sequences arranged
 											by similarity (this is <strong>not</strong> a phylogenetic tree – why?)
 										</li>
-									</ul>
+									</ul-->
 								</li>
 								<p>
 									Not all similar DNA sequences are necessarily homologous –
@@ -570,19 +570,120 @@
 								</li>
 								<li>
 									Select four or five taxa and click “Add to cart”.
-									Prefer taxa that are included in one of the
-									"well-corroborated trees" figured by
+									The table outlines marsupial relationships; each order is
+									monophyletic, and the Australian
+									Australidelphia form a clade within Australidelphia.
+								</li>
+								<table class="middle">
+									<thead>
+										<th>Superorder</th>
+										<th>Order</th>
+										<th>Genus</th>
+										<th>Common name</th>
+										<th></th>
+									</thead>
+									<tbody>
+										<tr>
+											<td>—</td>
+											<td>Didelphimorphoa</td>
+											<td><i>Monodelphis</i></td>
+											<td>Gray short-tailed opossum</td>
+											<td><img class="silhouette" src="images/clock/phylopic/Monodelphis.svg" /></td>
+										</tr>
+										</th>
+										<tr>
+											<td>—</td>
+											<td>Didelphimorphoa</td>
+											<td><i>Gracilinanus</i></td>
+											<td>Gracile mouse opossum</td>
+											<td><img class="silhouette" src="images/clock/phylopic/Gracilinanus.svg" /></td>
+										</tr>
+										</th>
+										<tr>
+											<td>Australidelphia</td>
+											<td>Microbiotheria</td>
+											<td><i>Dromiciops</i></td>
+											<td>Monito del monte</td>
+											<td><img class="silhouette" src="images/clock/phylopic/Dromiciops.svg" /></td>
+										</tr>
+										<tr>
+											<td>Australidelphia (Australian)</td>
+											<td>Diprotodontia</td>
+											<td><i>Vombatus</i></td>
+											<td>Wombat</td>
+											<td><img class="silhouette" src="images/clock/phylopic/Vombatus.svg" /></td>
+										</tr>
+										</tr>
+										<tr>
+											<td>Australidelphia (Australian)</td>
+											<td>Diprotodontia</td>
+											<td><i>Phascolarctos</i></td>
+											<td>Koala</td>
+											<td><img class="silhouette" src="images/clock/phylopic/Phascolarctos.svg" /></td>
+										</tr>
+										<tr>
+											<td>Australidelphia (Australian)</td>
+											<td>Diprotodontia</td>
+											<td><i>Trichosurus</i></td>
+											<td>Brushtail possom</td>
+											<td><img class="silhouette" src="images/clock/phylopic/Trichosurus.svg" /></td>
+										</tr>
+										<!--tr>
+											<td>Peramelemorphia</td>
+											<td>Notoryctemorphia</td>
+										</tr-->
+										<tr>
+											<td>Australidelphia (Australian)</td>
+											<td>Dasyuromorphia</td>
+											<td><i>Antechinus</i></td>
+											<td>Antechinus</td>
+											<td><img class="silhouette" src="images/clock/phylopic/Antechinus.svg" /></td>
+										</tr>
+										<tr>
+											<td>Australidelphia (Australian)</td>
+											<td>Dasyuromorphia</td>
+											<td><i>Sarcophilus</i></td>
+											<td>Tasmanian devil</td>
+											<td><img class="silhouette" src="images/clock/phylopic/Sarcophilus.svg" /></td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="5" style="font-size: smaller; font-style: italic; text-align: right;">
+												Silhouettes: <a href="https://www.phylopic.org/permalinks/a888ee7faeb10760a564b06efe167423ec9023129e1afa938434a53c7f3050e8" target="_blank">Phylopic contributors</a>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+								<li>
+									Clear the taxonomic name box and add expand the taxonomy tree
+									to display the placental mammals.
+									Select two taxa from each of the three major placental clades:
+									<ul>
+										<li>
+											Afrotheria (African mammals)
+										</li>
+										<li>
+											Laurasiatheria (
+												Glires (rabbits & rodents)
+											 + Euarchonta (tree shrews, flying lemurs + primates)
+										 	)
+										</li>
+										<li>
+											Euarchontoglires (
+												insectivores, bats, ungulates;
+												pangolins + carnivores
+											)
+										</li>
+									</ul>
+									Laurasiatheria and Euarchontoglires together form a clade.
+									The "well-corroborated trees" in
 									<a href="https://academic.oup.com/view-large/figure/362010550/syab072f1.tif"
-									target="_blank">Asher &amp; Smith (2023)</a> –
-									it will help to know something about the relationships
-									between your chosen taxa.
+									target="_blank">Asher &amp; Smith (2023)</a> give a
+									detailed depiction of universally accepted relationships.
 								</li>
 								<li>
-									Clear the taxonomic name box and repeat for
-									placentals (Eutheria).
-								</li>
-								<li>
-									Now add both the available species of monotreme to your cart.
+									Finally, add both available species of monotreme to your cart.
 									The platypus and echidna will together form our outgroup.
 								</li>
 								<li>
@@ -593,7 +694,7 @@
 										 losing your progress.
 									 </li></ul>
 								</li>
-								<li>
+								<!--li>
 									Within the Cart window, Select “Protein alignment → one sequence per gene”.
 								</li>
 								<li>
@@ -618,9 +719,79 @@
 									This will take a few seconds as the algorithm tries to find
 									the best fit match of AA sequences.
 								</li>
-								<li class="question" onclick="Reveal('gap-cost');">
-									Whilst the alignment runs, try to justify the default
-									gap opening/extension values.
+
+								<li>
+									Observe the graphical overview of the alignment.
+									Note the highly conserved nature of the amino acid sequences.
+									Scroll down to see the aligned sequences themselves.
+								</li>
+								<p>
+									So far we've been aligning the amino acid sequences.
+									We could work backwards from this alignment to produce a
+									DNA alignment.  But we're instead going to use the mRNA
+									nucleotide sequences directly.
+								</p>
+								<li>
+									Close the COBALT alignment tool and return to your Cart.
+								</li-->
+								<li>
+									Click "Download" → "RefSeq transcripts (FASTA)"
+									(one sequence per gene). This will download the mRNA
+									sequences that encode the catalase gene in these taxa.
+								</li>
+								<li>
+									Open the downloaded file in a text editor (I recommend
+									<a href="https://notepad-plus-plus.org/downloads/" title="Download Notepad++"
+									target="_blank">Notepad++</a>;
+									Apple users might prefer
+									<a href="https://zed.dev/" target="_blank" title="Zed editor">Zed</a>)
+								</li>
+								<li>
+									Perform a search & replace to replace spaces (<code> </code>)
+									with underscores (<code>_</code>).
+									<ul>
+										<li>
+											Optionally, remove other information, to leave only
+											the species names – this doesn't affect the analysis,
+											but may make your results easier to read.
+										</li>
+										<li>
+											Be sure to retain the initial &ldquo;<code>&gt;</code>&rdquo;,
+											such that
+											<p><code>&gt;NM_001035386.2_Bos_taurus_catalase_(CAT),_mRNA</code></p>
+											becomes <p><code>&gt;Bos_taurus</code></p>
+										</li>
+									</ul>
+								</li>
+							<h3>Align DNA sequences</h3>
+							<p>Now we are ready to align our nucleotide sequences.</p>
+
+								<li>
+									Open the <a href="https://www.ebi.ac.uk/jdispatcher/msa/muscle"
+									title="MUSCLE multiple sequence alignment" target="_blank">
+									MUSCLE web tool</a>
+								</li>
+								<li>
+									Under "Input sequence", select "Choose file" to upload your
+									edited FASTA file.
+									<ul>
+										<li>
+											Not working? Try my
+											<a href="assets/clock/cat_refseq_transcript.fasta">sample file</a>.
+										</li>
+									</ul>
+								</li>
+								<li>
+									Under "Parameters", select "Output Format: Pearson/FASTA".
+								</li>
+								<li>
+									Click "Submit" and wait for your results to be ready.
+								</li>
+								<li class="extension">
+									Whilst the alignment runs, consider the following questions:
+								</li>
+								<!--li class="question" onclick="Reveal('gap-cost');">
+									Suggest a justification for the gap opening/extension values.
 								</li>
 								<li class="bulb">
 									Consider what an alignment might look like if the "Opening" cost
@@ -651,7 +822,7 @@
 										events, it's very unlikely that any alignment will be fully
 										accurate.
 									</p>
-								</li>
+								</li-->
 								<li class="question" onclick="Reveal('aln-correct');">
 									Can we know whether an alignment is "correct"?
 									(What would this mean?)
@@ -674,80 +845,15 @@
 									will be misled.
 								</li>
 								<li>
-									Observe the graphical overview of the alignment.
-									Note the highly conserved nature of the amino acid sequences.
-									Scroll down to see the aligned sequences themselves.
-								</li>
-								<p>
-									So far we've been aligning the amino acid sequences.
-									We could work backwards from this alignment to produce a
-									DNA alignment.  But we're instead going to use the mRNA
-									nucleotide sequences directly.
-								</p>
-								<li>
-									Close the COBALT alignment tool and return to your Cart.
-								</li>
-								<li>
-									Click "Download" → "RefSeq transcripts (FASTA)"
-									(one sequence per gene). This will download the mRNA
-									sequences.
-								</li>
-								<li>
-									Open the file in a text editor (I recommend
-									<a href="https://notepad-plus-plus.org/downloads/" title="Download Notepad++"
-									target="_blank">Notepad++</a>;
-									Apple users might prefer
-									<a href="https://zed.dev/" target="_blank" title="Zed editor">Zed</a>)
-								</li>
-								<li>
-									Perform a search & replace to replace spaces (<code> </code>)
-									with underscores (<code>_</code>).
-									<ul>
-										<li>
-											Optionally, remove other information, to leave only
-											the species names – this doesn't affect the analysis,
-											but may make your results easier to read.
-										</li>
-										<li>
-											Be sure to retain the initial &ldquo;<code>&gt;</code>&rdquo;,
-											such that <code>&gt;NM_001035386.2_Bos_taurus_catalase_(CAT),_mRNA</code>
-											becomes <code>&gt;Bos_taurus</code>
-										</li>
-									</ul>
-								</li>
-							<h3>Align DNA sequences</h3>
-							<p>Now we are ready to align our nucleotide sequences.</p>
-
-								<li>
-									Open the <a href="https://www.ebi.ac.uk/jdispatcher/msa/muscle"
-									title="MUSCLE multiple sequence alignment" target="_blank">
-									MUSCLE web tool</a>
-								</li>
-								<li>
-									Under "Input sequence", select "Choose file" to upload your
-									edited FASTA file.
-									<ul>
-										<li>
-											Not working? Try my
-											<a href="assets/clock/cat_refseq_transcript.fasta">sample file</a>.
-										</li>
-									</ul>
-								</li>
-								<li>
-									Under "Parameters", select "Output Format: Pearson/FASTA".
-								</li>
-								<li>
-									Click "Submit" and wait for your results to be ready.
-								</li>
-								<li>
 									Explore your alignment; zoom and drag using the axis.
 								</li>
 								<img src="images/clock/muscle-alignment.png" />
-								<li>
+								<li class="extension">
 									Notice that the MUSCLE algorithm aligns the sequences assuming
 									a phylogenetic explanation for differences; it thus generates
 									an <strong>unrooted</strong> phylogenetic tree as part of
-									finding the best alignment.
+									finding the best alignment. View this tree on the
+									"Phylogenetic Tree" tab (scroll to "Phylogram").
 								</li>
 								<li class="question" onclick="Reveal('tree-root');">
 									How would the tree look different if a root was specified?
@@ -759,7 +865,7 @@
 									sequence similarity; it does affect dates.
 								</li>
 								<li class="question" onclick="Reveal('rel-corr');">
-									How do the relationships in your tree compare to those in the
+									How do the relationships in your tree compare to those in
 									<a href="https://academic.oup.com/view-large/figure/362010550/syab072f1.tif"
 									target="_blank">well-corroborated trees</a>?
 								</li>
@@ -789,19 +895,17 @@
 											Try asking e.g.
 											 <a href="https://bard.google.com/" target="_blank">Bard</a>,
 											<a href="https://chat.openai.com/" target="_blank">ChatGPT</a>
-											 "How do I change a file extension in Windows 10?"
+											 "How do I change a file extension in Windows 11?"
 
-											 Generative AI often gets to the point faster than top-ranked
-											 <a href="https://www.indeed.com/career-advice/career-development/how-to-change-file-type" target="_blank" rel="nofollow">search results</a>,
-											 which are often bloated with
-											 <acronym title="Search Engine Optimization">SEO</acronym>
-											 blather.
+											 Generative AI often gets to the point faster than
+											 <acronym title="Search Engine Optimization">SEO</acronym>–bloated
+											 <a href="https://www.indeed.com/career-advice/career-development/how-to-change-file-type" target="_blank" rel="nofollow">web search results</a>.
 										 </li>
 									 </ul>
 								</li>
 								<h3>Design a molecular clock analysis</h3>
 								<li>
-									If you haven't already done so,
+									If you haven't already,
 									download BEAST2 and unzip the contents to a folder on your computer.
 								</li>
 								<li>
@@ -857,23 +961,24 @@
 								<li>
 									Save your progress (File → Save)
 								</li>
+								<h4>Callibrate node ages with priors</h4>
 								<li>
 									At the bottom of the "Priors" tab, click "+ Add Prior".
 								</li>
-								<p>We are going to constrain the age of the common ancestor of a clade.
-									Our prior allows us to set a probability distribution on the
-									date of the most recent common ancestor
-									(<acronym title="most recent common ancestor">MRCA</acronym>)
-									of a set of taxa.
+								<p>We are going to constrain the age of a clade.
+									Our prior first dictates that a clade exists; then
+									allows us to set a probability distribution on the
+									date of its most recent common ancestor
+									(<acronym title="most recent common ancestor">MRCA</acronym>).
 								<li>
 									Select "MRCA Prior".
 									<ul><li class="bulb"><strong>Be careful!</strong>
-									Priors cannot be deleted – if you select the wrong one,
-									you'll have to start again from your last save file (!)
+									Priors cannot be deleted – if you select the wrong type,
+									you'll have to start again from your last save file.
 								</li></ul>
 								</li>
 								<li>
-									Select the taxa in the group you wish to constrain.
+									Select <em>all</em> members of the group you wish to constrain.
 									We'll start with the monotremes, <i>Ornithorhynchus</i> and
 									<i>Tachyglossus</i>.  Move these taxa to the right-hand
 									list (by pressing "&gt;&gt;").
@@ -885,16 +990,20 @@
 									Click "OK".
 								</li>
 								<p>
-									The prior should now appear on your "Priors" tab.
-									At the moment it is an "empty" prior and will not affect
-									the analysis.
+									The prior should now appear on your "Priors" tab – but as yet,
+									it will have no effect on your analysis.
 								</p>
 								<li>
-									Tick the "Monophyletic" checkbox. This forces these taxa
-									to form a clade – and allows us to constrain the date of
-									the clade's MRCA.
+									Tick the "Monophyletic" checkbox.
 								</li>
+								<p>
+									The prior now causes any trees in which these taxa do not
+									form a clade to be discarded (i.e. assigned zero likelihood)
+									during the analysis.
+								</p>
 								<li>
+									Now that the "Monophyletic" checkbox has defined the taxa
+									as a clade, we can constrain the date of their MRCA.
 									Choose a prior from the the "[none]" drop-down box.
 									A "Gamma" prior is probably appropriate here.
 								</li>
@@ -999,16 +1108,20 @@
 								<li>
 									Select at least one, ideally two or three, further clades to
 									constrain.  Search the literature to justify your design
-									of priors.
+									of priors.  You may wish to complement the fossil record
+									with palaeogeographical information: for instance,
+									Austrailia separated from the Gondwanan continent around
+									30&nbsp;Ma.
 								</li>
 								<li>
 									To root the tree, add an MRCA prior including everything that's
 									not a monotreme. Label it appropriately
 									("Theria", or simply "ingroup").
 									Leave the prior type to "[none]" and select "monophyletic".
-									This will force the tree to be rooted on monotremes,
-									and produce a summary for the posterior estimate of the
-									date of the MRCA of placentals and marsupuals (the therians).
+									This will force the tree to be rooted on monotremes.
+									Incidentally, it will also cause the analysis to report
+									a posterior estimate of the date of the MRCA of therians
+									(placentals and marsupuals).
 								</li>
 								<li>
 									Finally, configure the
@@ -1023,7 +1136,7 @@
 									Safe your settings (File→Save).
 								</li>
 								<h3>Conduct the analysis</h3>
-								<li>Return to your BEAST folder and run BEAST</li>
+								<li>Return to your BEAST folder and launch BEAST.</li>
 								<li>
 									Select the "Input file" you just created in BEAUti.
 									<ul><li class="bulb">
@@ -1075,9 +1188,10 @@
 								<p>
 									When a run has converged on the posterior distribution,
 									the samples should plateau to form a cloud about a steady
-									likelihood value – they are often sampling likely parameter
-									values, and sampling unlikely values in proportion to their
-									probability.
+									likelihood value. This shows that likely parameter values,
+									are sampled often; and unlikely values
+									(giving a lower likelihood of the model given the data)
+									are sampled less often, in proportion to their probability.
 								</p><p>
 									The low values early in this run suggest that it took a
 									while for the run to converge on a sensible set of parameters.
@@ -1095,20 +1209,25 @@
 								</li>
 								<li>
 									Launch BEAST, select your file, and change from "default" to
-									 "resume" to append the new steps to your previous chain.
+									 "resume" to append the 2M new steps to your previous chain.
 								 </li>
 								 <li>
 									 Whilst the analysis is running, return to Tracer and "Reload"
 									 the results.
 								 </li>
 								 <p>
-									 Notice that the results have now formed a plateau, with the
-									 initial low values in the greyed-out "burn-in" stage.
-								 </p>
-								 <p>
-									 Notice also that the <acronym title="Estimated Sample Size">
+									 In the example results below, likelihood values have formed
+									 a plateau, with the initial low values in the greyed-out
+									 "burn-in" stage; and the <acronym title="Estimated Sample Size">
 										 ESS</acronym> values are now mostly above 200.
 										 Our results may now be meaningful.
+								 </p>
+								 <p>
+									 If your run is not displaying this behaviour, or you are
+									 seeing very low ESS values, check your model carefully for
+									 errors or inconsistency in your priors; e.g. did you forget
+									 to mark a clade as monophyletic, or specify unrealistically
+									 young/old dates for a clade's MRCA?
 								 </p>
 								 <img src="images/clock/tracer-likelihood-2M.png" />
 								 <h3>Interpret results</h3>

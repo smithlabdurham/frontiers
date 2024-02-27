@@ -56,12 +56,22 @@ img.li-ad {
   border: 1px solid black;
 }
 
+table.middle td {
+	vertical-align: middle;
+}
+
 img.right {
 	float: right;
 	clear: both;
 	border: 1px solid black;
 	margin-bottom: 1em;
 	margin-left: 1em;
+}
+
+img.silhouette {
+	opacity: 0.65;
+	max-width: 4em;
+	max-height: 4em;
 }
 
 blockquote, q {
