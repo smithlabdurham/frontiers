@@ -21,17 +21,17 @@
     <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <style>      
+    <style>
       .button.scrolly.wide {
         width: 100%;
         margin-bottom: 30px;
       }
-      
+
       td:nth-child(1) {width: 16%;}
       td:nth-child(2) {width: 24%;}
       td:nth-child(3) {width: 34%;}
       td:nth-child(4) {width: 24%;}
-      
+
       a.importance-essential:before {
         content: "* ";
       }
@@ -53,7 +53,7 @@
         color: rgba(255, 255, 255, 0.45);
         font-size: smaller;
       }
-      
+
       div.table-wrapper {
         overflow: visible;
       }
@@ -115,9 +115,16 @@
                 </div>
                 <div class="hidden slideInfo"  id="course-exam">
                   <p>
-                    There are two components of assessment, each requiring you to construct a reasoned argument that integrates multiple aspects of an active research topic, based on your own reading.
-                    During the term you will work as a group to prepare a microsite that advocates a position on a contested palaeontological topic.
-                    You will then write an individual essay that provides a reasoned counter-argument to one of your peers' microsites.
+                    There are two components of assessment, each requiring you
+										to construct a reasoned argument that integrates multiple
+										 aspects of an active research topic, based on your own reading.
+                    During the term you will work as a group to prepare a
+										 microsite that advocates a position on a contested
+										 palaeontological topic
+	 									<a href="pdf/Rubric - Microsite group project.pdf">[Rubric]</a>.
+                    You will then write an individual essay that provides a
+										reasoned counter-argument to one of your peers' microsites
+										<a href="pdf/Rubric - Essay.pdf">[Rubric]</a>.
                   </p>
                 </div>
                 <div class="hidden slideInfo"  id="course-groups">
@@ -156,11 +163,11 @@
               </p>
               <p>Meeting deadlines is your responsibility – please note them in your diaries today.</p>
             </div>
-          </section>           
+          </section>
         </div>
       </div>
     </section>
-    
+
     <section id="resources" class="main">
       <header>
         <div class="container">
@@ -186,7 +193,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-3 col-12-narrow">								
+            <div class="col-3 col-12-narrow">
             </div>
             <div class="col-6 col-12-narrow">
             </div>
@@ -194,7 +201,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Footer -->
     <section id="footer">
       <div class="copyright">
@@ -217,11 +224,11 @@
     <script>
       "use strict";
       let timetable = document.getElementById('timetable');
-      
+
       function addWidth(elem, wd) {
         elem.width = (wd * 100 / 12);
       }
-      
+
       function addRow(i, topic,
         readingText, readingURL, readingImportance,
         exercise, task = "") {
@@ -271,7 +278,7 @@
         row.appendChild(xrcs);
         timetable.appendChild(row);
       }
-      
+
       addRow(1, "Introduction", ["Evolutionary trees: A primer", "Tree misinterpretations", "How to build a tree"],
         ["https://evolution.berkeley.edu/the-tree-room/evolutionary-trees-a-primer/",
         "https://evolution.berkeley.edu/the-tree-room/tree-misinterpretations/",
@@ -280,33 +287,33 @@
         "<a href='pdf/Phylogeny%20Review%20Worksheet%202017.pdf' target='_blank'>Phylogenetics introduction</a>",
         ""
         );
-        
+
       addRow(2, "Fossils in phylogenetics",
         ["Sansom <i>et al.</i> 2010, Nature", "Briggs 2010, Nature"],
         ["https://dx.doi.org/10.1038/nature08745", "https://dx.doi.org/10.1038/463741a"],
-        ["essential", "recommended"], 
+        ["essential", "recommended"],
         "Paper discussion");
       addRow(3, "Fossils in phylogenetics", [""], [""], [""], "Debate");
-      
+
       addRow(4, "Rocks and Clocks",
-      ["Intro to molecular clocks", "Formative exercise"], 
+      ["Intro to molecular clocks", "Formative exercise"],
       ["https://www.nature.com/scitable/topicpage/the-molecular-clock-and-estimating-species-divergence-41971/", "essay.html"],
       ["recommended", ""],
       "Molecular clock");
-      addRow(5, "The Cambrian &lsquo;explosion&rsquo;?", 
+      addRow(5, "The Cambrian &lsquo;explosion&rsquo;?",
       ["Cunningham <i>et al.</i> 2017, BioEssays", "Briggs 2015, Curr. Biol."],
       ["https://doi.org/10.1002/bies.201600120", "https://dx.doi.org/10.1016/j.cub.2015.04.047"],
        ["essential", "recommended"], "Paper discussion");
       addRow(6, "The Cambrian &lsquo;explosion&rsquo;?", ["Due: Formative exercise"], ["essay.html"], [""], "Debate");
-      
+
       addRow(7,	"Group project", [""], [""], [""],
        "<a href='topics.html'>Topic selection</a> and <a href='https://docs.google.com/spreadsheets/d/1k1-IIILRZWNH5PuNZLF4YSzke9eNJ_AiO-T4f64lEbE/edit?usp=sharing' target='_blank'>group assignment</a>");
       addRow(8,	"Group project", [""], [""], [""], "Feedback on draft microsite from staff", "Bring draft microsite");
       addRow(9,	"Peer presentations", [""], [""], [""], "Microsite presentation", "Oral presentation of microsite");
       addRow(10, "Surgery", [""], [""], [""], "Q&amp;A on essay topics", "");
-      
+
       document.getElementById("essayDeadline").innerHTML = essayDeadline.toDateString();
-      
+
       $(function() {
           $('a#showIntro').click(function () {
             $('#course-intro').slideToggle();

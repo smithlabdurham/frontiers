@@ -2,3 +2,4 @@ images/*/hdphoto*.wdp
 images/*/image*
 */~*.doc*
 *.bak
+*.tmp
