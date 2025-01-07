@@ -25,6 +25,35 @@
       min-height: 10em;
     }
     </style>
+    <style>
+      .question-container {
+          position: relative;
+          height: 600px;
+          margin: 20px auto;
+          overflow: hidden;
+      }
+
+      .sliding {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          padding: 20px;
+          border-radius: 8px;
+          box-sizing: border-box;
+          display: none;
+      }
+
+      .sliding.active {
+          display: block;
+      }
+
+      .button:disabled {
+          opacity: 0.4;
+          cursor: not-allowed;
+      }
+    </style>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
 	</head>
 	<body class="is-preload">
 
@@ -147,61 +176,37 @@
                 relationships between the deuterostomes – our own subdivision
                 of the animal kingdom.
               </p>
-              <ul>
-                <li class="question" onclick="Reveal('hemi4')">
-                  Use the tree to identify at least four characters possessed 
-                  by hemichordates.
-                </li>
-                <li class="hidden written answer" id="hemi4">
-                  Locate Hemichordates as the top of the tree.
-                  Trace the path back towards the bottom; the root node 
-                  represents the common ancestor of all Deuterostomes. 
-                  The six lines you cross on this path will correspond to 
-                  characters present in hemichordates.
-                </li>
-              </ul>
               <p>
-                A <strong>clade</strong> (also termed a
-                <strong>monophyletic group</strong>) is a set of organisms
-                comprising a single common ancestor and <em>all</em>
-                of its descendants.
+                You may not be familiar with all of these phyla.
+                The questions below will help you to learn how to read and
+                navigate this phylogenetic tree.
               </p>
               <ul>
-                <li class="question">
-                  On the image, mark the node corresponding to the single
-                  most recent common ancestor of echinoderms 
-                  (starfish and crinoids).
+                <li class="bulb" style="font-size: smaller;">
+                  Use the colours to draw on the canvas,
+                  or clear the canvas by double-clicking the white &times;.
                 </li>
-                <li class="question">
-                  Mark all regions of the tree that correspond to descendants
-                  of this most recent common ancestor.
+                <li id="settings">
+                  <button onclick="getColor('#56b4e911');" style='background-color:#56b4e9'>&bull;</button>
+                  <button onclick="getColor('#e69f0011');" style='background-color:#e69f00'>&bull;</button>
+                  <button onclick="getColor('#009e7311');" style='background-color:#009e73'>&bull;</button>
+                  <button onclick="getColor('#3d3d3d11');" style='background-color:#3d3d3d'>&bull;</button>
+                  <button onclick="getColor('#6c455711'); getSize(20);" 
+                      ondblclick="clearCanvas()"
+                      title="Double-click to clear canvas"
+                      style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>&times;</button>
                 </li>
-              
               </ul>
+              <p style="font-size: smaller;">
+                    More on chordate relationships: 
+                    Satoh <i>et al.</i> 2014 
+                    <a href="http://dx.doi.org/10.1098/rspb.2014.1729" target="_blank">Chordate evolution and the three-phylum system</a>.
+                    <i>Proc. R. Soc. B</i> 281: 20141729.
+                  </p>
             </div>
          
             <div class='col-8 col-12-narrow'>
               <table>
-                <tr>
-                  <td>
-                    <ul>
-                      <li class="bulb" style="font-size: smaller;">
-                        Select an ink colour; 
-                        or clear the canvas by double-clicking the white &times;.
-                      </li>
-                      <li id="settings">
-                        <button onclick="getColor('#56b4e911');" style='background-color:#56b4e9'>&bull;</button>
-                        <button onclick="getColor('#e69f0011');" style='background-color:#e69f00'>&bull;</button>
-                        <button onclick="getColor('#009e7311');" style='background-color:#009e73'>&bull;</button>
-                        <button onclick="getColor('#3d3d3d11');" style='background-color:#3d3d3d'>&bull;</button>
-                        <button onclick="getColor('#6c455711'); getSize(20);" 
-                            ondblclick="clearCanvas()"
-                            title="Double-click to clear canvas"
-                            style='background-color:rgba(255, 255, 255, 0.65); border: black; color: black;'>&times;</button>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
                 <tr>
                   <td>
                     <style>                          
@@ -277,216 +282,325 @@
                     Silhouettes: <a href="https://www.phylopic.org/collections/2bea39d6-d2ca-0c9a-28b8-28b3f7d974d9" target="_blank">Phylopic contributors</a>
                   </td>
                 </tr>
-                <tr>
-                  <td style="font-size: smaller;">
-                    More on chordate relationships: 
-                    Satoh N, Rokhsar D, Nishikawa T. 2014 
-                    <a href="http://dx.doi.org/10.1098/rspb.2014.1729" target="_blank">Chordate evolution and the three-phylum system</a>.
-                    <i>Proc. R. Soc. B</i> 281: 20141729.
-                  </td>
-                </tr>
               </table>
             </div>
-            <div class="row">  
-              <div class='col-8 col-12-narrow'>
-                <ul>
-                  <li class="question" onclick="Reveal('clade1');">
-                    True or false: Cephalochordates, Vertebrates, Urochordates 
-                    and Hemichordates together form a clade.
-                  </li>
-                  <li class="option" onclick="Wrong(this, 'clade1');">True</li>
-                  <li class="option" onclick="Right(this, 'clade1');">False</li>
-                  <li class="bulb">Hint: What is the last common ancestor of these taxa?</li>
-                  <li class="hidden answer" id="clade1">
-                    <p>
-                      Despite their name, hemichordates are more closely
-                      related to echinoderms than to chordates.
-                    </p>
-                    <p>
-                      The most recent common ancestor of these four phyla
-                      corresponds to the deuterostome common ancestor – whose
-                      descendants also include echinoderms.
-                    </p>
-                  </li>
-                  <li class="question" onclick="Reveal('clade2');">
-                    True or false: Echinoderms and Hemichordates together form 
-                    a clade.
-                  </li>
-                  <li class="option" onclick="Right(this, 'clade2');">True</li>
-                  <li class="option" onclick="Wrong(this, 'clade2');">False</li>
-                  <li class="hidden answer" id="clade2">
-                    <p>
-                      This clade, termed "Ambulacraria", is characterized by
-                      feeding appendages and a distinctive larval morphology
-                      termed the dipleura larva.
-                    </p>
-                  </li>
-                  <li class="question" onclick="Reveal('chord4')">
-                    Mark the chordates
-                    (the group comprising cephalochordates, vertebrates and
-                    urochordates) on the diagram.
-                    Identify at least four characters present in all chordates.
-                  </li>
-                  
-                  <li class="hidden written answer" id="chord4">
-                    <p>
-                      Locate the most recent common ancestor of these three taxa –
-                      starting at each taxon in turn, trace a path towards the
-                      root of the tree.
-                      The most recent common ancestor is the first point
-                    at which all three paths meet.
-                    </p>
-                    <p>
-                      Now trace the path from this point to the bottom of the
-                      tree. 
-                      The six lines you cross on this path will correspond to 
-                      characters present in chordates.
-                    </p>
-                  </li>
-                  
-                  <li class="question" onclick="Reveal('chord3')">
-                    Which of these characters are <em>only</em> found in 
-                    chordates?
-                  </li>
-                  <li class="hidden written answer" id="chord3">
-                    <ul>
-                      <li>Pharynx</li>
-                      <li>Notochord</li>
-                      <li>Muscular tail</li>
-                    </ul>
-                    The other characters are found in all deuterostomes,
-                    as they evolved before the most recent common ancestor
-                    of chordates.
-                  </li>
-                  
-                  <li class="bulb">
-                    Characters that are unique to – and thus define – a given
-                    group are termed <strong>synapomorphies</strong>.
-                  </li>
-                  
-                  
-                  <li class="question" onclick="Reveal('seq1')">
-                    According to the cladogram, which evolved first?
-                  </li>
-                  <li class="option" onclick="Wrong(this, 'seq1');">Pharynx</li>
-                  <li class="option" onclick="Wrong(this, 'seq1');">Tunic</li>
-                  <li class="option" onclick="Right(this, 'seq1');">Gill slits</li>
-                  <li class="option" onclick="Wrong(this, 'seq1');">Sterom</li>
-                  <li class="option" onclick="Wrong(this, 'seq1');">Can't tell</li>
-                  <li class="hidden answer" id="seq1">
-                    A path traced upwards from the root of the tree will
-                    encounter characters in their chronological sequence.
-                    Such a path will cross &lsquo;gill slits&rsquo;
-                    before it hits any other character.
-                  </li>
-                  
-                  <li class="question" onclick="Reveal('seq2')">
-                    According to the cladogram, which evolved first?
-                  </li>
-                  <li class="option" onclick="Wrong(this, 'seq2');">Pharynx</li>
-                  <li class="option" onclick="Wrong(this, 'seq2');">Tunic</li>
-                  <li class="option" onclick="Wrong(this, 'seq2');">Stereom skeleton</li>
-                  <li class="option" onclick="Right(this, 'seq2');">Can't tell</li>
-                  <li class="hidden answer" id="seq2">
-                    <p>
-                      This cladogram only displays the relationships between taxa.
-                      The upwards direction denotes a temporal sequence, but is
-                      not scaled to time (or any other measure of evolutionary change).
-                    </p>
-                    <p>
-                      So whilst we can say that the pharynx evolved before the 
-                      tunic (as certain ancestors of urochordates exhibited
-                      a pharynx but not a tunic), we can't tell from the
-                      tree whether these events occurred before or after the
-                      origin of stereom.
-                    </p>
-                  </li>
-                  
-                  <li class="question" onclick="Reveal('att1')">
-                    Which deuterostomes do not have a pharynx?
-                  </li>
-                  <li class="option" onclick="Wrong(this, 'att1');">Cephalochordates</li>
-                  <li class="option" onclick="Wrong(this, 'att1');">Vertebrates</li>
-                  <li class="option" onclick="Wrong(this, 'att1');">Urochordates</li>
-                  <li class="option" onclick="Right(this, 'att1');">Hemichordates</li>
-                  <li class="option" onclick="Right(this, 'att1');">Starfish</li>
-                  <li class="option" onclick="Right(this, 'att1');">Crinoids</li>
-                  <li class="hidden answer" id="att1">
-                    <p>
-                      Locate the point on the tree at which the pharynx evolved.
-                      Which three phyla are descended from this individual?
-                    </p>
-                  </li>
-                  
-                  <li class="question" onclick="Reveal('att2')">
-                    Which deuterostomes have a brain?
-                  </li>
-                  <li class="option" onclick="Wrong(this, 'att2');">Cephalochordates</li>
-                  <li class="option" onclick="Right(this, 'att2');">Vertebrates</li>
-                  <li class="option" onclick="Right(this, 'att2');">Urochordates</li>
-                  <li class="option" onclick="Wrong(this, 'att2');">Hemichordates</li>
-                  <li class="option" onclick="Wrong(this, 'att2');">Starfish</li>
-                  <li class="option" onclick="Wrong(this, 'att2');">Crinoids</li>
-                  <li class="hidden answer" id="att2">
-                    <p>
-                      Locate the point on the tree at which the brain evolved.
-                      Which two phyla are descended from this individual?
-                    </p>
-                  </li>
-                  
-                  <li class="question" onclick="Reveal('relat1')">
-                    Which group is most closely related to urochordates?
-                  </li>
-                  <li class="option" onclick="Wrong(this, 'relat1');">Cephalochordates</li>
-                  <li class="option" onclick="Right(this, 'relat1');">Vertebrates</li>
-                  <li class="option" onclick="Wrong(this, 'relat1');">Urochordates</li>
-                  <li class="option" onclick="Wrong(this, 'relat1');">Hemichordates</li>
-                  <li class="option" onclick="Wrong(this, 'relat1');">Starfish</li>
-                  <li class="option" onclick="Wrong(this, 'relat1');">Crinoids</li>
-                  <li class="option" onclick="Wrong(this, 'relat1');">Echinoderms</li>
-                  <li class="hidden answer" id="relat1">
-                    <p>
-                      Starting at the urochordates, trace a path to the first
-                      node (branching point).  What other taxa are descended
-                      from this common ancestor?
-                    </p>
-                  </li>
-                  
-                  <li class="question" onclick="Reveal('relat1')">
-                    Which group is most closely related to hemichordates?
-                  </li>
-                  <li class="option" onclick="Wrong(this, 'relat1');">Cephalochordates</li>
-                  <li class="option" onclick="Wrong(this, 'relat1');">Vertebrates</li>
-                  <li class="option" onclick="Wrong(this, 'relat1');">Urochordates</li>
-                  <li class="option" onclick="Wrong(this, 'relat1');">Hemichordates</li>
-                  <li class="option" onclick="Wrong(this, 'relat1');">Starfish</li>
-                  <li class="option" onclick="Wrong(this, 'relat1');">Crinoids</li>
-                  <li class="option" onclick="Right(this, 'relat1');">Echinoderms</li>
-                  <li class="hidden answer" id="relat1">
-                    <p>
-                      Starting at the hemichordates, trace a path to the first
-                      node (branching point).
-                      All echinoderms are descended from this common ancestor,
-                      so are equally closely related – just as a grandmother is
-                      equally closely related to all of her grandchildren.
-                    </p>
-                    <p>
-                      Remember that you can rotate any node in the tree without
-                      changing the relationship information it contains:
-                      mirroring the position of starfish and crinoids would not
-                      change their last common ancestor, hence does not affect
-                      the relationships portrayed by the tree.
-                    </p>
-                  </li>
-                  
-                  
-                  
-                </ul>
-                
-              </div>
-            </div>
-            
           </div>
+          <div class="row">
+            <div class='col-6 col-12-narrow'>
+              <button class="button prev" disabled> &#x25B2; Previous</button>
+            </div>
+            <div class='col-6 col-12-narrow'>
+              <button class="button next">Next &#x25BC; </button>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class='col-8 col-12-narrow'>
+              <div class="question-container">
+                <div class="sliding active" data-question="1">
+                  <ul>
+                    <li class="question" onclick="Reveal('hemi4')">
+                      Use the tree to identify at least four characters possessed 
+                      by hemichordates.
+                    </li>
+                    <li class="hidden written answer" id="hemi4">
+                      Locate Hemichordates as the top of the tree.
+                      Trace the path back towards the bottom; the root node 
+                      represents the common ancestor of all Deuterostomes. 
+                      The six lines you cross on this path will correspond to 
+                      characters present in hemichordates.
+                    </li>
+                  </ul>
+                </div>
+                
+                <div class="sliding" data-question="2">
+                  <p>
+                    A <strong>clade</strong> (also termed a
+                    <strong>monophyletic group</strong>) is a set of organisms
+                    comprising a single common ancestor and <em>all</em>
+                    of its descendants.
+                  </p>
+                  <ul>
+                    <li class="question">
+                      On the image, mark the node corresponding to the single
+                      most recent common ancestor of echinoderms 
+                      (starfish and crinoids).
+                    </li>
+                    <li class="question">
+                      Mark all regions of the tree that correspond to descendants
+                      of this most recent common ancestor.
+                    </li>
+                  
+                  </ul>
+                </div>
+                
+                <div class="sliding" data-question="3">
+                    <h3>Question 3</h3>
+                    <p>What is your favorite food?</p>
+                    <input type="text" class="answer-input" required>
+                </div>
+            </div>
+            <script>
+              // Modified from script generated by claude.ai
+              $(document).ready(function() {
+                  const $questions = $('.sliding');
+                  const totalQuestions = $questions.length;
+                  let currentIndex = 0;
+
+                  function updateNavButtons() {
+                      $('.prev').prop('disabled', currentIndex === 0);
+                      $('.next').prop('disabled', currentIndex === totalQuestions - 1);
+                  }
+
+                  function slideQuestion(direction) {
+                      const $currentQuestion = $questions.eq(currentIndex);
+                      const newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
+                      const $nextQuestion = $questions.eq(newIndex);
+                      
+                      const slideOutPos = direction === 'next' ? '-100%' : '100%';
+                      const slideInStartPos = direction === 'next' ? '100%' : '-100%';
+
+                      // Prepare next question for animation
+                      $nextQuestion.css({
+                          display: 'block',
+                          top: slideInStartPos
+                      });
+
+                      // Animate both questions
+                      $currentQuestion.animate({ top: slideOutPos }, 500, function() {
+                          $(this).removeClass('active').css({ display: 'none' });
+                      });
+
+                      $nextQuestion.animate({ top: '0%' }, 500, function() {
+                          $(this).addClass('active');
+                      });
+
+                      currentIndex = newIndex;
+                      updateNavButtons();
+                  }
+
+                  // Initialize question positions
+                  $questions.css({ top: 0 });
+
+                  $('.next').click(function() {
+                      if (currentIndex < totalQuestions - 1) {
+                          slideQuestion('next');
+                      }
+                  });
+
+                  $('.prev').click(function() {
+                      if (currentIndex > 0) {
+                          slideQuestion('prev');
+                      }
+                  });
+
+                  // Initialize nav buttons
+                  updateNavButtons();
+              });
+          </script>
+
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class='col-8 col-12-narrow'>
+              <ul>
+                <li class="question" onclick="Reveal('clade1');">
+                  True or false: Cephalochordates, Vertebrates, Urochordates 
+                  and Hemichordates together form a clade.
+                </li>
+                <li class="option" onclick="Wrong(this, 'clade1');">True</li>
+                <li class="option" onclick="Right(this, 'clade1');">False</li>
+                <li class="bulb">Hint: What is the last common ancestor of these taxa?</li>
+                <li class="hidden answer" id="clade1">
+                  <p>
+                    Despite their name, hemichordates are more closely
+                    related to echinoderms than to chordates.
+                  </p>
+                  <p>
+                    The most recent common ancestor of these four phyla
+                    corresponds to the deuterostome common ancestor – whose
+                    descendants also include echinoderms.
+                  </p>
+                </li>
+                <li class="question" onclick="Reveal('clade2');">
+                  True or false: Echinoderms and Hemichordates together form 
+                  a clade.
+                </li>
+                <li class="option" onclick="Right(this, 'clade2');">True</li>
+                <li class="option" onclick="Wrong(this, 'clade2');">False</li>
+                <li class="hidden answer" id="clade2">
+                  <p>
+                    This clade, termed "Ambulacraria", is characterized by
+                    feeding appendages and a distinctive larval morphology
+                    termed the dipleura larva.
+                  </p>
+                </li>
+                <li class="question" onclick="Reveal('chord4')">
+                  Mark the chordates
+                  (the group comprising cephalochordates, vertebrates and
+                  urochordates) on the diagram.
+                  Identify at least four characters present in all chordates.
+                </li>
+                
+                <li class="hidden written answer" id="chord4">
+                  <p>
+                    Locate the most recent common ancestor of these three taxa –
+                    starting at each taxon in turn, trace a path towards the
+                    root of the tree.
+                    The most recent common ancestor is the first point
+                  at which all three paths meet.
+                  </p>
+                  <p>
+                    Now trace the path from this point to the bottom of the
+                    tree. 
+                    The six lines you cross on this path will correspond to 
+                    characters present in chordates.
+                  </p>
+                </li>
+                
+                <li class="question" onclick="Reveal('chord3')">
+                  Which of these characters are <em>only</em> found in 
+                  chordates?
+                </li>
+                <li class="hidden written answer" id="chord3">
+                  <ul>
+                    <li>Pharynx</li>
+                    <li>Notochord</li>
+                    <li>Muscular tail</li>
+                  </ul>
+                  The other characters are found in all deuterostomes,
+                  as they evolved before the most recent common ancestor
+                  of chordates.
+                </li>
+                
+                <li class="bulb">
+                  Characters that are unique to – and thus define – a given
+                  group are termed <strong>synapomorphies</strong>.
+                </li>
+                
+                
+                <li class="question" onclick="Reveal('seq1')">
+                  According to the cladogram, which evolved first?
+                </li>
+                <li class="option" onclick="Wrong(this, 'seq1');">Pharynx</li>
+                <li class="option" onclick="Wrong(this, 'seq1');">Tunic</li>
+                <li class="option" onclick="Right(this, 'seq1');">Gill slits</li>
+                <li class="option" onclick="Wrong(this, 'seq1');">Sterom</li>
+                <li class="option" onclick="Wrong(this, 'seq1');">Can't tell</li>
+                <li class="hidden answer" id="seq1">
+                  A path traced upwards from the root of the tree will
+                  encounter characters in their chronological sequence.
+                  Such a path will cross &lsquo;gill slits&rsquo;
+                  before it hits any other character.
+                </li>
+                
+                <li class="question" onclick="Reveal('seq2')">
+                  According to the cladogram, which evolved first?
+                </li>
+                <li class="option" onclick="Wrong(this, 'seq2');">Pharynx</li>
+                <li class="option" onclick="Wrong(this, 'seq2');">Tunic</li>
+                <li class="option" onclick="Wrong(this, 'seq2');">Stereom skeleton</li>
+                <li class="option" onclick="Right(this, 'seq2');">Can't tell</li>
+                <li class="hidden answer" id="seq2">
+                  <p>
+                    This cladogram only displays the relationships between taxa.
+                    The upwards direction denotes a temporal sequence, but is
+                    not scaled to time (or any other measure of evolutionary change).
+                  </p>
+                  <p>
+                    So whilst we can say that the pharynx evolved before the 
+                    tunic (as certain ancestors of urochordates exhibited
+                    a pharynx but not a tunic), we can't tell from the
+                    tree whether these events occurred before or after the
+                    origin of stereom.
+                  </p>
+                </li>
+                
+                <li class="question" onclick="Reveal('att1')">
+                  Which deuterostomes do not have a pharynx?
+                </li>
+                <li class="option" onclick="Wrong(this, 'att1');">Cephalochordates</li>
+                <li class="option" onclick="Wrong(this, 'att1');">Vertebrates</li>
+                <li class="option" onclick="Wrong(this, 'att1');">Urochordates</li>
+                <li class="option" onclick="Right(this, 'att1');">Hemichordates</li>
+                <li class="option" onclick="Right(this, 'att1');">Starfish</li>
+                <li class="option" onclick="Right(this, 'att1');">Crinoids</li>
+                <li class="hidden answer" id="att1">
+                  <p>
+                    Locate the point on the tree at which the pharynx evolved.
+                    Which three phyla are descended from this individual?
+                  </p>
+                </li>
+                
+                <li class="question" onclick="Reveal('att2')">
+                  Which deuterostomes have a brain?
+                </li>
+                <li class="option" onclick="Wrong(this, 'att2');">Cephalochordates</li>
+                <li class="option" onclick="Right(this, 'att2');">Vertebrates</li>
+                <li class="option" onclick="Right(this, 'att2');">Urochordates</li>
+                <li class="option" onclick="Wrong(this, 'att2');">Hemichordates</li>
+                <li class="option" onclick="Wrong(this, 'att2');">Starfish</li>
+                <li class="option" onclick="Wrong(this, 'att2');">Crinoids</li>
+                <li class="hidden answer" id="att2">
+                  <p>
+                    Locate the point on the tree at which the brain evolved.
+                    Which two phyla are descended from this individual?
+                  </p>
+                </li>
+                
+                <li class="question" onclick="Reveal('relat1')">
+                  Which group is most closely related to urochordates?
+                </li>
+                <li class="option" onclick="Wrong(this, 'relat1');">Cephalochordates</li>
+                <li class="option" onclick="Right(this, 'relat1');">Vertebrates</li>
+                <li class="option" onclick="Wrong(this, 'relat1');">Urochordates</li>
+                <li class="option" onclick="Wrong(this, 'relat1');">Hemichordates</li>
+                <li class="option" onclick="Wrong(this, 'relat1');">Starfish</li>
+                <li class="option" onclick="Wrong(this, 'relat1');">Crinoids</li>
+                <li class="option" onclick="Wrong(this, 'relat1');">Echinoderms</li>
+                <li class="hidden answer" id="relat1">
+                  <p>
+                    Starting at the urochordates, trace a path to the first
+                    node (branching point).  What other taxa are descended
+                    from this common ancestor?
+                  </p>
+                </li>
+                
+                <li class="question" onclick="Reveal('relat1')">
+                  Which group is most closely related to hemichordates?
+                </li>
+                <li class="option" onclick="Wrong(this, 'relat1');">Cephalochordates</li>
+                <li class="option" onclick="Wrong(this, 'relat1');">Vertebrates</li>
+                <li class="option" onclick="Wrong(this, 'relat1');">Urochordates</li>
+                <li class="option" onclick="Wrong(this, 'relat1');">Hemichordates</li>
+                <li class="option" onclick="Wrong(this, 'relat1');">Starfish</li>
+                <li class="option" onclick="Wrong(this, 'relat1');">Crinoids</li>
+                <li class="option" onclick="Right(this, 'relat1');">Echinoderms</li>
+                <li class="hidden answer" id="relat1">
+                  <p>
+                    Starting at the hemichordates, trace a path to the first
+                    node (branching point).
+                    All echinoderms are descended from this common ancestor,
+                    so are equally closely related – just as a grandmother is
+                    equally closely related to all of her grandchildren.
+                  </p>
+                  <p>
+                    Remember that you can rotate any node in the tree without
+                    changing the relationship information it contains:
+                    mirroring the position of starfish and crinoids would not
+                    change their last common ancestor, hence does not affect
+                    the relationships portrayed by the tree.
+                  </p>
+                </li>
+                
+                
+                
+              </ul>
+              
+            </div>
+          </div>
+            
           <div class="row">
             <div class="col-8 col-12-narrow">
              
