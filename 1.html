@@ -296,6 +296,7 @@
                   </li>
                   <li class="option" onclick="Wrong(this, 'clade1');">True</li>
                   <li class="option" onclick="Right(this, 'clade1');">False</li>
+                  <li class="bulb">Hint: What is the last common ancestor of these taxa?</li>
                   <li class="hidden answer" id="clade1">
                     <p>
                       Despite their name, hemichordates are more closely
@@ -372,7 +373,7 @@
                   <li class="option" onclick="Right(this, 'seq1');">Gill slits</li>
                   <li class="option" onclick="Wrong(this, 'seq1');">Sterom</li>
                   <li class="option" onclick="Wrong(this, 'seq1');">Can't tell</li>
-                  <li class="hidden written answer" id="seq1">
+                  <li class="hidden answer" id="seq1">
                     A path traced upwards from the root of the tree will
                     encounter characters in their chronological sequence.
                     Such a path will cross &lsquo;gill slits&rsquo;
@@ -384,9 +385,9 @@
                   </li>
                   <li class="option" onclick="Wrong(this, 'seq2');">Pharynx</li>
                   <li class="option" onclick="Wrong(this, 'seq2');">Tunic</li>
-                  <li class="option" onclick="Wrong(this, 'seq2');">Stereom skeleton<li>
+                  <li class="option" onclick="Wrong(this, 'seq2');">Stereom skeleton</li>
                   <li class="option" onclick="Right(this, 'seq2');">Can't tell</li>
-                  <li class="hidden written answer" id="seq1">
+                  <li class="hidden answer" id="seq2">
                     <p>
                       This cladogram only displays the relationships between taxa.
                       The upwards direction denotes a temporal sequence, but is
@@ -398,6 +399,38 @@
                       a pharynx but not a tunic), we can't tell from the
                       tree whether these events occurred before or after the
                       origin of stereom.
+                    </p>
+                  </li>
+                  
+                  <li class="question" onclick="Reveal('att1')">
+                    Which deuterostomes do not have a pharynx?
+                  </li>
+                  <li class="option" onclick="Wrong(this, 'att1');">Cephalochordates</li>
+                  <li class="option" onclick="Wrong(this, 'att1');">Vertebrates</li>
+                  <li class="option" onclick="Wrong(this, 'att1');">Urochordates</li>
+                  <li class="option" onclick="Right(this, 'att1');">Hemichordates</li>
+                  <li class="option" onclick="Right(this, 'att1');">Starfish</li>
+                  <li class="option" onclick="Right(this, 'att1');">Crinoids</li>
+                  <li class="hidden answer" id="att1">
+                    <p>
+                      Locate the point on the tree at which the pharynx evolved.
+                      Which three phyla are descended from this individual?
+                    </p>
+                  </li>
+                  
+                  <li class="question" onclick="Reveal('att2')">
+                    Which deuterostomes have a brain?
+                  </li>
+                  <li class="option" onclick="Wrong(this, 'att2');">Cephalochordates</li>
+                  <li class="option" onclick="Right(this, 'att2');">Vertebrates</li>
+                  <li class="option" onclick="Right(this, 'att2');">Urochordates</li>
+                  <li class="option" onclick="Wrong(this, 'att2');">Hemichordates</li>
+                  <li class="option" onclick="Wrong(this, 'att2');">Starfish</li>
+                  <li class="option" onclick="Wrong(this, 'att2');">Crinoids</li>
+                  <li class="hidden answer" id="att2">
+                    <p>
+                      Locate the point on the tree at which the brain evolved.
+                      Which two phyla are descended from this individual?
                     </p>
                   </li>
                   
