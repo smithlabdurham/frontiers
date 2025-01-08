@@ -162,7 +162,7 @@
     <section id="second" class="main">
       <header>
         <div class="container">
-          <h2>Synchronous exercise: Phylogenetic thinking</h2>
+          <h2>Classroom exercise: Phylogenetic thinking</h2>
         </div>
       </header>
       
@@ -293,6 +293,9 @@
             </div>
             <div class='col-3 col-12-narrow'>
               <button class="button next">Next &#x25BC;</button>
+            </div>
+            <div class='col-3 col-12-narrow'>
+              <button class="button panic">Panic</button>
             </div>
           </div>
           
@@ -587,19 +590,19 @@
                 
                 <div class="sliding" data-question="14">
                   <div style="display:inline-block; width:59%; padding-right:12px;">
+                    <p>
+                      <i>Banffia</i> is another enigmatic Cambrian fossil from the Burgess Shale;
+                      it has a feeding appendage, but lacks a stereom or three-part body.
+                    </p>
                     <li class="question" onclick="Reveal('banff')">
-                      <p>
-                        <i>Banffia</i> is another enigmatic Cambrian fossil from the Burgess Shale;
-                        it has a feeding appendage, but lacks a stereom or three-part body.
-                      </p>
-                      <p>Use stem-group and crown-group terminology to describe its most parsimonious phylogenetic positions.</p>
+                      Use stem-group and crown-group terminology to describe its most parsimonious phylogenetic positions.
                   </div>
                   <div style="display:inline-block; width:40%;">
                     <span class="image">
                       <img src="images/Banffia.jpg" alt="Fossil of Banffia" style="width: 100%; border: 1px black solid;">
                     </span>
                   </div>
-                  <li class="hidden answer" id="banff">
+                  <li class="hidden written answer" id="banff">
                     <p>
                       <i>Banffia</i> could be a stem-group hemichordate, a stem-group echinoderm, or a stem-group ambulacrarian.
                       (Ambulacraria is the clade comprising echinoderms (starfish, crinoids and relatives) and hemichordates.)
@@ -609,9 +612,49 @@
                 
                 <div class="sliding" data-question="15">
                   <div style="display:inline-block; width:59%; padding-right:12px;">
-                    <li class="question">
+                    <p>
+                      Another problematic Cambrian fossil: <i>Rotadiscus</i> has a robust upper surface that has some similarity to
+                      the urochordate tunic.  It lacks a brain, skull, stereom, three-part body, notochord or tail;
+                      and has gill slits and feeding appendages.  Its other attributes are uncertain.
+                    </p>
+                  </div>
+                  <div style="display:inline-block; width:40%;">
+                    <span class="image">
+                      <img src="images/Rotadiscus.jpg" alt="Reconstruction of Rotadiscus" style="width: 100%; border: 1px black solid;">
+                    </span>
+                  </div>
+                  <li class="question">
+                    Mark its most parsimonious phylogenetic position on the tree.
+                  </li>
+                  <li class="question" onclick="Reveal('rota')">
+                    What makes this position unparsimonious?  What evolutionary scenario might account for the combination of characters observed?
+                  </li>
+                  <li class="hidden written answer" id="rota">
+                    <p>
+                      If the tunic is homologous with that of urochordates, <i>Rotadiscus</i> would be a member of that total group.
+                      We would have to account for the absence of a brain, notochord and tail – unless, as with modern urochordates,
+                      these three characters were present in larval stages and lost in the fossilized adults.
+                      We'd also have to interpret the feeding appendages as convergent traits, leaving a total of four extra
+                      steps on our tree.
+                    </p>
+                    <p>
+                      It is more parsimonious to treat the potential tunic as a homoplasy (convergently derived character),
+                      in which case the other characters combine to position <i>Rotadiscus</i> in the stem lineage
+                      of Hemichordates and/or echinoderms.
+                    </p>
+                  </li>                    
+                  <li class="bulb">
+                    The <a href="https://doi.org/10.1016/j.cub.2023.05.015" target="_blank">full story</a> is interesting to explore!
+                  </li>
+                </div>
+                
+                <div class="sliding" data-question="16">
+                  <div style="display:inline-block; width:59%; padding-right:12px;">
+                    <p>
                       <i>Nectocaris</i> is another Burgess Shale fossil; it has been interpreted as having a muscular tail,
                       but lacks a notochord.
+                    </p>
+                    <li class="question">
                       Mark its possible phylogenetic position on the tree.
                     </li>
                   </div>
@@ -645,6 +688,8 @@
                     </p>
                   </li>
                 </div>
+                
+                
                 
               </ul>
             </div>
@@ -719,9 +764,17 @@
                       $('.question-container').css({
                         height: '600px'
                       })
-                       currentIndex = currentIndex - 1;
-                       slideQuestion('next');
+                      currentIndex = currentIndex - 1;
+                      slideQuestion('next');
                     }
+                  });
+                  
+                  $('.panic').click(function() {
+                    $questions.css({
+                      visibility: 'hidden',
+                      position: 'absolute'
+                    });
+                    currentIndex = totalQuestions - 1; slideQuestion('prev');
                   });
 
                   // Initialize nav buttons
