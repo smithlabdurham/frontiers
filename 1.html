@@ -163,7 +163,6 @@
       <header>
         <div class="container">
           <h2>Synchronous exercise: Phylogenetic thinking</h2>
-          Coming soon.
         </div>
       </header>
       
@@ -543,6 +542,109 @@
                     </p>
                   </li>
                 </div>
+                <div class="sliding" data-question="12">
+                  <div style="display:table-cell; width:49%;">
+                    <img src="images/Deuterostome_alt1.svg" height="120px">
+                    <br />
+                    <img src="images/Deuterostome_alt2.svg" height="120px">
+                  </div>
+                  <div style="display:table-cell; width:49%;">
+                    <img src="images/Deuterostome_alt3.svg" height="120px">
+                    <br />
+                    <img src="images/Deuterostome_alt4.svg" height="120px">
+                  </div>
+                  <p>
+                    <li class="question" onclick="Reveal('oddoneout')">
+                      Which one of these trees shows a different set of relationships to the others?
+                    </li>
+                    <li class="hidden answer" id="oddoneout">
+                      <p>Which group is most closely related to urochordates? To vertebrates?</p>
+                      <p>
+                        Remember, the most closely related group is the group that shares a most recent common ancestor.
+                        Common ancestors occur at the branching points on a path traced towards the root of the tree.
+                      </p>
+                    </li>
+                  </p>
+                </div>
+                <div class="sliding" data-question="13">
+                  <div style="display:inline-block; width:59%; padding-right:12px;">
+                    <li class="question" onclick="Reveal('gyalt')">
+                      <p><i>Gyaltsenglossus</i> is a Cambrian fossil with a three-part body, comprising a proboscis, collar and trunk.</p>
+                      <p>Where on the tree is it most likely to plot?</p>
+                  </div>
+                  <div style="display:inline-block; width:40%">
+                    <span class="image">
+                      <img src="images/Gyaltsenglossus-senis.jpg" alt="Reconstruction and fossil of Gyaltsenglossus senis" style="width: 100%;">
+                    </span>
+                  </div>
+                  <li class="hidden answer" id="gyalt">
+                    <p>
+                      Unless the three-part body denotes convergent evolution, it belongs in the Hemichordate total group.
+                      The information available is insufficient to determine whether it belongs in the crown or stem group.
+                    </p>
+                  </li>
+                </div>
+                
+                <div class="sliding" data-question="14">
+                  <div style="display:inline-block; width:59%; padding-right:12px;">
+                    <li class="question" onclick="Reveal('banff')">
+                      <p>
+                        <i>Banffia</i> is another enigmatic Cambrian fossil from the Burgess Shale;
+                        it has a feeding appendage, but lacks a stereom or three-part body.
+                      </p>
+                      <p>Use stem-group and crown-group terminology to describe its most parsimonious phylogenetic positions.</p>
+                  </div>
+                  <div style="display:inline-block; width:40%;">
+                    <span class="image">
+                      <img src="images/Banffia.jpg" alt="Fossil of Banffia" style="width: 100%; border: 1px black solid;">
+                    </span>
+                  </div>
+                  <li class="hidden answer" id="banff">
+                    <p>
+                      <i>Banffia</i> could be a stem-group hemichordate, a stem-group echinoderm, or a stem-group ambulacrarian.
+                      (Ambulacraria is the clade comprising echinoderms (starfish, crinoids and relatives) and hemichordates.)
+                    </p>
+                  </li>
+                </div>
+                
+                <div class="sliding" data-question="15">
+                  <div style="display:inline-block; width:59%; padding-right:12px;">
+                    <li class="question">
+                      <i>Nectocaris</i> is another Burgess Shale fossil; it has been interpreted as having a muscular tail,
+                      but lacks a notochord.
+                      Mark its possible phylogenetic position on the tree.
+                    </li>
+                  </div>
+                  <div style="display:inline-block; width:40%;">
+                    <span class="image">
+                      <img src="images/nectocaris.jpg" alt="Holotype of Nectocaris" style="width: 100%; border: 1px black solid;">
+                    </span>
+                  </div>
+                  <p>
+                      If hearts, brains and notochords are quick to decay, their absence could reflect non-preservation
+                        rather than an original biological absence.
+                    </p>
+                    <li class="question" onclick="Reveal('necto')">
+                      Mark the tree to indicate the possible position of <i>Nectocaris<i>
+                      if the original presence of these organs is equivocal.
+                    </li>
+                  <li class="hidden answer" id="necto">
+                    <p>
+                      If the notochord is genuinely absent, the affinity of <i>Nectocaris</i> can be constrained to quite a precise
+                      position in the chordate stem lineage – and <i>Nectocaris</i> would help to constrain the sequence of evolution 
+                      (i.e. a muscular tail preceded the evolution of the notochord).
+                    </p>
+                    <p>
+                      However, if the absence of these characters is taphonomic, there is much more uncertainty about its position: 
+                      it could also sit higher in the stem lineage, or in the chordate crown group, with an affiliation to one or more
+                      chordate phyla.
+                    </p>
+                    <p>
+                      (In fact, the interpretation of <i>Nectocaris</i> has since been substantially revised, and it is no longer
+                      thought to be a deuterostome.)
+                    </p>
+                  </li>
+                </div>
                 
               </ul>
             </div>
@@ -632,9 +734,7 @@
           
             
           <div class="row">
-            <div class="col-8 col-12-narrow">
-             
-            </div>
+            
             
           </div>
         </div>
