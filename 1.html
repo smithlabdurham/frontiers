@@ -496,7 +496,58 @@
                     </p>
                   </li>
                 </div>
+                  
                 <div class="sliding" data-question="10">
+                  <li class="question" onclick="Reveal('anc1')">
+                    True or false: cephalochordates are ancestors of vertebrates
+                  </li>
+                  <li class="option" onclick="Wrong(this, 'anc1');">True</li>
+                  <li class="option" onclick="Right(this, 'anc1');">False</li>
+                  <li class="option" onclick="Wrong(this, 'anc1');">Can't tell from tree</li>
+                  <li class="hidden answer" id="anc1">
+                    <p>
+                      Where on the tree is the most recent common ancestor of cephalochordates and vertebrates?
+                    </p>
+                    <p>
+                      This common ancestor was itself a chordate (the first crown-group chordate), but was no
+                      more a cephalochordate than a vertebrate.  Both lineages have since undergone
+                      ~520 million years of evolution since being descended from this shared common ancestor,
+                      and these two independent evolutionary histories are what made each group what they are today.
+                    </p>
+                    <p>
+                      See <a href="https://evolution.berkeley.edu/the-tree-room/tree-misinterpretations/misinterpretations-about-relatedness/" target="_blank">
+                      Misinterpretations about relatedness</a>
+                    </p>
+                  </li>
+                </div>
+                  
+                <div class="sliding" data-question="11">
+                  <li class="question" onclick="Reveal('anc2')">
+                    True or false: cephalochordates are older than vertebrates
+                  </li>
+                  <li class="option" onclick="Wrong(this, 'anc2');">True</li>
+                  <li class="option" onclick="Wrong(this, 'anc2');">False</li>
+                  <li class="option" onclick="Right(this, 'anc2');">Can't tell from tree</li>
+                  <li class="hidden answer" id="anc2">
+                    <p>
+                      The tree doesn't contain any absolute time information. We <strong>can</strong> say that the cephalochordate 
+                      <strong>lineage</strong> diverged from the vertebrate lineage before vertebrates diverged from urochordates – 
+                      but notice that this is a different question. We don't know what other lineages might have diverged from the
+                      cephalochordates before the group attained its modern identity.
+                    </p>
+                    <p>
+                      As the age of a crown group is defined by the age of its most recent common ancestor,
+                      we'd need to date the divergence of all living cephalochordate lineages in order to establish
+                      the age of the crown-group phylum.
+                    </p>
+                    <p>
+                      See <a href="https://evolution.berkeley.edu/the-tree-room/tree-misinterpretations/misinterpretations-about-time/" target="_blank">
+                      Misinterpretations about time</a>
+                    </p>
+                  </li>
+                </div>
+                  
+                <div class="sliding" data-question="12">
                   
                   <li class="question" onclick="Reveal('relat1')">
                     Which group is most closely related to urochordates?
@@ -517,7 +568,7 @@
                   </li>
                   
                 </div>
-                <div class="sliding" data-question="11">
+                <div class="sliding" data-question="13">
                   <li class="question" onclick="Reveal('relat2')">
                     Which group is most closely related to hemichordates?
                   </li>
@@ -545,7 +596,38 @@
                     </p>
                   </li>
                 </div>
-                <div class="sliding" data-question="12">
+                <div class="sliding" data-question="14">
+                  <p>
+                    <li class="question" onclick="Reveal('mostev')">
+                      Which of these groups is the most evolved?
+                    </li>
+                    <li class="option" onclick="Wrong(this, 'mostev');">Cephalochordates</li>
+                    <li class="option" onclick="Wrong(this, 'mostev');">Vertebrates</li>
+                    <li class="option" onclick="Wrong(this, 'mostev');">Urochordates</li>
+                    <li class="option" onclick="Wrong(this, 'mostev');">Hemichordates</li>
+                    <li class="option" onclick="Right(this, 'mostev');">Can't say</li>
+                    <li class="hidden answer" id="mostev">
+                      <p>
+                        This is a bad question: all the groups are alive today, so each has been evolving
+                        for 3&nbsp;456 million years.  Some groups share more of this history than others,
+                        depending on the sequence in which the lineages diverged.
+                      </p>
+                      <p>
+                        Review: <a href="https://evolution.berkeley.edu/the-tree-room/tree-misinterpretations/misinterpretations-about-progress/" target="_blank">Misinterpretations about progress</a>
+                      </p>
+                      <p>
+                        The important point here is that the shape of the tree depends on which taxa are
+                        included; cephalochordates are no 'less evolved' than vertebrates, even if they
+                        exhibit a different (and less complex?) set of morphological features.
+                      </p>
+                      <p>
+                        Groups that are morphologically simple may be secondarily so (as with adult urochordates);
+                        groups that are less diverse are not necessarily less sophisticated.                        
+                      </p>
+                    </li>
+                  </p>
+                </div>
+                <div class="sliding" data-question="15">
                   <div style="display:table-cell; width:49%;">
                     <img src="images/Deuterostome_alt1.svg" height="120px">
                     <br />
@@ -569,7 +651,7 @@
                     </li>
                   </p>
                 </div>
-                <div class="sliding" data-question="13">
+                <div class="sliding" data-question="16">
                   <div style="display:inline-block; width:59%; padding-right:12px;">
                     <li class="question" onclick="Reveal('gyalt')">
                       <p><i>Gyaltsenglossus</i> is a Cambrian fossil with a three-part body, comprising a proboscis, collar and trunk.</p>
@@ -588,7 +670,7 @@
                   </li>
                 </div>
                 
-                <div class="sliding" data-question="14">
+                <div class="sliding" data-question="17">
                   <div style="display:inline-block; width:59%; padding-right:12px;">
                     <p>
                       <i>Banffia</i> is another enigmatic Cambrian fossil from the Burgess Shale;
@@ -610,7 +692,7 @@
                   </li>
                 </div>
                 
-                <div class="sliding" data-question="15">
+                <div class="sliding" data-question="18">
                   <div style="display:inline-block; width:59%; padding-right:12px;">
                     <p>
                       Another problematic Cambrian fossil: <i>Rotadiscus</i> has a robust upper surface that has some similarity to
@@ -648,7 +730,7 @@
                   </li>
                 </div>
                 
-                <div class="sliding" data-question="16">
+                <div class="sliding" data-question="19">
                   <div style="display:inline-block; width:59%; padding-right:12px;">
                     <p>
                       <i>Nectocaris</i> is another Burgess Shale fossil; it has been interpreted as having a muscular tail,
