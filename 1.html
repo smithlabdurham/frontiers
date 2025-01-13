@@ -26,30 +26,6 @@
     }
     </style>
     <style>
-      .question-container {
-          position: relative;
-          height: 600px;
-          margin: 0px auto;
-          overflow-y: hidden;
-          overflow-x: auto;
-      }
-
-      .sliding {
-          position: absolute;
-          width: 97%;
-          height: 600px;
-          overflow-x: hidden;
-          overflow-y: auto;
-          padding: 1em 1em 1em 1.2em;
-          border-radius: 8px;
-          box-sizing: border-box;
-          visibility: hidden;
-      }
-
-      .sliding.active {
-          visibility: visible;
-      }
-
       .button:disabled {
           opacity: 0.4;
           cursor: not-allowed;
@@ -77,8 +53,8 @@
         <div class="container">
           <h2>Welcome to the Frontier</h2>
           <p>
-            This section of the course aims to develop the critical analysis and 
-            communication skills that characterize effective thinkers.
+            This course aims to develop the critical analysis and communication
+            skills that characterize effective thinkers.
           </p>
           <p>
             By visiting the forefront of the discipline, we'll get to grips
@@ -94,7 +70,7 @@
             <div class="col-8 col-12-narrow">
               <section>
                 <header>
-                  <h3>What we&rsquo;ll do this term</h3>
+                  <h3>What we&rsquo;ll do</h3>
                 </header>
                 <p>
                   By the end of this term, you and your group will construct a
@@ -126,7 +102,7 @@
                 </p>
               </section>
             </div>
-            <div class="col-4 col-12-narrow">
+            <div class="col-4 col-12-narrow noprint">
               <span class="image">
                 <img src="images/p049kfjc.jpg" alt="Credit: BBC">
               </span>
@@ -136,7 +112,7 @@
       </div>
     </section>
 
-    <section id="q-and-a" class="main">
+    <section id="q-and-a" class="main noprint">
       <header>
         <div class="container">
           <span class="feature-icon">
@@ -149,7 +125,7 @@
         <div class="container">
           <p>
             The reading for this session is linked from the 
-            <a href="index.html#timetable">index page</a>.
+            <a href="index.html#timetable">course index page</a>.
           </p>
           <p>
             We'll start the face-to-face session by covering any questions that have
@@ -183,7 +159,7 @@
                 The questions below will help you to learn how to read and
                 navigate this phylogenetic tree.
               </p>
-              <ul>
+              <ul class="noprint">
                 <li class="bulb" style="font-size: smaller;">
                   Use the colours to draw on the canvas,
                   or clear the canvas by double-clicking the white &times;.
@@ -223,7 +199,8 @@
                               margin-left: auto; margin-right: auto; display: block;}
                     </style>
                     
-                    <div id="sketch" style="margin-top: 1em;">
+                    <img src="images/Deuterostome_phylogeny_k.svg" class="printonly" />
+                    <div id="sketch" style="margin-top: 1em;" class="noprint">
                       <canvas id="paint"></canvas>
                     </div>
                     
@@ -287,7 +264,7 @@
               </table>
             </div>
           </div>
-          <div class="row">
+          <div class="row noprint">
             <div class='col-3 col-12-narrow'>
               <button class="button prev" disabled>&#x25B2; Previous</button>
             </div>

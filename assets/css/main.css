@@ -2862,20 +2862,73 @@ canvas.paintable {
  .sketchable {
   margin-top: 1em;
  }
+ 
+ 
+ /* Sliding question elements */
+ 
+.question-container {
+    position: relative;
+    height: 600px;
+    margin: 0px auto;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.sliding {
+    position: absolute;
+    width: 97%;
+    height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 1em 1em 1em 1.2em;
+    border-radius: 8px;
+    box-sizing: border-box;
+    visibility: hidden;
+}
+
+.sliding.active {
+    visibility: visible;
+}
+
+      
+/* Print configuration */      
+.printonly {
+  display: none;
+}
 
  /* Print */
   @media print {
     iframe, video,
-    .image.featured, .scrolly, .feature-icon,
+    .image.featured, .scrolly, .button, .noprint, .feature-icon,
     #footer    {
       display: none;
     }
+    
+    textarea {
+      visibility: hidden;
+    }
 
+    .printonly {
+      display: block;
+    }
+    
+    .sliding {
+      visibility: visible !important;
+      display: block;
+      position: relative !important;
+      height: inherit;
+    }
+    
+    .question-container {
+      height: inherit;
+      overflow-y: visible;
+    }
+    
     body {
       background: white;
     }
 
-    #header {
+    #header, .main > header {
       position: relative;
       margin: 0;
       background: none;
@@ -2883,19 +2936,48 @@ canvas.paintable {
       text-align: center;
     }
 
-	.dark strong, .dark b {
-		color: #000;
-	}
+    .dark strong, .dark a, .dark b {
+      color: #000;
+    }
 
+    .main > .content {
+      padding: 1em;
+    }
+    
     .main > .content.dark,
     .main > .content.style1,
     .main > .content.style2,
     .main > .content.style3,
     .main > .content.style4,
-    .main > .content.style5
+    .main > .content.style5,
+    .main > header p,
+    .main > a
     {
       background: none;
       color: black;
+      font-size: 10pt;
+      line-height: 1.5em;
+    }
+    
+    #header header h1,
+    .main > header h1
+    {
+      font-size: 12pt; /* Multiplied by .main > header h2 */
+      font-weight: strong;
+      text-shadow: none;
+    }
+    
+    .main > header h2,
+    #header header p
+    {
+      font-size: 12pt;
+      font-weight: strong;
+      text-shadow: none;
+    }
+    
+    .main > header h3,
+    .main > .content h3
+    {
       font-size: 12pt;
     }
 
@@ -2905,5 +2987,5 @@ canvas.paintable {
     .row > .col-8 {
       width: 100%;
     }
-
+    
   }
