@@ -30,14 +30,17 @@
           position: relative;
           height: 600px;
           margin: 0px auto;
-          overflow: hidden;
+          overflow-y: hidden;
+          overflow-x: auto;
       }
 
       .sliding {
           position: absolute;
-          width: 100%;
-          height: 100%;
-          padding: 20px;
+          width: 97%;
+          height: 600px;
+          overflow-x: hidden;
+          overflow-y: auto;
+          padding: 1em 1em 1em 1.2em;
           border-radius: 8px;
           box-sizing: border-box;
           visibility: hidden;
@@ -474,7 +477,7 @@
                   <li class="hidden answer" id="att1">
                     <p>
                       Locate the point on the tree at which the pharynx evolved.
-                      Which three phyla are descended from this individual?
+                      Which <strong>three<strong> phyla are descended from this individual?
                     </p>
                   </li>
                   
@@ -492,7 +495,7 @@
                   <li class="hidden answer" id="att2">
                     <p>
                       Locate the point on the tree at which the brain evolved.
-                      Which two phyla are descended from this individual?
+                      Which <strong>two</strong> phyla are descended from this individual?
                     </p>
                   </li>
                 </div>
