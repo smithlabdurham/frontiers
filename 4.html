@@ -135,12 +135,12 @@
               <p>
                 Mutations cause changes to individual nucleotide bases within
                 a DNA sequence – or may cause bases to be added or lost.
-                What impact might mutations have on the resulting protein?
               </p>
 
               <ul>
+                <li>What impact might the following mutations have on the resulting protein?</li>
                 <li class="question" onclick="Reveal('mutate-base');">Changing an individual base</li>
-                <li class="bulb">Think about the specific codons <code>TTG</code> and <code>TGT</code></li>
+                <li class="bulb">Think about the specific codons <code>CTG</code> and <code>TGT</code></li>
                 <li class="hidden written answer" id="mutate-base">
                   <p>If the base is in the third codon position, often there will be no effect.
                   Some first-position changes have no effect, too.
@@ -150,12 +150,12 @@
                   but a change in an amino acid in the active site of an enzyme could
                   render the protien non-functional.
                   </p><p>
-                  Cystine (Cys) contains sulfur and forms strong S-S bonds that often
+                  Cystine (Cys) contains sulfur and forms strong S–S bonds that often
                   control how a protein folds; removing these structural elements may be
                   more catastrophic than swapping two amino acids with similar chemistry.
                   </p>
                 </li>
-                <li class="question" onclick="Reveal('add-base');">Adding a new base</li>
+                <li class="question" onclick="Reveal('add-base');">Adding a single new base</li>
                 <li class="hidden written answer" id="add-base">
                   This will shift the reading frame; every codon after the insertion will encode a different amino acid.
                   This is likely disastrous for the protein, as the sequence of amino acids will be essentially random.
@@ -190,7 +190,8 @@
                   A good first guess might be 25&nbsp;million years.
                   The two species each followed separate evolutionary pathways
                   for 25&nbsp;Ma; the <strong>ancestral</strong> sequence would
-                  differ from each living descendant in 25 places.
+                  differ from each living descendant in 25 (likely different) places.
+                  (25 different mutations on each of two distinct lineages gives 50 differences in total.)
                   </p>
                 </li>
                 <li class="question" onclick="Reveal('mol-more');">
@@ -220,10 +221,10 @@
                       <li>
                         One descendant might have mutated to <code>C</code>,
                         the other to <code>G</code>.
-                        We'd count one mutation where two had occurred.
+                        With one base different, we'd count one mutation where two had occurred.
                       </li>
                       <li>
-                        Both descendants might have mutated to <code>C</code>.
+                        Both descendants might have independently mutated to <code>C</code>.
                         We'd count no mutations, where two had occurred.
                       </li>
                     </ul>
@@ -277,13 +278,13 @@
 								Ultimately, we can only draw conclusions indirectly from this
 								approach – we're not really interested in the probability of
 								the data, because once we have observed the data, we know what
-								the data are!
+								the data are with probability 1!
 							</p>
 							<p>
 								<em>Bayesian</em> probability is a statistical paradigm that
 								aims to
 								estimate the probability of a hypothesis (or model) based on
-								available data – which is a much more useful thing to know.
+								available data – a much more useful thing to know.
 							</p>
 							<p>
 								The drawback here is that whilst data can make a particular
@@ -301,7 +302,7 @@
 								data.
 								Critics of a Bayesian approach contend that this is a subjective
 								step; the counterargument is that with enough data, the choice
-								of prior should have very little influcence on the final
+								of prior should have very little influence on the final
 								estimate of probability.
 							</p>
 						</div>
@@ -330,7 +331,7 @@ https://www.countbayesie.com/blog/2015/2/18/hans-solo-and-bayesian-priors">Han S
 									<p>
 										I'm going to toss a coin a few times, then offer a generous
 										wager: you give me a pound if the next toss shows heads;
-										I give you two pounds if it's tails.
+										I give you <em>two</em> pounds if it's tails.
 									</p>
 									<p>
 										We'll consider two students.
@@ -349,7 +350,7 @@ https://www.countbayesie.com/blog/2015/2/18/hans-solo-and-bayesian-priors">Han S
 										</li>
 									</ul>
 									<p>
-										The students are thus evaluating the probability of two
+										Cyril and Niamh are thus evaluating the probability of two
 										hypotheses: (i), a fair coin that shows heads 50% of the time;
 										and (ii), a bent coin that shows heads 90% of the time.
 										They'll only accept my wager if there's a good chance that
@@ -511,7 +512,7 @@ https://www.countbayesie.com/blog/2015/2/18/hans-solo-and-bayesian-priors">Han S
               <h3>Obtain DNA sequences</h3>
               <p>
                 We will download sequences of the catalase gene from the
-                <acronym title="National Center for Biotechnology information">NCBI</acronym>,
+                <acronym title="National Center for Biotechnology Information">NCBI</acronym>,
                 a database covering the majority of recorded DNA sequences.
               </p>
               <ol>
@@ -1056,7 +1057,7 @@ https://www.countbayesie.com/blog/2015/2/18/hans-solo-and-bayesian-priors">Han S
 									distribution.
 									If we felt it was likely that our constraining fossil was
 									very close to the date of the MRCA, we might pick a small
-									value of alpha; in this case, I am inclined to opt for a
+									value of Alpha; in this case, I am inclined to opt for a
 									larger value of Alpha, which increases the mean of the
 									distribution – simply put, it moves the "hump" of the
 									distribution further back in time.
@@ -1237,8 +1238,8 @@ https://www.countbayesie.com/blog/2015/2/18/hans-solo-and-bayesian-priors">Han S
 								 <li>
 									 Use Style:Block and Grid: Full grid to view the date
 									 estimates of key nodes.  This is an indirect way of viewing
-									 the information available in Tracer – but Tracer can only
-									 produce these histograms for constrained nodes.
+									 the information available in Tracer, which can only
+									 produce histograms for constrained nodes.
 								 </li>
 								 <img src="images/clock/densitree-block.png" />
 								 <li>
